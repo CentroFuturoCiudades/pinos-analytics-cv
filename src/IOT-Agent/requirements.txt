@@ -1,0 +1,10 @@
+ultralytics
+ffmpegcv
+opencv-contrib.python
+imutils
+pycryptodome
+boto3
+pymysql
+psycopg2-binary
+cx_Oracle
+sqlalchemy
