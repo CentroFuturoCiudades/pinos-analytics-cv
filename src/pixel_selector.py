@@ -134,7 +134,6 @@ def display_images(img1_path, img2_path):
 
     # Bind reset zoom shortcut ('r' key)
     plt.gcf().canvas.mpl_connect("key_press_event", lambda event: [img1_selector.reset_zoom(event), img2_selector.reset_zoom(event)] if event.key == "r" else None)
-
     plt.show()
 
 if __name__ == "__main__":
