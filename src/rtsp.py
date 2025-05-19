@@ -84,8 +84,7 @@ ax.imshow(birdseye_img)
 for (x, y) in transformed_points:
     ax.plot(x, y, "bo")
 
-plt.show()
-
 timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 plt.savefig(f'../imgs/plottedtrajectories{timestamp}.png')
+plt.show()
 video.release()
