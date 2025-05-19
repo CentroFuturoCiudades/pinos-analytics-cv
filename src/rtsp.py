@@ -87,5 +87,5 @@ for (x, y) in transformed_points:
 plt.show()
 
 timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-plt.savefig(f'../imgs/plottedtrayectories{timestamp}.png')
+plt.savefig(f'../imgs/plottedtrajectories{timestamp}.png')
 video.release()
