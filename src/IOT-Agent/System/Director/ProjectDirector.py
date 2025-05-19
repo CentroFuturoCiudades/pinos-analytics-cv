@@ -59,16 +59,18 @@ class ProjectDirector( GenericProjectDirector ):
         #Step 01: Calling videoprocedures
         # Starting all objects
         sources=['camera1', 'camera2']
-        #video_streams = {}
+        video_streams = {}
         movement_detectors = {}
         TIME_TO_UPLOAD = 2 # Upload every 5 minutes
         TIME_TO_RECORD = 5 # Be active for 11 minutes
         VISUALIZE = False
         VERBOSE = True
         
+        src = "rtsp://100.108.97.81:8554/cam2"
         
-        
-        for src in sources:
+        video_streams[src] = RTSPRecorder(src, height=480, width=640, codec='h264', verbose=True)
+        video_streams[src].startRecording()
+        """for src in sources:
             self.ctx['__obj']['__log'].setLog('Starting {}'.format(src))
             #video_streams[src] = RTSPRecorder(src, height=480, width=640, codec='h264', verbose=True)
             movement_detectors[src] = MovementDetector(camera = src, model = self.model, ROI=None, height=480, width=640, codec='h264', verbose=VERBOSE, visualize=VISUALIZE)
@@ -76,7 +78,7 @@ class ProjectDirector( GenericProjectDirector ):
         self.ctx['__obj']['__log'].setLog('Recording for {} seconds'.format(TIME_TO_RECORD))
         for src in sources:
             #video_streams[src].startRecording()
-            movement_detectors[src].start_inference()
+            movement_detectors[src].start_inference()"""
         endTime = datetime.datetime.now() + datetime.timedelta(minutes=TIME_TO_RECORD)
         #upload all .enc files
 
@@ -100,15 +102,16 @@ class ProjectDirector( GenericProjectDirector ):
             except KeyboardInterrupt:
                 print("Exit through keyboard interrupt")
                 break
-
-        for src in sources:
+        
+        video_streams[src].release()
+        """for src in sources:
              # close all
             #video_streams[src].release()
             movement_detectors[src].stop()
             self.ctx['__obj']['__log'].setLog('Stopped {}'.format(src))
             #encrypt records
             #self.ctx['__obj']['__log'].setLog('Encrypting records of {}'.format(src))
-            #scrambler.encryptFile(video_streams[src].filename)
+            #scrambler.encryptFile(video_streams[src].filename)"""
         
         self.ctx['__obj']['__log'].setLog('Finished demo')
         #Bye
