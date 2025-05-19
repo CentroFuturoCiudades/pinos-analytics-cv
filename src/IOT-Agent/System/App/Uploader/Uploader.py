@@ -187,7 +187,6 @@ class Uploader(Borg):
         files = glob('records/**/*.mp4',recursive=True)
         self.ctx['__obj']['__log'].setLog(f'Loaded files: {files}')
         for f in files:
-            print("file length:", self.check_video_length(f))
             if self.check_video_length(f) < 3:
                 self.ctx['__obj']['__log'].setLog(f'The file {f} is too short or unreadable')
                 os.remove(f)

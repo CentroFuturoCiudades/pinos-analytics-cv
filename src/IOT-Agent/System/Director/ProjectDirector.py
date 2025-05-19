@@ -47,7 +47,7 @@ class ProjectDirector( GenericProjectDirector ):
         self.ctx['__obj']['__log'].setLog( 'Iniciando ...' )
         self.ctx['__obj']['__log'].setDebug( self.ctx ) 
         uploader = Uploader()
-        # uploader.loadProcess()
+        uploader.loadProcess()
         
         # loading model
         self.model = ultralytics.YOLO("yolov8n.pt")
@@ -62,15 +62,16 @@ class ProjectDirector( GenericProjectDirector ):
         #video_streams = {}
         movement_detectors = {}
         TIME_TO_UPLOAD = 2 # Upload every 5 minutes
-        TIME_TO_RECORD = 120 # Be active for 11 minutes
+        TIME_TO_RECORD = 5 # Be active for 11 minutes
         VISUALIZE = False
         VERBOSE = True
-        FPS = int(self.ctx['__obj']['__config'].get('rtsp')['fps'])
+        
+        
         
         for src in sources:
             self.ctx['__obj']['__log'].setLog('Starting {}'.format(src))
             #video_streams[src] = RTSPRecorder(src, height=480, width=640, codec='h264', verbose=True)
-            movement_detectors[src] = MovementDetector(camera = src, model = self.model, ROI=None, height=1080, width=1920, src_fps=FPS, codec='h264', verbose=VERBOSE, visualize=VISUALIZE)
+            movement_detectors[src] = MovementDetector(camera = src, model = self.model, ROI=None, height=480, width=640, codec='h264', verbose=VERBOSE, visualize=VISUALIZE)
         # Record for TIME_TO_RECORD seconds
         self.ctx['__obj']['__log'].setLog('Recording for {} seconds'.format(TIME_TO_RECORD))
         for src in sources:

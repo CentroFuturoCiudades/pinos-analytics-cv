@@ -92,7 +92,7 @@ class MovementDetector(Borg):
         self.model = model
 
         # start RTSVideoRecorder
-        self.recorder = RTSPRecorder(camera=camera, folder=folder, codec=codec, width=width, height=height, fps=src_fps, verbose=verbose, visualize=False)
+        self.recorder = RTSPRecorder(camera=camera, folder=folder, codec=codec, width=width, height=height, fps=src_fps, verbose=verbose, visualize=visualize)
         # get first frame
         frame = self.recorder.get_frame()
 
@@ -253,7 +253,6 @@ class MovementDetector(Borg):
             #self.ctx['__obj']['__log'].setLog(f"Prediction done in {time.time() - prevtime} seconds")
             # accumulate time of predictions, to print average
             prediction_time_accum += time.time() - prevtime
-            predictions_num += 1
             # every minute, print average prediction time
 
             
@@ -294,16 +293,16 @@ class MovementDetector(Borg):
                 if key == ord('q'):
                     self.visualize = False
                     cv2.destroyAllWindows()"""
-        self.ctx['__obj']['__log'].setLog(f"Person detection stopped in {self.src_name}")
-        self.ctx['__obj']['__log'].setLog(f"Average prediction time: {prediction_time_accum/predictions_num} seconds")
-    
     def stop(self):
-        self.ctx['__obj']['__log'].setLog(f"[INFO] Releasing thread on {self.src_name}")
+        self.ctx['__obj']['__log'].setLog("[INFO] Releasing thread")
         self.run_active = False
+        if (self.curr_state == self.RECORDING):
+            self.recorder.stopRecording()
         self.recorder.release()
         cv2.destroyAllWindows()
-        self.ctx['__obj']['__log'].setLog(f"[INFO] Finished releasing video capture and output on {self.src_name}")
-        
+        self.ctx['__obj']['__log'].setLog("[INFO] Finished releasing video capture and output")
+        pass
+    
     def is_recording(self):
         return self.curr_state == self.RECORDING
 
