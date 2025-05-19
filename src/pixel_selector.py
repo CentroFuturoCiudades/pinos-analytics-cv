@@ -5,9 +5,9 @@ import csv
 import os
 import ast  # Import ast for safe evaluation
 
-CSV_FILE = "../csv/points_cam07.csv"  # Define the CSV file name
+CSV_FILE = "../csv/points_cam03.csv"  # Define the CSV file name
 #CSV_FILE = "../csv/arbitrary_testing/arb_points_cam07.csv"  # Define the CSV file name
-IMG2 = "../imgs/cam07.jpg"  # Update with image from camera
+IMG2 = "../imgs/cam03.jpg"  # Update with image from camera
 
 class ImagePointSelector:
     def __init__(self, ax, img_path, label, point_list):
