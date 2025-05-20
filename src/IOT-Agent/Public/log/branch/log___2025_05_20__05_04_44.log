@@ -1,0 +1,74 @@
+---------------------------------
+[2025-05-20 05:04:44][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-20 05:04:44][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-20 05:04:46][INFO][200]:Model loaded in 1.4601366519927979 seconds
+---------------------------------
+[2025-05-20 05:04:46][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-20 05:04:47][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-20 05:04:47][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-20 05:04:47][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-20 05:04:47][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-20 05:05:27][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-20 05:05:33][INFO][200]:[ERROR] camera1 is not capturing correctly, retrying...
+---------------------------------
+[2025-05-20 05:05:34][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 19.0
+---------------------------------
+[2025-05-20 05:05:35][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 18.0
+---------------------------------
+[2025-05-20 05:05:36][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 17.0
+---------------------------------
+[2025-05-20 05:05:37][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 16.0
+---------------------------------
+[2025-05-20 05:05:38][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 15.0
+---------------------------------
+[2025-05-20 05:05:39][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 14.0
+---------------------------------
+[2025-05-20 05:05:40][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 13.0
+---------------------------------
+[2025-05-20 05:05:41][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 12.0
+---------------------------------
+[2025-05-20 05:05:42][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 11.0
+---------------------------------
+[2025-05-20 05:05:43][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 10.0
+---------------------------------
+[2025-05-20 05:05:44][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 9.0
+---------------------------------
+[2025-05-20 05:05:45][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 8.0
+---------------------------------
+[2025-05-20 05:05:46][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 7.0
+---------------------------------
+[2025-05-20 05:05:47][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 6.0
+---------------------------------
+[2025-05-20 05:05:48][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 5.0
+---------------------------------
+[2025-05-20 05:05:49][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-20 05:05:50][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-20 05:05:51][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-20 05:05:52][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-20 05:05:53][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.0
+---------------------------------
+[2025-05-20 05:05:54][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1.0
+---------------------------------
+[2025-05-20 05:05:54][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-20 05:06:47][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-20 05:06:47][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-20 05:06:47][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-20 05:06:47][INFO][200]:Finished demo
+---------------------------------
+[2025-05-20 05:06:47][INFO][200]:[INFO] Finished reading frames cleanly in [120.006933226] sec.

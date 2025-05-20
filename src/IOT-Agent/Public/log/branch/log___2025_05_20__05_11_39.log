@@ -1,0 +1,40 @@
+---------------------------------
+[2025-05-20 05:11:39][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-20 05:11:39][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-20 05:11:41][INFO][200]:Model loaded in 1.4127650260925293 seconds
+---------------------------------
+[2025-05-20 05:11:41][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-20 05:11:41][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 133, in go
+    ProjectDirector().setFlux( argv )
+  File "/home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 113, in setFlux
+    self.__play(
+  File "/home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 60, in __play
+    detector = MovementDetector(
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/System/App/MovementDetector/MovementDetector.py", line 89, in __init__
+    self.recorder = RTSPRecorder(camera=camera, folder=folder, codec=codec, width=width, height=height, fps=src_fps, verbose=verbose, visualize=visualize)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/System/App/RTSPRecorder/RTSPRecorder.py", line 23, in __init__
+    "capture": ffmpegcv.VideoCapture(src, 'hevc'),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alanromero/anaconda3/lib/python3.11/site-packages/ffmpegcv/__init__.py", line 156, in VideoCapture
+    return FFmpegReader.VideoReader(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alanromero/anaconda3/lib/python3.11/site-packages/ffmpegcv/ffmpeg_reader.py", line 210, in VideoReader
+    assert os.path.exists(filename) and os.path.isfile(
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [AssertionError]:rtsp://100.108.97.81:8554/cam1 not exists
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+

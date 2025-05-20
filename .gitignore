@@ -7,4 +7,5 @@
 .env*
 *.pt
 *.mp4
+*.avi
 *.enc

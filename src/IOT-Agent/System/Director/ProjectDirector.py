@@ -62,7 +62,7 @@ class ProjectDirector( GenericProjectDirector ):
             model=self.model,
             visualize=False,  # Solo si quieres ver el video
             verbose=True,
-            clip_duration=20,
+            clip_duration=5,
             time_between_detections=1
         )
 

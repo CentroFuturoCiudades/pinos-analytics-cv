@@ -31,10 +31,8 @@ class MovementDetector(Borg):
                  time_between_detections: int=1, 
                  clip_duration: int=5, 
                  folder: str='', 
-                 codec: str='h264', 
-                 width: int=None, 
-                 height: int=None, 
-                 src_fps: int=None, 
+                 width: int=640, 
+                 height: int=480, 
                  verbose: bool=False, 
                  visualize: bool=False) -> None:
         
@@ -48,10 +46,8 @@ class MovementDetector(Borg):
                             "time_between_detections": time_between_detections,
                             "clip_duration": clip_duration,
                             "folder": folder,
-                            "codec": codec,
                             "width": width,
                             "height": height,
-                            "src_fps": src_fps,
                             "verbose": verbose,
                             "visualize": visualize
                         }
@@ -77,16 +73,14 @@ class MovementDetector(Borg):
             self.src_name = src_name
         self.treshold = treshold
         self.folder = folder
-        self.codec = codec
         self.width = width
         self.height = height
-        self.src_fps = src_fps
         self.verbose = verbose
         self.visualize = visualize
         self.model = model
 
         # start RTSVideoRecorder
-        self.recorder = RTSPRecorder(camera=camera, folder=folder, codec=codec, width=width, height=height, fps=src_fps, verbose=verbose, visualize=visualize)
+        self.recorder = RTSPRecorder(camera=camera, folder=folder, width=width, height=height, verbose=verbose, visualize=visualize)
         # get first frame
         frame = self.recorder.get_frame()
 

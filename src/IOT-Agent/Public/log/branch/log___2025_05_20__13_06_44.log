@@ -1,0 +1,30 @@
+---------------------------------
+[2025-05-20 13:06:44][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-20 13:06:44][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-20 13:06:46][INFO][200]:Model loaded in 1.392735481262207 seconds
+---------------------------------
+[2025-05-20 13:06:46][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 133, in go
+    ProjectDirector().setFlux( argv )
+  File "/home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 113, in setFlux
+    self.__play(
+  File "/home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 60, in __play
+    detector = MovementDetector(
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/System/App/MovementDetector/MovementDetector.py", line 86, in __init__
+    self.recorder = RTSPRecorder(camera=camera, folder=folder, width=width, height=height, fps=src_fps, verbose=verbose, visualize=visualize)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [TypeError]:RTSPRecorder.__init__() got an unexpected keyword argument 'fps'
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+

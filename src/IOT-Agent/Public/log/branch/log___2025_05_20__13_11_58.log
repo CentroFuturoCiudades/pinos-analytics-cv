@@ -1,0 +1,76 @@
+---------------------------------
+[2025-05-20 13:11:58][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-20 13:11:58][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-20 13:12:00][INFO][200]:Model loaded in 1.3932247161865234 seconds
+---------------------------------
+[2025-05-20 13:12:00][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-20 13:12:00][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-20 13:12:00][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-20 13:12:00][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-20 13:12:00][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-20 13:12:04][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-20 13:12:04][INFO][200]:[INFO] Starting ffmpeg recording to /home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-01_12_04_PM.mp4
+---------------------------------
+[2025-05-20 13:12:05][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 19.0
+---------------------------------
+[2025-05-20 13:12:07][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 19.0
+---------------------------------
+[2025-05-20 13:12:11][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 19.0
+---------------------------------
+[2025-05-20 13:12:12][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 18.0
+---------------------------------
+[2025-05-20 13:12:13][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 17.0
+---------------------------------
+[2025-05-20 13:12:14][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 16.0
+---------------------------------
+[2025-05-20 13:12:15][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 15.0
+---------------------------------
+[2025-05-20 13:12:16][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 14.0
+---------------------------------
+[2025-05-20 13:12:17][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 13.0
+---------------------------------
+[2025-05-20 13:12:18][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 12.0
+---------------------------------
+[2025-05-20 13:12:19][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 11.0
+---------------------------------
+[2025-05-20 13:12:20][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 10.0
+---------------------------------
+[2025-05-20 13:12:21][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 9.0
+---------------------------------
+[2025-05-20 13:12:22][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 8.0
+---------------------------------
+[2025-05-20 13:12:23][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 7.0
+---------------------------------
+[2025-05-20 13:12:24][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 6.0
+---------------------------------
+[2025-05-20 13:12:25][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 5.0
+---------------------------------
+[2025-05-20 13:12:26][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-20 13:12:27][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-20 13:12:28][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-20 13:12:29][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-20 13:12:30][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.0
+---------------------------------
+[2025-05-20 13:12:30][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-20 13:12:30][INFO][200]:[INFO] Finished recording to /home/alanromero/alan/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-01_12_04_PM.mp4
+---------------------------------
+[2025-05-20 13:14:00][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-20 13:14:00][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-20 13:14:00][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-20 13:14:00][INFO][200]:Finished demo
