@@ -3,6 +3,9 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime
+import csv
+
+timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 
 #For Camera 3
 """video = cv2.VideoCapture('rtsp://100.108.97.81:8554/cam1')
@@ -20,6 +23,25 @@ homography_matrix = np.array([
        [ 1.90218797e-04, -1.27126773e-04,  1.00000000e+00]
        ], dtype=np.float32)
 
+#For Camera 7
+"""video = cv2.VideoCapture('rtsp://100.108.97.81:8554/cam6')
+homography_matrix = np.array([
+       [-1.08657421e+00,  5.62481118e+00,  3.69884046e+03],
+       [ 5.80457350e-01,  2.11268027e+00,  2.84623988e+02],
+       [-2.06181382e-04,  3.15899573e-03,  1.00000000e+00]
+       ], dtype=np.float32)"""
+
+
+# Get frame width and height
+frame_width = int(video.get(cv2.CAP_PROP_FRAME_WIDTH))
+frame_height = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))
+frame_size = (frame_width, frame_height)
+
+# Define codec and create VideoWriter object
+fourcc = cv2.VideoWriter_fourcc(*'MJPG')  # You can use 'MP4V' for .mp4 files
+fps = 20.0  # Adjust as per your camera's FPS
+out = cv2.VideoWriter(f'../vids/output_video{timestamp}.avi', fourcc, fps, frame_size)
+
 model = YOLO("yolo11l-pose.pt")
 
 lowest_points = []
@@ -31,8 +53,6 @@ if not video.isOpened():
     print("No se pudo abrir el stream.")
 
 else:
-    ret, frame = video.read()
-    results = model(frame)
     while True:
         ret, frame = video.read()
         
@@ -63,10 +83,14 @@ else:
                         #cv2.circle(frame, (int(x), int(y)), 3, (0, 255, 0), -1)
 
             #print(kpts)
-
+        out.write(frame)
         cv2.imshow('frame', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+
+video.release()
+out.release()
+cv2.destroyAllWindows()
 
 print("Lowest points")
 print(lowest_points)
@@ -81,10 +105,17 @@ transformed_points = transformed_points.reshape(-1, 2)
 fig, ax = plt.subplots()
 ax.imshow(birdseye_img)
 
+
+# Save to csv file
+csv_file = f"../csv/trajectory/trajectory_points_{timestamp}.csv"
+with open(csv_file, mode="w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(["x", "y"])  # Header
+    for x, y in transformed_points:
+        writer.writerow([x, y])
+
 for (x, y) in transformed_points:
     ax.plot(x, y, "bo")
 
-timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 plt.savefig(f'../imgs/plottedtrajectories{timestamp}.png')
 plt.show()
-video.release()
