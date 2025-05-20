@@ -13,7 +13,6 @@ import argparse
 import numpy as np
 #Local imports
 from Generic.Global.Borg import Borg
-from System.App.Uploader.Uploader import Uploader
 from System.App.RTSPRecorder.RTSPRecorder import RTSPRecorder
 
 
@@ -28,7 +27,6 @@ class MovementDetector(Borg):
     def __init__(self,
                  camera: str='camera1',
                  model=None,
-                 ROI: str=None, 
                  treshold: float=0.002, 
                  time_between_detections: int=1, 
                  clip_duration: int=5, 
@@ -42,13 +40,10 @@ class MovementDetector(Borg):
         
         self.ctx = Borg._Borg__shared_state['ctx']        
         src = self.ctx['__obj']['__config'].get('rtsp')[camera]
-        if ROI is not None:
-            ROI = self.ctx['__obj']['__config'].get('roi')[ROI]
 
         self.ctx_mov = {  "src": src,
                             "src_name": camera,
                             "model": model,
-                            "ROI": ROI,
                             "treshold": treshold,
                             "time_between_detections": time_between_detections,
                             "clip_duration": clip_duration,
@@ -64,8 +59,8 @@ class MovementDetector(Borg):
 
         self.TIME_BETWEEN_DETECTIONS = time_between_detections # seconds
         self.CLIP_MIN_DURATION = clip_duration # seconds
-        self.BLUR_INTENSITY = 15 # pixels
-        self.DIFFERENCE_THRESHOLD = 0.003 # As a percentage of image
+        self.BLUR_INTENSITY = 5 # pixels
+        self.DIFFERENCE_THRESHOLD = 0.001 # As a percentage of image
         self.PIXEL_TRESHOLD = 30 # Treshold to be considered a different pixel
 
         # recording states
@@ -80,7 +75,6 @@ class MovementDetector(Borg):
             self.src_name = str(src)
         else:
             self.src_name = src_name
-        self.roi_src = ROI
         self.treshold = treshold
         self.folder = folder
         self.codec = codec
@@ -96,28 +90,9 @@ class MovementDetector(Borg):
         # get first frame
         frame = self.recorder.get_frame()
 
-        # get ROI mask
-        if self.roi_src is not None:
-            self.roi_mask = self.get_ROI_mask(self.roi_src, frame)
-        else:
-            self.roi_mask = np.ones(frame.shape, dtype=np.uint8)*255
-
         self.run_active = False
         self.ctx['__obj']['__log'].setLog(f"[INFO] Initialized movement detection object for {self.src_name}")
 
-    def get_ROI_mask(self, roi_src, frame):
-        # load ROI either from disk or directly the numpu array
-        if roi_src.endswith('.npy'):
-            roi = np.load(roi_src)
-        else:
-            roi = roi_src
-        # convert from percentages to pixels
-        roi[:,0] = roi[:,0]*frame.shape[1]
-        roi[:,1] = roi[:,1]*frame.shape[0]
-        # convert ROI points to mask
-        mask = np.zeros(frame.shape, dtype=np.uint8)
-        cv2.fillPoly(mask, np.int32([roi]), (255,255,255))
-        return mask
 
     def start(self):
         self.run_active = True
@@ -140,7 +115,6 @@ class MovementDetector(Borg):
     def run(self):
         # get first frame
         prev_frame = self.recorder.get_frame()
-        prev_frame = cv2.bitwise_and(prev_frame, self.roi_mask)
         prev_frame = cv2.GaussianBlur(prev_frame, (self.BLUR_INTENSITY, self.BLUR_INTENSITY), 0)
         last_frame_time = time.time()
         while self.run_active:
@@ -151,9 +125,8 @@ class MovementDetector(Borg):
             # use getFrame to get a frame from the video
             frame = self.recorder.get_frame()
             if frame is None:
-                break
-            # apply mask to frame
-            frame = cv2.bitwise_and(frame, self.roi_mask)
+                self.ctx['__obj']['__log'].setLog(f"[WARNING] {self.src_name} : Received empty frame, skipping")
+                continue
             # blur
             frame = cv2.GaussianBlur(frame, (self.BLUR_INTENSITY, self.BLUR_INTENSITY), 0)
             # calculate difference between frames
@@ -227,6 +200,7 @@ class MovementDetector(Borg):
             return boxes, confidences, classids
         # get first frame
         prev_frame = self.recorder.get_frame()
+        
         last_frame_time = time.time()
 
         predictions_num = 0
@@ -240,11 +214,10 @@ class MovementDetector(Borg):
             last_frame_time = time.time()
             # use getFrame to get a frame from the video
             frame = self.recorder.get_frame()
-            if frame is None:
-                pass
-            # apply mask to frame
-            if self.roi_src is not None:
-                frame = cv2.bitwise_and(prev_frame, self.roi_mask)
+            if frame is None or frame.size == 0:
+                self.ctx['__obj']['__log'].setLog(f"[WARNING] {self.src_name} : Received invalid frame, skipping inference")
+                time.sleep(1)
+                continue
             
             prevtime = time.time()
             detections = self.model.predict(source=frame, verbose=False)

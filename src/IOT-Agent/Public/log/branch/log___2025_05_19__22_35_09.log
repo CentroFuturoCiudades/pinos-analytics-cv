@@ -1,0 +1,28 @@
+---------------------------------
+[2025-05-19 22:35:09][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-19 22:35:09][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-19 22:35:10][INFO][200]:Model loaded in 1.2385263442993164 seconds
+---------------------------------
+[2025-05-19 22:35:10][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-19 22:35:11][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-19 22:35:11][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-19 22:35:11][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-19 22:35:11][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-19 22:35:35][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-19 22:35:41][INFO][200]:[ERROR] camera1 is not capturing correcly, retrying...
+---------------------------------
+[2025-05-19 22:37:11][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-19 22:37:11][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-19 22:37:11][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-19 22:37:11][INFO][200]:Finished demo

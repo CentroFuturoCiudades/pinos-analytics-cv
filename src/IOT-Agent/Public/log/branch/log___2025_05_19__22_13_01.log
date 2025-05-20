@@ -1,0 +1,68 @@
+---------------------------------
+[2025-05-19 22:13:01][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-19 22:13:01][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-19 22:13:01][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-19 22:13:02][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-19 22:13:02][INFO][200]:Initializing Uploader from .env
+---------------------------------
+[2025-05-19 22:13:02][INFO][200]:Uploader initialized
+---------------------------------
+[2025-05-19 22:13:02][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-19 22:13:02][INFO][200]:[INFO] Starting movement detection for camera1
+---------------------------------
+[2025-05-19 22:13:03][INFO][200]:[INFO] camera1 : Percent diff: 0.615
+---------------------------------
+[2025-05-19 22:13:03][INFO][200]:[INFO] camera1 : Movement detected
+---------------------------------
+[2025-05-19 22:13:03][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-19 22:13:04][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:13:04][INFO][200]:[INFO] camera1 : Movement not detected, remaining recording time: 19.01
+---------------------------------
+[2025-05-19 22:13:05][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:13:05][INFO][200]:[INFO] camera1 : Movement not detected, remaining recording time: 18.01
+---------------------------------
+[2025-05-19 22:13:06][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:13:06][INFO][200]:[INFO] camera1 : Movement not detected, remaining recording time: 17.02
+---------------------------------
+[2025-05-19 22:13:07][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:13:07][INFO][200]:[INFO] camera1 : Movement not detected, remaining recording time: 16.02
+---------------------------------
+[2025-05-19 22:13:08][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:13:08][INFO][200]:[INFO] camera1 : Movement not detected, remaining recording time: 15.02
+---------------------------------
+[2025-05-19 22:13:09][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:13:09][INFO][200]:[INFO] camera1 : Movement not detected, remaining recording time: 14.02
+---------------------------------
+[2025-05-19 22:13:09][INFO][200]:[ERROR] Reconnecting to camera1
+---------------------------------
+[2025-05-19 22:20:08][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 127, in go
+    #-----------------------------------------------------------------------------------------------------------------------------
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 107, in setFlux
+    * Examples that you can run on console/shell:
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 67, in __play
+    )
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyboardInterrupt]:
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+

@@ -1,0 +1,34 @@
+---------------------------------
+[2025-05-19 21:51:15][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-19 21:51:15][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-19 21:51:15][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-19 21:51:17][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-19 21:51:17][INFO][200]:[INFO] Showing video...
+---------------------------------
+[2025-05-19 21:51:17][INFO][200]:Initializing Uploader from .env
+---------------------------------
+[2025-05-19 21:51:17][INFO][200]:Uploader initialized
+---------------------------------
+[2025-05-19 21:51:17][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-19 21:51:17][INFO][200]:[INFO] Starting movement detection for camera1
+---------------------------------
+[2025-05-19 21:51:18][INFO][200]:[INFO] camera1 : Percent diff: 0.594
+---------------------------------
+[2025-05-19 21:51:18][INFO][200]:[INFO] camera1 : Movement detected
+---------------------------------
+[2025-05-19 21:51:18][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-19 21:51:30][INFO][200]:[ERROR] Reconnecting to camera1
+---------------------------------
+[2025-05-19 21:53:17][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-19 21:53:17][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-19 21:53:17][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-19 21:53:17][INFO][200]:Finished demo

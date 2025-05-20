@@ -1,0 +1,42 @@
+---------------------------------
+[2025-05-19 22:22:12][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-19 22:22:12][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-19 22:22:13][INFO][200]:Model loaded in 1.4414658546447754 seconds
+---------------------------------
+[2025-05-19 22:22:13][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-19 22:22:14][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-19 22:22:14][INFO][200]:Initializing Uploader from .env
+---------------------------------
+[2025-05-19 22:22:14][INFO][200]:Uploader initialized
+---------------------------------
+[2025-05-19 22:22:14][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-19 22:22:14][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-19 22:22:15][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-19 22:22:22][INFO][200]:[ERROR] Reconnecting to camera1
+---------------------------------
+[2025-05-19 22:22:37][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 133, in go
+    ProjectDirector().setFlux( argv )
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 113, in setFlux
+    self.__play(
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 73, in __play
+    time.sleep(DURATION_SECONDS)
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyboardInterrupt]:
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+

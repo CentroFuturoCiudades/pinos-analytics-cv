@@ -43,76 +43,37 @@ class ProjectDirector( GenericProjectDirector ):
         Main API starter objects flux
         """
 
+
         #Initial procedure log
         self.ctx['__obj']['__log'].setLog( 'Iniciando ...' )
         self.ctx['__obj']['__log'].setDebug( self.ctx ) 
-        uploader = Uploader()
-        uploader.loadProcess()
-        
+        # Parámetros
+        CAMERA_ID = 'camera1'
+        DURATION_SECONDS = 120  # Duración de monitoreo
         # loading model
         self.model = ultralytics.YOLO("yolov8n.pt")
         prevtime = time.time()
         yolov8_warmup(model=self.model, repetitions=10, verbose=False)
         self.ctx['__obj']['__log'].setLog(f"Model loaded in {time.time() - prevtime} seconds")
-        
-        
-        #Step 01: Calling videoprocedures
-        # Starting all objects
-        sources=['camera1', 'camera2']
-        video_streams = {}
-        movement_detectors = {}
-        TIME_TO_UPLOAD = 2 # Upload every 5 minutes
-        TIME_TO_RECORD = 5 # Be active for 11 minutes
-        VISUALIZE = False
-        VERBOSE = True
-        
-        src = "rtsp://100.108.97.81:8554/cam2"
-        
-        video_streams[src] = RTSPRecorder(src, height=480, width=640, codec='h264', verbose=True)
-        video_streams[src].startRecording()
-        """for src in sources:
-            self.ctx['__obj']['__log'].setLog('Starting {}'.format(src))
-            #video_streams[src] = RTSPRecorder(src, height=480, width=640, codec='h264', verbose=True)
-            movement_detectors[src] = MovementDetector(camera = src, model = self.model, ROI=None, height=480, width=640, codec='h264', verbose=VERBOSE, visualize=VISUALIZE)
-        # Record for TIME_TO_RECORD seconds
-        self.ctx['__obj']['__log'].setLog('Recording for {} seconds'.format(TIME_TO_RECORD))
-        for src in sources:
-            #video_streams[src].startRecording()
-            movement_detectors[src].start_inference()"""
-        endTime = datetime.datetime.now() + datetime.timedelta(minutes=TIME_TO_RECORD)
-        #upload all .enc files
 
-        uploadTime = datetime.datetime.now() + datetime.timedelta(minutes=TIME_TO_UPLOAD)
-        while datetime.datetime.now() < endTime:
+        # Instancia del detector
+        detector = MovementDetector(
+            camera=CAMERA_ID,
+            model=self.model,
+            visualize=False,  # Solo si quieres ver el video
+            verbose=True,
+            clip_duration=20,
+            time_between_detections=1
+        )
 
-            # upload all .enc files
-            try:
-                if datetime.datetime.now() > uploadTime:
-                    allow_upload = True
-                    for movement_detector in movement_detectors.values():
-                        if movement_detector.is_recording():
-                            allow_upload = False
-                    if allow_upload:
-                        self.ctx['__obj']['__log'].setLog('Uploading files')
-                        uploader.loadProcess()
-                        uploadTime = datetime.datetime.now() + datetime.timedelta(minutes=TIME_TO_UPLOAD)
-                        self.ctx['__obj']['__log'].setLog('Finished uploading files')
-                # keep recording
-                time.sleep(1)
-            except KeyboardInterrupt:
-                print("Exit through keyboard interrupt")
-                break
-        
-        video_streams[src].release()
-        """for src in sources:
-             # close all
-            #video_streams[src].release()
-            movement_detectors[src].stop()
-            self.ctx['__obj']['__log'].setLog('Stopped {}'.format(src))
-            #encrypt records
-            #self.ctx['__obj']['__log'].setLog('Encrypting records of {}'.format(src))
-            #scrambler.encryptFile(video_streams[src].filename)"""
-        
+        # Iniciar detección
+        detector.start_inference()
+
+        # Esperar cierto tiempo
+        time.sleep(DURATION_SECONDS)
+
+        # Finalizar proceso
+        detector.stop()
         self.ctx['__obj']['__log'].setLog('Finished demo')
         #Bye
         return None

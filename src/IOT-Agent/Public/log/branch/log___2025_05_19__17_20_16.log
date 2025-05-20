@@ -1,0 +1,38 @@
+---------------------------------
+[2025-05-19 17:20:16][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-19 17:20:16][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-19 17:20:16][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-19 17:20:17][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-19 17:20:17][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-19 17:20:17][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 109, in go
+    ProjectDirector().setFlux( argv )
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 89, in setFlux
+    self.__play(
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 50, in __play
+    video_stream = RTSPRecorder(src, height=480, width=640, codec='h264', verbose=True)
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/App/RTSPRecorder/RTSPRecorder.py", line 67, in __init__
+    self.uploader = Uploader()
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/App/Uploader/Uploader.py", line 33, in __init__
+    self.aws = self.ctx['__obj']['__config'].get('aws')
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/../Generic/Global/GenericConfig.py", line 129, in get
+    return self.__get( section )
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/../Generic/Global/GenericConfig.py", line 103, in __get
+    raise Exception(
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [Exception]:Error en seccion de configuracion: GenericConfig.__get( "aws" ). No se puede encontrar el [match] en el archivo de configuraciones: [system.release.standard.config.ini]
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+

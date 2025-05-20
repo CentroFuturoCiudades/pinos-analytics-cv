@@ -1,0 +1,90 @@
+---------------------------------
+[2025-05-19 22:06:03][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-19 22:06:03][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-19 22:06:03][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-19 22:06:04][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-19 22:06:04][INFO][200]:Initializing Uploader from .env
+---------------------------------
+[2025-05-19 22:06:05][INFO][200]:Uploader initialized
+---------------------------------
+[2025-05-19 22:06:05][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-19 22:06:05][INFO][200]:[INFO] Starting movement detection for camera1
+---------------------------------
+[2025-05-19 22:06:06][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:07][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:08][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:09][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:10][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:11][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:12][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:13][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:14][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:15][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:16][INFO][200]:[INFO] camera1 : Percent diff: 0.001
+---------------------------------
+[2025-05-19 22:06:17][INFO][200]:[INFO] camera1 : Percent diff: 0.001
+---------------------------------
+[2025-05-19 22:06:18][INFO][200]:[INFO] camera1 : Percent diff: 0.001
+---------------------------------
+[2025-05-19 22:06:19][INFO][200]:[INFO] camera1 : Percent diff: 0.002
+---------------------------------
+[2025-05-19 22:06:20][INFO][200]:[INFO] camera1 : Percent diff: 0.002
+---------------------------------
+[2025-05-19 22:06:21][INFO][200]:[INFO] camera1 : Percent diff: 0.002
+---------------------------------
+[2025-05-19 22:06:22][INFO][200]:[INFO] camera1 : Percent diff: 0.003
+---------------------------------
+[2025-05-19 22:06:22][INFO][200]:[INFO] camera1 : Movement detected
+---------------------------------
+[2025-05-19 22:06:22][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-19 22:06:23][INFO][200]:[INFO] camera1 : Percent diff: 0.001
+---------------------------------
+[2025-05-19 22:06:23][INFO][200]:[INFO] camera1 : Movement not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-19 22:06:24][INFO][200]:[INFO] camera1 : Percent diff: 0.001
+---------------------------------
+[2025-05-19 22:06:24][INFO][200]:[INFO] camera1 : Movement not detected, remaining recording time: 2.99
+---------------------------------
+[2025-05-19 22:06:25][INFO][200]:[INFO] camera1 : Percent diff: 0.001
+---------------------------------
+[2025-05-19 22:06:25][INFO][200]:[INFO] camera1 : Movement not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-19 22:06:26][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:26][INFO][200]:[INFO] camera1 : Movement not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-19 22:06:27][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:27][INFO][200]:[INFO] camera1 : Movement not detected, remaining recording time: 0.0
+---------------------------------
+[2025-05-19 22:06:28][INFO][200]:[INFO] camera1 : Percent diff: 0.0
+---------------------------------
+[2025-05-19 22:06:28][INFO][200]:[INFO] camera1 : Movement not detected, remaining recording time: -1.0
+---------------------------------
+[2025-05-19 22:06:28][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-19 22:06:28][INFO][200]:[ERROR] Reconnecting to camera1
+---------------------------------
+[2025-05-19 22:08:05][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-19 22:08:05][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-19 22:08:05][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-19 22:08:05][INFO][200]:Finished demo

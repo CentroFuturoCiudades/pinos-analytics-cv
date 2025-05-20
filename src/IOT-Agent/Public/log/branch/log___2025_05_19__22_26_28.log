@@ -1,0 +1,54 @@
+---------------------------------
+[2025-05-19 22:26:28][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-19 22:26:28][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-19 22:26:30][INFO][200]:Model loaded in 1.30604887008667 seconds
+---------------------------------
+[2025-05-19 22:26:30][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-19 22:26:31][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-19 22:26:31][INFO][200]:Initializing Uploader from .env
+---------------------------------
+[2025-05-19 22:26:31][INFO][200]:Uploader initialized
+---------------------------------
+[2025-05-19 22:26:31][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-19 22:26:31][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-19 22:26:44][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-19 22:26:51][INFO][200]:[ERROR] Reconnecting to camera1
+---------------------------------
+[2025-05-19 22:26:53][INFO][200]:[WARNING] camera1 : Received invalid frame, skipping inference
+---------------------------------
+[2025-05-19 22:26:55][INFO][200]:[WARNING] camera1 : Received invalid frame, skipping inference
+---------------------------------
+[2025-05-19 22:26:58][INFO][200]:[WARNING] camera1 : Received invalid frame, skipping inference
+---------------------------------
+[2025-05-19 22:27:00][INFO][200]:[WARNING] camera1 : Received invalid frame, skipping inference
+---------------------------------
+[2025-05-19 22:27:03][INFO][200]:[WARNING] camera1 : Received invalid frame, skipping inference
+---------------------------------
+[2025-05-19 22:27:04][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 133, in go
+    ProjectDirector().setFlux( argv )
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 113, in setFlux
+    self.__play(
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 73, in __play
+    time.sleep(DURATION_SECONDS)
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyboardInterrupt]:
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+
+---------------------------------
+[2025-05-19 22:27:05][INFO][200]:[WARNING] camera1 : Received invalid frame, skipping inference

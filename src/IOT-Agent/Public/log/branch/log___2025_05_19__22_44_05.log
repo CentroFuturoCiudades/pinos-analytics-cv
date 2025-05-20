@@ -1,0 +1,70 @@
+---------------------------------
+[2025-05-19 22:44:05][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-19 22:44:05][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-19 22:44:06][INFO][200]:Model loaded in 1.282560110092163 seconds
+---------------------------------
+[2025-05-19 22:44:06][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-19 22:44:07][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-19 22:44:07][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-19 22:44:07][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-19 22:44:07][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-19 22:44:11][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-19 22:44:14][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 19.0
+---------------------------------
+[2025-05-19 22:44:15][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 17.99
+---------------------------------
+[2025-05-19 22:44:16][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 17.0
+---------------------------------
+[2025-05-19 22:44:17][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 15.99
+---------------------------------
+[2025-05-19 22:44:18][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 15.0
+---------------------------------
+[2025-05-19 22:44:18][INFO][200]:[ERROR] camera1 is not capturing correctly, retrying...
+---------------------------------
+[2025-05-19 22:44:19][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 14.0
+---------------------------------
+[2025-05-19 22:44:20][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 13.0
+---------------------------------
+[2025-05-19 22:44:21][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 12.0
+---------------------------------
+[2025-05-19 22:44:22][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 11.0
+---------------------------------
+[2025-05-19 22:44:23][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 10.0
+---------------------------------
+[2025-05-19 22:44:24][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 9.0
+---------------------------------
+[2025-05-19 22:44:24][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 133, in go
+    ProjectDirector().setFlux( argv )
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 113, in setFlux
+    self.__play(
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 73, in __play
+    time.sleep(DURATION_SECONDS)
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyboardInterrupt]:
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+
+---------------------------------
+[2025-05-19 22:44:25][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 8.0
+---------------------------------
+[2025-05-19 22:44:26][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 7.0
+---------------------------------
+[2025-05-19 22:44:27][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 6.0
+---------------------------------
+[2025-05-19 22:44:28][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 5.01

@@ -1,0 +1,26 @@
+---------------------------------
+[2025-05-19 17:18:41][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-19 17:18:41][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-19 17:18:41][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 109, in go
+    ProjectDirector().setFlux( argv )
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 89, in setFlux
+    self.__play(
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 50, in __play
+    video_stream = RTSPRecorder(src, height=480, width=640, codec='h264', verbose=True)
+  File "/Users/l03542515/Documents/pinos-analytics-cv/src/IOT-Agent/System/App/RTSPRecorder/RTSPRecorder.py", line 39, in __init__
+    src = self.ctx['__obj']['__config'].get('rtsp')[camera]
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyError]:'rtsp://100.108.97.81:8554/cam6'
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+
