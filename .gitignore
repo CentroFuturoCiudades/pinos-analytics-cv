@@ -2,7 +2,7 @@
 .pnp.*
 .yarn/*
 # misc
-.DS_Store
+*.DS_Store*
 *.pem
 .env*
 *.pt
