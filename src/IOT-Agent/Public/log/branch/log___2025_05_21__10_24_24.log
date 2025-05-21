@@ -1,0 +1,94 @@
+---------------------------------
+[2025-05-21 10:24:24][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-21 10:24:24][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-21 10:24:26][INFO][200]:Model loaded in 1.7387471199035645 seconds
+---------------------------------
+[2025-05-21 10:24:26][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-21 10:24:26][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-21 10:24:26][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-21 10:24:26][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-21 10:24:26][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-21 10:24:28][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-21 10:24:28][INFO][200]:[INFO] Starting ffmpeg recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-10_24_28_AM.mp4
+---------------------------------
+[2025-05-21 10:24:31][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 10:24:32][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-21 10:24:33][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-21 10:24:34][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-21 10:24:35][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.01
+---------------------------------
+[2025-05-21 10:24:35][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-21 10:24:35][INFO][200]:[INFO] Finished recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-10_24_28_AM.mp4
+---------------------------------
+[2025-05-21 10:24:49][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-21 10:24:49][INFO][200]:[INFO] Starting ffmpeg recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-10_24_49_AM.mp4
+---------------------------------
+[2025-05-21 10:24:50][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-21 10:25:03][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 10:25:07][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-21 10:25:08][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.99
+---------------------------------
+[2025-05-21 10:25:09][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-21 10:25:10][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-21 10:25:11][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.0
+---------------------------------
+[2025-05-21 10:25:12][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1.0
+---------------------------------
+[2025-05-21 10:25:12][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-21 10:25:12][INFO][200]:[INFO] Finished recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-10_24_49_AM.mp4
+---------------------------------
+[2025-05-21 10:25:15][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-21 10:25:15][INFO][200]:[INFO] Starting ffmpeg recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-10_25_15_AM.mp4
+---------------------------------
+[2025-05-21 10:25:18][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-21 10:25:24][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-21 10:25:25][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.01
+---------------------------------
+[2025-05-21 10:25:26][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.01
+---------------------------------
+[2025-05-21 10:25:27][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.01
+---------------------------------
+[2025-05-21 10:25:28][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.0
+---------------------------------
+[2025-05-21 10:25:29][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1.0
+---------------------------------
+[2025-05-21 10:25:29][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-21 10:25:29][INFO][200]:[INFO] Finished recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-10_25_15_AM.mp4
+---------------------------------
+[2025-05-21 10:26:06][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-21 10:26:06][INFO][200]:[INFO] Starting ffmpeg recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-10_26_06_AM.mp4
+---------------------------------
+[2025-05-21 10:26:26][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-21 10:26:26][INFO][200]:[INFO] Finished recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-10_26_06_AM.mp4
+---------------------------------
+[2025-05-21 10:26:26][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-21 10:26:26][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-21 10:26:26][INFO][200]:Finished demo
