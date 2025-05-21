@@ -1,0 +1,38 @@
+---------------------------------
+[2025-05-21 09:57:12][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-21 09:57:12][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-21 09:57:14][INFO][200]:Model loaded in 1.8385562896728516 seconds
+---------------------------------
+[2025-05-21 09:57:14][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-21 09:57:14][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-21 09:57:14][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-21 09:57:14][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-21 09:57:14][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-21 09:57:18][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-21 09:57:18][INFO][200]:[INFO] Starting ffmpeg recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-09_57_18_AM.mp4
+---------------------------------
+[2025-05-21 09:57:44][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-21 09:57:46][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 09:57:52][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.98
+---------------------------------
+[2025-05-21 09:57:55][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 09:58:14][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-21 09:58:16][INFO][200]:[INFO] Recording completed. Actual duration: 4.50s
+---------------------------------
+[2025-05-21 09:58:16][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-21 09:58:16][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-21 09:58:16][INFO][200]:Finished demo

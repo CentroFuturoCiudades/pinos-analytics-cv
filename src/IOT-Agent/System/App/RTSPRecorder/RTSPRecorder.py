@@ -81,18 +81,37 @@ class RTSPRecorder(Borg):
         self.filename = os.path.join(dir, file)
         self.ctx['__obj']['__log'].setLog(f"[INFO] Starting ffmpeg recording to {self.filename}")
 
+        # Start FFmpeg without duration limit
         self.ffmpeg_proc = subprocess.Popen([
-            "ffmpeg", "-rtsp_transport", "tcp", "-i", self.rtsp_url,
-            "-t", "5", "-c", "copy", "-y", self.filename
-        ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            "ffmpeg",
+            "-rtsp_transport", "tcp",
+            "-i", self.rtsp_url,
+            "-c", "copy",
+            "-f", "segment",
+            "-segment_time", "300",  # 5 minute chunks as safety (adjust as needed)
+            "-segment_format", "mp4",
+            "-reset_timestamps", "1",
+            "-movflags", "+faststart",
+            "-strftime", "1",
+            "-y", self.filename
+        ], stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
 
+        self.recording_start_time = time.time()
+        self.last_movement_time = time.time()  # Track last movement
         self.recording = True
 
     def stopRecording(self):
-        self.recording = False
         if hasattr(self, 'ffmpeg_proc') and self.ffmpeg_proc:
-            self.ffmpeg_proc.wait()
-            self.ctx['__obj']['__log'].setLog(f"[INFO] Finished recording to {self.filename}")
+            try:
+                # Gracefully stop FFmpeg
+                self.ffmpeg_proc.stdin.write(b'q\n')
+                self.ffmpeg_proc.stdin.flush()
+                self.ffmpeg_proc.wait(timeout=5)
+            except:
+                self.ffmpeg_proc.kill()
+            finally:
+                self.recording = False
+                self.ctx['__obj']['__log'].setLog(f"[INFO] Finished recording to {self.filename}")
 
     def release(self):
         self.active = False
@@ -100,3 +119,11 @@ class RTSPRecorder(Borg):
             self.stopRecording()
         cv2.destroyAllWindows()
         self.ctx['__obj']['__log'].setLog("[INFO] Finished releasing video capture and output")
+
+    def updateMovementTime(self):
+        """Call this from MovementDetector when movement is detected"""
+        self.last_movement_time = time.time()
+
+    def shouldStopRecording(self, clip_duration=5):
+        """Call this periodically from MovementDetector to check if should stop"""
+        return (time.time() - self.last_movement_time) >= clip_duration
