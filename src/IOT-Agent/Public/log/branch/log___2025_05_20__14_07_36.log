@@ -1,0 +1,54 @@
+---------------------------------
+[2025-05-20 14:07:36][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-20 14:07:36][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-20 14:07:39][INFO][200]:Model loaded in 2.2480952739715576 seconds
+---------------------------------
+[2025-05-20 14:07:39][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-20 14:07:39][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-20 14:07:39][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-20 14:07:39][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-20 14:07:39][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-20 14:07:42][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-20 14:07:42][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-02_07_42_PM.mp4
+---------------------------------
+[2025-05-20 14:07:58][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-20 14:07:59][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.96
+---------------------------------
+[2025-05-20 14:08:00][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.96
+---------------------------------
+[2025-05-20 14:08:01][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.97
+---------------------------------
+[2025-05-20 14:08:02][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.06
+---------------------------------
+[2025-05-20 14:08:02][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-20 14:08:02][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-02_07_42_PM.mp4
+---------------------------------
+[2025-05-20 14:08:10][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 133, in go
+    ProjectDirector().setFlux( argv )
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 113, in setFlux
+    self.__play(
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 73, in __play
+    time.sleep(DURATION_SECONDS)
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyboardInterrupt]:
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+

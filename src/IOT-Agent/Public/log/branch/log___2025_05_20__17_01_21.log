@@ -1,0 +1,60 @@
+---------------------------------
+[2025-05-20 17:01:21][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-20 17:01:21][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-20 17:01:26][INFO][200]:Model loaded in 4.115216493606567 seconds
+---------------------------------
+[2025-05-20 17:01:26][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-20 17:01:26][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-20 17:01:26][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-20 17:01:26][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-20 17:01:26][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-20 17:01:28][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-20 17:01:28][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-05_01_28_PM.mp4
+---------------------------------
+[2025-05-20 17:03:02][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1747782177.24
+---------------------------------
+[2025-05-20 17:03:03][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1747782178.14
+---------------------------------
+[2025-05-20 17:03:04][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1747782179.22
+---------------------------------
+[2025-05-20 17:03:05][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1747782180.25
+---------------------------------
+[2025-05-20 17:03:06][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1747782181.21
+---------------------------------
+[2025-05-20 17:03:06][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-20 17:03:06][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-05_01_28_PM.mp4
+---------------------------------
+[2025-05-20 17:03:10][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-20 17:03:10][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-05_03_10_PM.mp4
+---------------------------------
+[2025-05-20 17:03:11][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1747782186.03
+---------------------------------
+[2025-05-20 17:03:12][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1747782187.14
+---------------------------------
+[2025-05-20 17:03:13][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1747782188.26
+---------------------------------
+[2025-05-20 17:03:14][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1747782189.19
+---------------------------------
+[2025-05-20 17:03:15][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1747782190.23
+---------------------------------
+[2025-05-20 17:03:15][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-20 17:03:15][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-05_03_10_PM.mp4
+---------------------------------
+[2025-05-20 17:03:26][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-20 17:03:26][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-20 17:03:26][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-20 17:03:26][INFO][200]:Finished demo

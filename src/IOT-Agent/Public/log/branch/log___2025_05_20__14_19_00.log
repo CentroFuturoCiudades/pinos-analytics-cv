@@ -1,0 +1,36 @@
+---------------------------------
+[2025-05-20 14:19:00][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-20 14:19:00][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-20 14:19:02][INFO][200]:Model loaded in 1.756971836090088 seconds
+---------------------------------
+[2025-05-20 14:19:02][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-20 14:19:02][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-20 14:19:02][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-20 14:19:02][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-20 14:19:02][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-20 14:21:17][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 133, in go
+    ProjectDirector().setFlux( argv )
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 113, in setFlux
+    self.__play(
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 73, in __play
+    time.sleep(DURATION_SECONDS)
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyboardInterrupt]:
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+

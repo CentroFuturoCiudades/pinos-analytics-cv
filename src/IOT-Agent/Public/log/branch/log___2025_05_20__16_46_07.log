@@ -1,0 +1,18 @@
+---------------------------------
+[2025-05-20 16:46:07][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-20 16:46:07][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-20 16:46:12][INFO][200]:Model loaded in 4.095251560211182 seconds
+---------------------------------
+[2025-05-20 16:46:12][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-20 16:46:12][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-20 16:46:12][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-20 16:46:12][INFO][200]:[INFO] Showing video...
+---------------------------------
+[2025-05-20 16:46:12][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-20 16:46:12][INFO][200]:[INFO] Starting human detection for camera1
