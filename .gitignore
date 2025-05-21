@@ -1,6 +1,5 @@
 # dependencies
 .pnp.*
-.yarn/*
 # misc
 *.DS_Store*
 *.pem
