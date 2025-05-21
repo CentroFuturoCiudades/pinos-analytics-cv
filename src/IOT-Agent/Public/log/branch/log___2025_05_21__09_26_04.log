@@ -1,0 +1,133 @@
+---------------------------------
+[2025-05-21 09:26:04][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-21 09:26:04][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-21 09:26:05][INFO][200]:Model loaded in 1.7540478706359863 seconds
+---------------------------------
+[2025-05-21 09:26:05][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-21 09:26:05][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-21 09:26:05][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-21 09:26:05][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-21 09:26:05][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-21 09:26:12][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-21 09:26:12][INFO][200]:[INFO] Starting ffmpeg recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-09_26_12_AM.mp4
+---------------------------------
+[2025-05-21 09:26:13][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-21 09:26:15][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-21 09:26:16][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-21 09:26:17][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-21 09:26:19][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 09:26:20][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-21 09:26:21][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-21 09:26:22][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.01
+---------------------------------
+[2025-05-21 09:26:23][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.0
+---------------------------------
+[2025-05-21 09:26:25][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 09:26:26][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-21 09:26:28][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 09:26:37][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-21 09:26:38][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.99
+---------------------------------
+[2025-05-21 09:26:39][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.02
+---------------------------------
+[2025-05-21 09:26:40][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.01
+---------------------------------
+[2025-05-21 09:26:41][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.01
+---------------------------------
+[2025-05-21 09:26:46][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 09:26:47][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.01
+---------------------------------
+[2025-05-21 09:26:48][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.01
+---------------------------------
+[2025-05-21 09:26:54][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-21 09:26:55][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.98
+---------------------------------
+[2025-05-21 09:27:01][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-21 09:27:02][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-21 09:27:05][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-21 09:27:06][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-21 09:27:07][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.99
+---------------------------------
+[2025-05-21 09:27:08][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-21 09:27:09][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.0
+---------------------------------
+[2025-05-21 09:27:11][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 09:27:23][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 09:27:24][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-21 09:27:38][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 09:27:42][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-21 09:27:43][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.01
+---------------------------------
+[2025-05-21 09:27:47][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-21 09:27:48][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-21 09:27:53][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 09:27:58][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 09:28:05][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-21 09:32:26][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 133, in go
+    ProjectDirector().setFlux( argv )
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 113, in setFlux
+    self.__play(
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 76, in __play
+    detector.stop()
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/App/MovementDetector/MovementDetector.py", line 267, in stop
+    self.recorder.stopRecording()
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/App/RTSPRecorder/RTSPRecorder.py", line 95, in stopRecording
+    "-c", "copy",
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 2051, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 2009, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyboardInterrupt]:
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+
