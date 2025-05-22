@@ -1,0 +1,100 @@
+---------------------------------
+[2025-05-20 16:22:46][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-20 16:22:46][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-20 16:22:52][INFO][200]:Model loaded in 5.814926862716675 seconds
+---------------------------------
+[2025-05-20 16:22:52][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-20 16:22:52][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-20 16:22:52][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-20 16:22:52][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-20 16:22:52][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-20 16:22:54][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-20 16:22:54][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-04_22_54_PM.mp4
+---------------------------------
+[2025-05-20 16:23:04][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 29.17
+---------------------------------
+[2025-05-20 16:23:15][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 28.99
+---------------------------------
+[2025-05-20 16:23:17][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 29.01
+---------------------------------
+[2025-05-20 16:23:20][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 29.01
+---------------------------------
+[2025-05-20 16:23:23][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 29.03
+---------------------------------
+[2025-05-20 16:23:24][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 27.95
+---------------------------------
+[2025-05-20 16:23:25][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 27.12
+---------------------------------
+[2025-05-20 16:23:26][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 26.11
+---------------------------------
+[2025-05-20 16:23:27][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 25.0
+---------------------------------
+[2025-05-20 16:23:28][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 24.01
+---------------------------------
+[2025-05-20 16:23:29][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 23.0
+---------------------------------
+[2025-05-20 16:23:30][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 22.0
+---------------------------------
+[2025-05-20 16:23:31][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 20.99
+---------------------------------
+[2025-05-20 16:23:32][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 19.99
+---------------------------------
+[2025-05-20 16:23:33][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 18.98
+---------------------------------
+[2025-05-20 16:23:34][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 17.99
+---------------------------------
+[2025-05-20 16:23:35][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 16.99
+---------------------------------
+[2025-05-20 16:23:36][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 15.99
+---------------------------------
+[2025-05-20 16:23:37][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 14.99
+---------------------------------
+[2025-05-20 16:23:38][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 14.0
+---------------------------------
+[2025-05-20 16:23:39][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 12.99
+---------------------------------
+[2025-05-20 16:23:40][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 12.0
+---------------------------------
+[2025-05-20 16:23:41][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 10.98
+---------------------------------
+[2025-05-20 16:23:42][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 9.99
+---------------------------------
+[2025-05-20 16:23:43][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 9.01
+---------------------------------
+[2025-05-20 16:23:44][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 7.96
+---------------------------------
+[2025-05-20 16:23:45][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 7.12
+---------------------------------
+[2025-05-20 16:23:46][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 6.02
+---------------------------------
+[2025-05-20 16:23:47][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 5.03
+---------------------------------
+[2025-05-20 16:23:48][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-20 16:23:49][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.02
+---------------------------------
+[2025-05-20 16:23:50][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.01
+---------------------------------
+[2025-05-20 16:23:51][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.03
+---------------------------------
+[2025-05-20 16:23:52][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.04
+---------------------------------
+[2025-05-20 16:23:52][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-20 16:23:52][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-04_22_54_PM.mp4
+---------------------------------
+[2025-05-20 16:24:52][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-20 16:24:52][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-20 16:24:52][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-20 16:24:52][INFO][200]:Finished demo

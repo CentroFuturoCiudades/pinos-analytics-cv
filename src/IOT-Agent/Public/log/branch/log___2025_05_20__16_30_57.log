@@ -1,0 +1,40 @@
+---------------------------------
+[2025-05-20 16:30:57][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-20 16:30:57][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-20 16:31:01][INFO][200]:Model loaded in 4.098221302032471 seconds
+---------------------------------
+[2025-05-20 16:31:01][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-20 16:31:01][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-20 16:31:01][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-20 16:31:01][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-20 16:31:01][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-20 16:32:38][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-20 16:32:38][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-04_32_38_PM.mp4
+---------------------------------
+[2025-05-20 16:32:58][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.0
+---------------------------------
+[2025-05-20 16:32:58][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-20 16:32:58][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-04_32_38_PM.mp4
+---------------------------------
+[2025-05-20 16:32:59][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-20 16:32:59][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-04_32_59_PM.mp4
+---------------------------------
+[2025-05-20 16:33:01][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-20 16:33:04][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_20/camera1/2025_05_20-04_32_59_PM.mp4
+---------------------------------
+[2025-05-20 16:33:04][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-20 16:33:04][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-20 16:33:04][INFO][200]:Finished demo
