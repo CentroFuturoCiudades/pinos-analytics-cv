@@ -6,9 +6,13 @@ import numpy as np
 import csv
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
+import os
+import glob
 
-TIMESTAMP = 'ADD_HERE' #modify according to video name in IOT-AGENT/records
-DAY = 'ADD_HERE' #modify according to video name in IOT-AGENT/records
+
+"""FOR 1 VIDEO"""
+"""TIMESTAMP = 'ADD_HERE' #modify according to video name in IOT-AGENT/records
+DAY = '2025_05_21' #modify according to video name in IOT-AGENT/records
 
 # Load the YOLO11 model
 model = YOLO("yolo11x-pose.pt")
@@ -80,7 +84,6 @@ cv2.destroyAllWindows()
 out.release()
 
 #print(track_history)
-
 # Save to csv file
 csv_file = f"../csv/trajectory/trajectory_points_{TIMESTAMP}.csv"
 with open(csv_file, mode="w", newline="") as file:
@@ -119,4 +122,91 @@ ax.set_ylim(img_height, 0)  # Flip y-axis to match image orientation
 # Save and show
 plt.axis('on')
 plt.savefig(f'../imgs/plottedtrajectories_{TIMESTAMP}.png')
-#plt.show()
+#plt.show()"""
+
+"""FOR ALL VIDEOS IN FOLDER - does not save video"""
+DAY = 'ADD_HERE'  #modify according to video name in IOT-AGENT/records
+video_folder = f"IOT-Agent/records/{DAY}/camera1/"
+video_files = glob.glob(os.path.join(video_folder, "*.mp4"))
+
+model = YOLO("yolo11x-pose.pt")
+
+for video_path in video_files:
+    TIMESTAMP = os.path.splitext(os.path.basename(video_path))[0]
+    cap = cv2.VideoCapture(video_path)
+    track_history = defaultdict(lambda: [])
+
+    frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    frame_size = (frame_width, frame_height)
+    fps = cap.get(cv2.CAP_PROP_FPS)
+
+    #output_path = f'../vids/output_trajectory_{TIMESTAMP}.avi'
+    #fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+    #out = cv2.VideoWriter(output_path, fourcc, fps, frame_size)
+
+    while cap.isOpened():
+        success, frame = cap.read()
+        if not success:
+            break
+        result = model.track(frame, persist=True)[0]
+        if result.boxes and result.boxes.id is not None:
+            boxes = result.boxes.xywh.cpu()
+            track_ids = result.boxes.id.int().cpu().tolist()
+            frame = result.plot()
+            for i, (box, track_id) in enumerate(zip(boxes, track_ids)):
+                if hasattr(result, "keypoints") and result.keypoints is not None:
+                    keypoints = result.keypoints.xy.cpu().numpy()
+                    foot_index = 16
+                    foot_x, foot_y = keypoints[i][foot_index]
+                    track = track_history[track_id]
+                    if (foot_x != 0 and foot_y != 0):
+                        track.append((float(foot_x), float(foot_y)))
+                        points = np.hstack(track).astype(np.int32).reshape((-1, 1, 2))
+                        cv2.polylines(frame, [points], isClosed=False, color=(230, 230, 230), thickness=10)
+            #out.write(frame)
+        if cv2.waitKey(1) & 0xFF == ord("q"):
+            break
+    cap.release()
+    #out.release()
+    cv2.destroyAllWindows()
+
+    # Save to csv file
+    csv_file = f"../csv/trajectory/trajectory_points_{TIMESTAMP}.csv"
+    with open(csv_file, mode="w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerow(["track_id", "x", "y"]) # Header
+
+        for track_id, points in track_history.items():
+            for x, y in points:
+                writer.writerow([track_id, x, y])
+
+
+    #plot trajectory
+    cam_img = cv2.imread("../imgs/cam01.jpeg")
+    cam_img  = cv2.cvtColor(cam_img, cv2.COLOR_BGR2RGB)
+    img_height, img_width, _ = cam_img.shape
+
+    fig, ax = plt.subplots()
+    ax.imshow(cam_img)
+
+    # Generate colors for each id
+    track_ids = sorted(track_history.keys())
+    cmap = cm.get_cmap("tab20", len(track_ids))
+    track_colors = {track_id: cmap(i) for i, track_id in enumerate(track_ids)}
+
+    # Plot trajectories
+    for track_id, points in track_history.items():
+        if points:
+            x_vals, y_vals = zip(*points)
+            ax.plot(x_vals, y_vals, color=track_colors[track_id], label=f"ID {track_id}")
+
+    # Optional: Add legend
+    ax.legend(loc='upper right')
+    ax.set_xlim(0, img_width)
+    ax.set_ylim(img_height, 0)  # Flip y-axis to match image orientation
+
+    # Save and show
+    plt.axis('on')
+    plt.savefig(f'../imgs/plottedtrajectories_{TIMESTAMP}.png')
+    #plt.show()

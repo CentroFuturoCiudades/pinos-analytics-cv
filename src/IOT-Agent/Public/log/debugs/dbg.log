@@ -808,3 +808,33 @@
                  '__mailer': <System.Mailer.Mailer.Mailer object at 0x1350c7d40>}}
 
 ---------------
+[DEBUG-17479386904920540]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 22, 12, 31, 30, 481882),
+                    '__global_run_id': '17479386904814688',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x7f87b8215dc0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x7f86d3622900>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x7f86d3c51df0>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x7f86d3c26420>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x7f87b81c6ff0>,
+                 '__log': <System.Global.Log.Log object at 0x7f86d3623e00>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x7f86d36afc20>}}
+
+---------------
+[DEBUG-17479389319095065]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 22, 12, 35, 31, 899344),
+                    '__global_run_id': '17479389318990405',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x7ffa6e26f8c0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x7ff9896afe30>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x7ff9898a7d70>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x7ff98b04a180>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x7ffa6e26ef60>,
+                 '__log': <System.Global.Log.Log object at 0x7ff9896afe60>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x7ff9896af920>}}
+
+---------------

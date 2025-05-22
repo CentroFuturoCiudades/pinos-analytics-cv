@@ -1,0 +1,72 @@
+---------------------------------
+[2025-05-22 12:31:30][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-22 12:31:30][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-22 12:31:31][INFO][200]:Model loaded in 1.22544264793396 seconds
+---------------------------------
+[2025-05-22 12:31:31][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-22 12:31:31][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-22 12:31:31][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-22 12:31:31][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-22 12:31:31][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-22 12:31:40][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-22 12:31:40][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_22/camera1/2025_05_22-12_31_40_PM.mp4
+---------------------------------
+[2025-05-22 12:32:21][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-22 12:32:22][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-22 12:32:23][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-22 12:32:24][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-22 12:32:25][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.0
+---------------------------------
+[2025-05-22 12:32:25][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-22 12:32:25][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_22/camera1/2025_05_22-12_31_40_PM.mp4
+---------------------------------
+[2025-05-22 12:32:30][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-22 12:32:30][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_22/camera1/2025_05_22-12_32_30_PM.mp4
+---------------------------------
+[2025-05-22 12:32:32][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-22 12:32:35][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-22 12:32:36][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-22 12:32:37][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-22 12:32:38][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-22 12:32:39][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.0
+---------------------------------
+[2025-05-22 12:32:40][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.99
+---------------------------------
+[2025-05-22 12:32:40][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-22 12:32:40][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_22/camera1/2025_05_22-12_32_30_PM.mp4
+---------------------------------
+[2025-05-22 12:33:19][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-22 12:33:19][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_22/camera1/2025_05_22-12_33_19_PM.mp4
+---------------------------------
+[2025-05-22 12:33:26][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-22 12:33:31][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-22 12:33:31][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_22/camera1/2025_05_22-12_33_19_PM.mp4
+---------------------------------
+[2025-05-22 12:33:31][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-22 12:33:31][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-22 12:33:31][INFO][200]:Finished demo
