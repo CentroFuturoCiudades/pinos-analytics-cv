@@ -778,3 +778,33 @@
                  '__mailer': <System.Mailer.Mailer.Mailer object at 0x1515c72f0>}}
 
 ---------------
+[DEBUG-17479364817132470]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 22, 11, 54, 41, 700391),
+                    '__global_run_id': '17479364816998170',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x1014369f0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x135cc7050>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x135cc7ce0>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x135c7bd10>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x1359a5700>,
+                 '__log': <System.Global.Log.Log object at 0x135cc70b0>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x135cc7080>}}
+
+---------------
+[DEBUG-17479367768386612]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 22, 11, 59, 36, 826336),
+                    '__global_run_id': '17479367768255238',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x1028a54c0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x1350c7cb0>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x1350c7c80>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x13353b6b0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x1028869f0>,
+                 '__log': <System.Global.Log.Log object at 0x1350c7110>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x1350c7d40>}}
+
+---------------
