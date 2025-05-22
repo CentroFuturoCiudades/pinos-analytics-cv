@@ -1,0 +1,67 @@
+---------------------------------
+[2025-05-21 12:34:10][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-21 12:34:10][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-21 12:34:12][INFO][200]:Model loaded in 1.807269811630249 seconds
+---------------------------------
+[2025-05-21 12:34:12][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-21 12:34:12][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-21 12:34:12][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-21 12:34:12][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-21 12:34:12][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-21 12:34:14][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-21 12:34:14][INFO][200]:[INFO] Starting ffmpeg recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-12_34_14_PM.mp4
+---------------------------------
+[2025-05-21 12:34:32][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-21 12:34:42][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.98
+---------------------------------
+[2025-05-21 12:34:43][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-21 12:34:44][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.99
+---------------------------------
+[2025-05-21 12:34:45][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.98
+---------------------------------
+[2025-05-21 12:34:46][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.01
+---------------------------------
+[2025-05-21 12:34:46][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-21 12:36:12][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-21 12:39:22][INFO][200]:[INFO] Finished recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-12_34_14_PM.mp4
+---------------------------------
+[2025-05-21 12:39:22][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 133, in go
+    ProjectDirector().setFlux( argv )
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 113, in setFlux
+    self.__play(
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 76, in __play
+    detector.stop()
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/App/MovementDetector/MovementDetector.py", line 267, in stop
+    self.recorder.stopRecording()
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/App/RTSPRecorder/RTSPRecorder.py", line 114, in stopRecording
+    self.ffmpeg_proc.wait()
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/subprocess.py", line 2048, in _wait
+    with self._waitpid_lock:
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyboardInterrupt]:
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+

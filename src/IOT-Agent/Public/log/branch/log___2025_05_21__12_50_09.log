@@ -1,0 +1,74 @@
+---------------------------------
+[2025-05-21 12:50:09][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-21 12:50:09][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-21 12:50:11][INFO][200]:Model loaded in 1.7939281463623047 seconds
+---------------------------------
+[2025-05-21 12:50:11][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-21 12:50:11][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-21 12:50:11][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-21 12:50:11][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-21 12:50:11][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-21 12:50:13][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-21 12:50:13][INFO][200]:[INFO] Starting ffmpeg recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-12_50_13_PM.mp4
+---------------------------------
+[2025-05-21 12:50:17][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.92
+---------------------------------
+[2025-05-21 12:50:18][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.92
+---------------------------------
+[2025-05-21 12:50:20][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.76
+---------------------------------
+[2025-05-21 12:50:20][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.96
+---------------------------------
+[2025-05-21 12:50:21][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.04
+---------------------------------
+[2025-05-21 12:50:21][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-21 12:50:21][INFO][200]:[INFO] Finished recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-12_50_13_PM.mp4
+---------------------------------
+[2025-05-21 12:50:37][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-21 12:50:37][INFO][200]:[INFO] Starting ffmpeg recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-12_50_37_PM.mp4
+---------------------------------
+[2025-05-21 12:50:38][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-21 12:50:39][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.02
+---------------------------------
+[2025-05-21 12:50:40][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.03
+---------------------------------
+[2025-05-21 12:50:41][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.02
+---------------------------------
+[2025-05-21 12:50:42][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.03
+---------------------------------
+[2025-05-21 12:50:43][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.96
+---------------------------------
+[2025-05-21 12:50:43][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-21 12:50:43][INFO][200]:[INFO] Finished recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-12_50_37_PM.mp4
+---------------------------------
+[2025-05-21 12:52:04][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 133, in go
+    ProjectDirector().setFlux( argv )
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 113, in setFlux
+    self.__play(
+  File "/Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 73, in __play
+    time.sleep(DURATION_SECONDS)
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyboardInterrupt]:
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+

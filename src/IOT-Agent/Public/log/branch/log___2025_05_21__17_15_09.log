@@ -1,0 +1,32 @@
+---------------------------------
+[2025-05-21 17:15:09][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-21 17:15:09][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-21 17:15:11][INFO][200]:Model loaded in 2.3737308979034424 seconds
+---------------------------------
+[2025-05-21 17:15:11][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-21 17:15:11][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-21 17:15:11][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-21 17:15:11][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-21 17:15:11][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-21 17:15:13][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-21 17:15:13][INFO][200]:[INFO] Starting ffmpeg recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-05_15_13_PM.mp4
+---------------------------------
+[2025-05-21 17:16:25][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.08
+---------------------------------
+[2025-05-21 17:17:11][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-21 17:17:11][INFO][200]:[INFO] Finished recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-05_15_13_PM.mp4
+---------------------------------
+[2025-05-21 17:17:11][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-21 17:17:11][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-21 17:17:11][INFO][200]:Finished demo

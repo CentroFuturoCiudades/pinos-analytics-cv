@@ -493,48 +493,288 @@
                  '__mailer': <System.Mailer.Mailer.Mailer object at 0x7f100981d130>}}
 
 ---------------
-[DEBUG-17478443771317370]
+[DEBUG-17478513304594300]
 
-{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 10, 19, 37, 121379),
-                    '__global_run_id': '17478443771202910',
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 12, 15, 30, 446643),
+                    '__global_run_id': '17478513304459782',
                     '__project': {   '__label': 'iot-agent',
                                      '__name': 'iot-agent'}},
-    '__obj': {   '__config': <System.Global.Config.Config object at 0x10341aa20>,
-                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x1517c7fb0>,
-                             '__manager': <System.Database.DbManager.DbManager object at 0x150aa36b0>,
-                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x15146e5d0>}},
-                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x151275700>,
-                 '__log': <System.Global.Log.Log object at 0x1517c7410>,
-                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x1517c7e30>}}
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x1032eb860>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x12abc39b0>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x12a695b80>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x12ab1a5d0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x1032ae9f0>,
+                 '__log': <System.Global.Log.Log object at 0x12abc2d20>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x12abc3950>}}
 
 ---------------
-[DEBUG-17478445145035840]
+[DEBUG-17478515563224268]
 
-{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 10, 21, 54, 492841),
-                    '__global_run_id': '17478445144919120',
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 12, 19, 16, 309856),
+                    '__global_run_id': '17478515563091850',
                     '__project': {   '__label': 'iot-agent',
                                      '__name': 'iot-agent'}},
-    '__obj': {   '__config': <System.Global.Config.Config object at 0x10115ea20>,
-                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x142bc7440>,
-                             '__manager': <System.Database.DbManager.DbManager object at 0x142bc7fb0>,
-                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x142bc7830>}},
-                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x1426ee780>,
-                 '__log': <System.Global.Log.Log object at 0x142bc7f80>,
-                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x142bc7470>}}
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x10366d4c0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x12a8c71a0>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x12a8303b0>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x12a66fd10>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x10364e9f0>,
+                 '__log': <System.Global.Log.Log object at 0x12a8c7230>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x12a8c5760>}}
 
 ---------------
-[DEBUG-17478446645469730]
+[DEBUG-17478517312258870]
 
-{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 10, 24, 24, 534145),
-                    '__global_run_id': '17478446645334290',
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 12, 22, 11, 214327),
+                    '__global_run_id': '17478517312136030',
                     '__project': {   '__label': 'iot-agent',
                                      '__name': 'iot-agent'}},
-    '__obj': {   '__config': <System.Global.Config.Config object at 0x1028fea20>,
-                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x14f9c7ef0>,
-                             '__manager': <System.Database.DbManager.DbManager object at 0x14f76e420>,
-                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x1429a03b0>}},
-                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x13e4c1c70>,
-                 '__log': <System.Global.Log.Log object at 0x14f9c7380>,
-                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x14f53ad20>}}
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x1053e29f0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x15cfc7110>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x15cfc7590>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x15cf303b0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x15c1bd700>,
+                 '__log': <System.Global.Log.Log object at 0x15cfc71a0>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x15cfc7170>}}
+
+---------------
+[DEBUG-17478520399482120]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 12, 27, 19, 937056),
+                    '__global_run_id': '17478520399354182',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x10574d520>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x12b85fa40>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x12b85f290>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x12b817ad0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x10572ee70>,
+                 '__log': <System.Global.Log.Log object at 0x12b85eea0>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x12b85fa10>}}
+
+---------------
+[DEBUG-17478524505210980]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 12, 34, 10, 508234),
+                    '__global_run_id': '17478524505075120',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x100f4a9f0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x131bc7890>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x1317376e0>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x130f3c3b0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x130e95700>,
+                 '__log': <System.Global.Log.Log object at 0x131bc74a0>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x131b7ecf0>}}
+
+---------------
+[DEBUG-17478527701093190]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 12, 39, 30, 96256),
+                    '__global_run_id': '17478527700953720',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x1016e14c0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x1592c78c0>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x1592c74d0>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x1592303b0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x1016c29f0>,
+                 '__log': <System.Global.Log.Log object at 0x14a752690>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x1592e0110>}}
+
+---------------
+[DEBUG-17478529418965100]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 12, 42, 21, 883761),
+                    '__global_run_id': '17478529418828852',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x1016bd4c0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x1589c79e0>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x1589c7590>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x1589c75f0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x10169e9f0>,
+                 '__log': <System.Global.Log.Log object at 0x1589c7620>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x1585fea20>}}
+
+---------------
+[DEBUG-17478530821413980]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 12, 44, 42, 128679),
+                    '__global_run_id': '17478530821279960',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x1015e69f0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x1558c7e30>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x1558c7ec0>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x1550283b0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x154fa2780>,
+                 '__log': <System.Global.Log.Log object at 0x1558c7290>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x1558c7230>}}
+
+---------------
+[DEBUG-17478534098556760]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 12, 50, 9, 842894),
+                    '__global_run_id': '17478534098422830',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x102f814c0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x1410c71a0>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x1410c7200>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x14056e5d0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x102f629f0>,
+                 '__log': <System.Global.Log.Log object at 0x1410c7230>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x1410c7e30>}}
+
+---------------
+[DEBUG-17478535723055140]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 12, 52, 52, 292655),
+                    '__global_run_id': '17478535722919600',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x10366e9f0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x13dfc7b90>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x13dfc6fc0>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x13dfc73e0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x13db2a780>,
+                 '__log': <System.Global.Log.Log object at 0x13dfc6ff0>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x13dfc7b60>}}
+
+---------------
+[DEBUG-17478574874055770]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 13, 58, 7, 392856),
+                    '__global_run_id': '17478574873913680',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x12b384c20>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x12c9c70e0>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x12c9c71d0>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x12c9c7d70>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x12c3ca780>,
+                 '__log': <System.Global.Log.Log object at 0x12c9c7200>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x12c9c7e00>}}
+
+---------------
+[DEBUG-17478577302097668]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 14, 2, 10, 196983),
+                    '__global_run_id': '17478577301963490',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x1012129f0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x168cc7290>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x168cc7e30>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x168cc7ef0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x168825700>,
+                 '__log': <System.Global.Log.Log object at 0x168cc72f0>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x168cc7740>}}
+
+---------------
+[DEBUG-17478593660279120]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 14, 29, 26, 17197),
+                    '__global_run_id': '17478593660163100',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x1059514c0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x1649c7f50>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x1649c77a0>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x16497f3b0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x1059329f0>,
+                 '__log': <System.Global.Log.Log object at 0x16339bd40>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x1649c7fe0>}}
+
+---------------
+[DEBUG-17478680405144792]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 16, 54, 0, 501632),
+                    '__global_run_id': '17478680405010650',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x15047d700>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x1504c7f50>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x1504c7770>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x15040b6e0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x150142780>,
+                 '__log': <System.Global.Log.Log object at 0x1462a2120>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x1504c7f20>}}
+
+---------------
+[DEBUG-17478685040983270]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 17, 1, 44, 87852),
+                    '__global_run_id': '17478685040867300',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x100eb69f0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x13cfc72f0>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x13cfc7770>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x13ce425d0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x13cde1700>,
+                 '__log': <System.Global.Log.Log object at 0x13cfc7380>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x13cfc7350>}}
+
+---------------
+[DEBUG-17478686750568690]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 17, 4, 35, 44173),
+                    '__global_run_id': '17478686750423400',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x100c054c0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x1364c73e0>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x1364e0050>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x1364c78c0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x100be69f0>,
+                 '__log': <System.Global.Log.Log object at 0x1364c7500>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x1364e0080>}}
+
+---------------
+[DEBUG-17478693092860190]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 17, 15, 9, 273302),
+                    '__global_run_id': '17478693092718430',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x1008ed4c0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x11cdc7da0>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x11cdc7200>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x11cdc75f0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x1008ce9f0>,
+                 '__log': <System.Global.Log.Log object at 0x11cdc7230>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x11cdc7d70>}}
+
+---------------
+[DEBUG-17478703201976068]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 17, 32, 0, 186937),
+                    '__global_run_id': '17478703201860470',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x1052fd4c0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x168bc7e90>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x168bc7e30>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x168bc7fe0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x1052de9f0>,
+                 '__log': <System.Global.Log.Log object at 0x168bc72f0>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x168bc72c0>}}
+
+---------------
+[DEBUG-17478705704566250]
+
+{   '__config': {   '__datetime': datetime.datetime(2025, 5, 21, 17, 36, 10, 443907),
+                    '__global_run_id': '17478705704422910',
+                    '__project': {   '__label': 'iot-agent',
+                                     '__name': 'iot-agent'}},
+    '__obj': {   '__config': <System.Global.Config.Config object at 0x102aa14c0>,
+                 '__db': {   '__connector': <System.Database.DbConnector.DbConnector object at 0x1515c7200>,
+                             '__manager': <System.Database.DbManager.DbManager object at 0x1515c7f20>,
+                             '__mysql': {   '__driver': <System.Database.Driver.MySql.MySql object at 0x1515083b0>}},
+                 '__global_procedures': <System.Global.GlobalProcedures.GlobalProcedures object at 0x102a829f0>,
+                 '__log': <System.Global.Log.Log object at 0x1515c7320>,
+                 '__mailer': <System.Mailer.Mailer.Mailer object at 0x1515c72f0>}}
 
 ---------------

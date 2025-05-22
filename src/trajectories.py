@@ -7,13 +7,14 @@ import csv
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
-TIMESTAMP = '2025_05_21-09_59_26_AM' #modify according to video name in IOT-AGENT/records
+TIMESTAMP = 'ADD_HERE' #modify according to video name in IOT-AGENT/records
+DAY = '2025_05_21' #modify according to video name in IOT-AGENT/records
 
 # Load the YOLO11 model
 model = YOLO("yolo11l-pose.pt")
 
 # Open the video file
-video_path = f"IOT-Agent/records/2025_05_21/camera1/{TIMESTAMP}.mp4"
+video_path = f"IOT-Agent/records/{DAY}/camera1/{TIMESTAMP}.mp4"
 cap = cv2.VideoCapture(video_path)
 
 # Store the track history

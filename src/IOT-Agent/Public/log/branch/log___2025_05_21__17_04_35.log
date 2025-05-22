@@ -1,0 +1,30 @@
+---------------------------------
+[2025-05-21 17:04:35][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-21 17:04:35][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-21 17:04:37][INFO][200]:Model loaded in 2.593635082244873 seconds
+---------------------------------
+[2025-05-21 17:04:37][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-21 17:04:37][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-21 17:04:37][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-21 17:04:37][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-21 17:04:37][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-21 17:04:39][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-21 17:04:39][INFO][200]:[INFO] Starting ffmpeg recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-05_04_39_PM.mp4
+---------------------------------
+[2025-05-21 17:06:37][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-21 17:06:37][INFO][200]:[INFO] Finished recording to /Users/sophia.calderon/Desktop/ FUTURE CITIES/pinos-analytics-cv/src/IOT-Agent/records/2025_05_21/camera1/2025_05_21-05_04_39_PM.mp4
+---------------------------------
+[2025-05-21 17:06:37][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-21 17:06:37][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-21 17:06:37][INFO][200]:Finished demo
