@@ -11,7 +11,7 @@ TIMESTAMP = 'ADD_HERE' #modify according to video name in IOT-AGENT/records
 DAY = 'ADD_HERE' #modify according to video name in IOT-AGENT/records
 
 # Load the YOLO11 model
-model = YOLO("yolo11l-pose.pt")
+model = YOLO("yolo11x-pose.pt")
 
 # Open the video file
 video_path = f"IOT-Agent/records/{DAY}/camera1/{TIMESTAMP}.mp4"
@@ -65,7 +65,7 @@ while cap.isOpened():
             out.write(frame)
         
         # Display the annotated frame
-        cv2.imshow("YOLO11 Tracking", frame)
+        #cv2.imshow("YOLO11 Tracking", frame)
 
         # Break the loop if 'q' is pressed
         if cv2.waitKey(1) & 0xFF == ord("q"):
@@ -119,4 +119,4 @@ ax.set_ylim(img_height, 0)  # Flip y-axis to match image orientation
 # Save and show
 plt.axis('on')
 plt.savefig(f'../imgs/plottedtrajectories_{TIMESTAMP}.png')
-plt.show()
+#plt.show()

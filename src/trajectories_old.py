@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
 TIMESTAMP = 'ADD_HERE' #modify according to video name in IOT-AGENT/records
-DAY = '2025_05_21' #modify according to video name in IOT-AGENT/records
+DAY = 'ADD_HERE' #modify according to video name in IOT-AGENT/records
 
 # Load the YOLO11 model
 model = YOLO("yolo11l-pose.pt")
