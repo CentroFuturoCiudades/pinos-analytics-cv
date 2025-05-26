@@ -1,0 +1,327 @@
+---------------------------------
+[2025-05-23 20:25:41][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-23 20:25:41][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-23 20:25:41][INFO][200]:Initializing Uploader from .env
+---------------------------------
+[2025-05-23 20:25:41][INFO][200]:Uploader initialized
+---------------------------------
+[2025-05-23 20:25:41][INFO][200]:Loaded files: []
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Model loaded in 3.49566912651062 seconds
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Starting camera1
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Starting camera2
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam2
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Starting the capturing process in the camera2
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Initialized movement detection object for camera2
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Starting camera3
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam3
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Starting the capturing process in the camera3
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Initialized movement detection object for camera3
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Starting camera4
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Starting the capturing process in the camera4
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Initialized movement detection object for camera4
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Starting camera5
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam5
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Starting the capturing process in the camera5
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Initialized movement detection object for camera5
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Starting camera6
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam6
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Starting the capturing process in the camera6
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Initialized movement detection object for camera6
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:Recording for 120 seconds
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Starting human detection for camera2
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Starting human detection for camera3
+---------------------------------
+[2025-05-23 20:25:44][INFO][200]:[INFO] Starting human detection for camera4
+---------------------------------
+[2025-05-23 20:25:45][INFO][200]:[INFO] Starting human detection for camera5
+---------------------------------
+[2025-05-23 20:25:45][INFO][200]:[INFO] Starting human detection for camera6
+---------------------------------
+[2025-05-23 20:25:55][INFO][200]:[INFO] camera6 : Starting recording
+---------------------------------
+[2025-05-23 20:25:55][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera6/2025_05_23-08_25_55_PM.mp4
+---------------------------------
+[2025-05-23 20:25:58][INFO][200]:[INFO] camera3 : Starting recording
+---------------------------------
+[2025-05-23 20:25:58][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_25_58_PM.mp4
+---------------------------------
+[2025-05-23 20:26:03][INFO][200]:[INFO] camera2 : Starting recording
+---------------------------------
+[2025-05-23 20:26:03][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_26_03_PM.mp4
+---------------------------------
+[2025-05-23 20:26:05][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: -2.03
+---------------------------------
+[2025-05-23 20:26:05][INFO][200]:[INFO] camera3 : Stopping recording
+---------------------------------
+[2025-05-23 20:26:05][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_25_58_PM.mp4
+---------------------------------
+[2025-05-23 20:26:09][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-23 20:26:09][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_26_09_PM.mp4
+---------------------------------
+[2025-05-23 20:26:14][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.13
+---------------------------------
+[2025-05-23 20:26:17][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 0.79
+---------------------------------
+[2025-05-23 20:26:19][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -4.43
+---------------------------------
+[2025-05-23 20:26:19][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-23 20:26:19][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_26_09_PM.mp4
+---------------------------------
+[2025-05-23 20:26:22][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: -4.01
+---------------------------------
+[2025-05-23 20:26:22][INFO][200]:[INFO] camera6 : Stopping recording
+---------------------------------
+[2025-05-23 20:26:22][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera6/2025_05_23-08_25_55_PM.mp4
+---------------------------------
+[2025-05-23 20:26:23][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 0.54
+---------------------------------
+[2025-05-23 20:26:27][INFO][200]:[INFO] camera6 : Starting recording
+---------------------------------
+[2025-05-23 20:26:27][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera6/2025_05_23-08_26_27_PM.mp4
+---------------------------------
+[2025-05-23 20:26:28][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: -4.51
+---------------------------------
+[2025-05-23 20:26:28][INFO][200]:[INFO] camera2 : Stopping recording
+---------------------------------
+[2025-05-23 20:26:28][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_26_03_PM.mp4
+---------------------------------
+[2025-05-23 20:26:37][INFO][200]:[INFO] camera3 : Starting recording
+---------------------------------
+[2025-05-23 20:26:37][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_26_37_PM.mp4
+---------------------------------
+[2025-05-23 20:26:38][INFO][200]:[INFO] camera4 : Starting recording
+---------------------------------
+[2025-05-23 20:26:38][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_26_38_PM.mp4
+---------------------------------
+[2025-05-23 20:26:43][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: -0.64
+---------------------------------
+[2025-05-23 20:26:43][INFO][200]:[INFO] camera3 : Stopping recording
+---------------------------------
+[2025-05-23 20:26:43][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_26_37_PM.mp4
+---------------------------------
+[2025-05-23 20:26:43][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: -0.41
+---------------------------------
+[2025-05-23 20:26:43][INFO][200]:[INFO] camera4 : Stopping recording
+---------------------------------
+[2025-05-23 20:26:43][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_26_38_PM.mp4
+---------------------------------
+[2025-05-23 20:26:46][INFO][200]:[INFO] camera2 : Starting recording
+---------------------------------
+[2025-05-23 20:26:46][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_26_46_PM.mp4
+---------------------------------
+[2025-05-23 20:26:48][INFO][200]:[INFO] camera3 : Starting recording
+---------------------------------
+[2025-05-23 20:26:48][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_26_48_PM.mp4
+---------------------------------
+[2025-05-23 20:26:53][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 0.12
+---------------------------------
+[2025-05-23 20:27:01][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 0.79
+---------------------------------
+[2025-05-23 20:27:05][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: -2.55
+---------------------------------
+[2025-05-23 20:27:05][INFO][200]:[INFO] camera3 : Stopping recording
+---------------------------------
+[2025-05-23 20:27:05][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_26_48_PM.mp4
+---------------------------------
+[2025-05-23 20:27:15][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 2.1
+---------------------------------
+[2025-05-23 20:27:15][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 2.35
+---------------------------------
+[2025-05-23 20:27:20][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: -2.11
+---------------------------------
+[2025-05-23 20:27:20][INFO][200]:[INFO] camera2 : Stopping recording
+---------------------------------
+[2025-05-23 20:27:20][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_26_46_PM.mp4
+---------------------------------
+[2025-05-23 20:27:25][INFO][200]:[INFO] camera2 : Starting recording
+---------------------------------
+[2025-05-23 20:27:25][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_27_25_PM.mp4
+---------------------------------
+[2025-05-23 20:27:31][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 2.36
+---------------------------------
+[2025-05-23 20:27:32][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 2.56
+---------------------------------
+[2025-05-23 20:27:33][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: -0.23
+---------------------------------
+[2025-05-23 20:27:33][INFO][200]:[INFO] camera2 : Stopping recording
+---------------------------------
+[2025-05-23 20:27:34][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_27_25_PM.mp4
+---------------------------------
+[2025-05-23 20:27:37][INFO][200]:[INFO] camera4 : Starting recording
+---------------------------------
+[2025-05-23 20:27:37][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_27_37_PM.mp4
+---------------------------------
+[2025-05-23 20:27:42][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 0.12
+---------------------------------
+[2025-05-23 20:27:44][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: -0.05
+---------------------------------
+[2025-05-23 20:27:44][INFO][200]:[INFO] camera6 : Stopping recording
+---------------------------------
+[2025-05-23 20:27:44][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera6/2025_05_23-08_26_27_PM.mp4
+---------------------------------
+[2025-05-23 20:27:48][INFO][200]:[INFO] camera3 : Starting recording
+---------------------------------
+[2025-05-23 20:27:48][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_27_48_PM.mp4
+---------------------------------
+[2025-05-23 20:27:49][INFO][200]:[INFO] camera6 : Starting recording
+---------------------------------
+[2025-05-23 20:27:49][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera6/2025_05_23-08_27_49_PM.mp4
+---------------------------------
+[2025-05-23 20:27:50][INFO][200]:[INFO] camera2 : Starting recording
+---------------------------------
+[2025-05-23 20:27:50][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_27_50_PM.mp4
+---------------------------------
+[2025-05-23 20:27:53][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 0.45
+---------------------------------
+[2025-05-23 20:27:57][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: -0.1
+---------------------------------
+[2025-05-23 20:27:57][INFO][200]:[INFO] camera4 : Stopping recording
+---------------------------------
+[2025-05-23 20:27:57][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_27_37_PM.mp4
+---------------------------------
+[2025-05-23 20:27:57][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: -4.07
+---------------------------------
+[2025-05-23 20:27:57][INFO][200]:[INFO] camera3 : Stopping recording
+---------------------------------
+[2025-05-23 20:27:57][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_27_48_PM.mp4
+---------------------------------
+[2025-05-23 20:27:58][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: -0.05
+---------------------------------
+[2025-05-23 20:27:59][INFO][200]:[INFO] camera6 : Stopping recording
+---------------------------------
+[2025-05-23 20:27:59][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera6/2025_05_23-08_27_49_PM.mp4
+---------------------------------
+[2025-05-23 20:28:02][INFO][200]:[INFO] camera6 : Starting recording
+---------------------------------
+[2025-05-23 20:28:02][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera6/2025_05_23-08_28_02_PM.mp4
+---------------------------------
+[2025-05-23 20:28:03][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 2.11
+---------------------------------
+[2025-05-23 20:28:04][INFO][200]:[INFO] camera3 : Starting recording
+---------------------------------
+[2025-05-23 20:28:04][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_28_04_PM.mp4
+---------------------------------
+[2025-05-23 20:28:14][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 0.8
+---------------------------------
+[2025-05-23 20:28:16][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 0.81
+---------------------------------
+[2025-05-23 20:28:27][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 2.21
+---------------------------------
+[2025-05-23 20:28:29][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 2.62
+---------------------------------
+[2025-05-23 20:28:40][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 2.07
+---------------------------------
+[2025-05-23 20:28:45][INFO][200]:[INFO] camera4 : Starting recording
+---------------------------------
+[2025-05-23 20:28:46][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_28_46_PM.mp4
+---------------------------------
+[2025-05-23 20:28:48][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 2.25
+---------------------------------
+[2025-05-23 20:28:51][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 1.73
+---------------------------------
+[2025-05-23 20:28:52][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: -1.1
+---------------------------------
+[2025-05-23 20:28:52][INFO][200]:[INFO] camera4 : Stopping recording
+---------------------------------
+[2025-05-23 20:28:52][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_28_46_PM.mp4
+---------------------------------
+[2025-05-23 20:28:53][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 1.22
+---------------------------------
+[2025-05-23 20:28:53][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 0.65
+---------------------------------
+[2025-05-23 20:28:55][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: -2.26
+---------------------------------
+[2025-05-23 20:28:55][INFO][200]:[INFO] camera2 : Stopping recording
+---------------------------------
+[2025-05-23 20:28:55][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_27_50_PM.mp4
+---------------------------------
+[2025-05-23 20:28:56][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: -2.36
+---------------------------------
+[2025-05-23 20:28:56][INFO][200]:[INFO] camera3 : Stopping recording
+---------------------------------
+[2025-05-23 20:28:56][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_28_04_PM.mp4
+---------------------------------
+[2025-05-23 20:29:00][INFO][200]:[INFO] camera2 : Starting recording
+---------------------------------
+[2025-05-23 20:29:00][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_29_00_PM.mp4
+---------------------------------
+[2025-05-23 20:29:09][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-23 20:29:11][INFO][200]:[INFO] camera3 : Starting recording
+---------------------------------
+[2025-05-23 20:29:11][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_29_11_PM.mp4
+---------------------------------
+[2025-05-23 20:29:14][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 2.06
+---------------------------------
+[2025-05-23 20:29:21][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 1.64
+---------------------------------
+[2025-05-23 20:32:36][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 147, in go
+    ProjectDirector().setFlux( argv )
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 127, in setFlux
+    self.__play(
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 78, in __play
+    while datetime.datetime.now() < endTime:
+          ^^^^^^^^^^^^^^^^^^^^^^^
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyboardInterrupt]:
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+

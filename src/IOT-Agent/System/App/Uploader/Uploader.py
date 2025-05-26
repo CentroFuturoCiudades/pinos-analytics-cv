@@ -1,6 +1,9 @@
 from azure.storage.blob import BlobServiceClient
 import os
+from glob import glob
 from dotenv import load_dotenv
+import subprocess
+from ngsildclient import Client, Entity, iso8601
 # local imports
 from Generic.Global.Borg import Borg
 
@@ -26,6 +29,7 @@ class Uploader(Borg):
 
         self.ctx['__obj']['__log'].setLog('Initializing Uploader from .env')
         self.blob_service_client = BlobServiceClient(account_url, credential=sas_token)
+        self.client = Client(hostname="localhost",port=1026)        
         self.ctx['__obj']['__log'].setLog('Uploader initialized')
 
     def upload_video(self, local_file_name: str) -> None:
@@ -48,5 +52,59 @@ class Uploader(Borg):
                 blob_client.upload_blob(data, overwrite=True)
 
             self.ctx['__obj']['__log'].setLog(f"Uploaded {local_file_name} to Azure Blob Storage.")
+            #create entity
+            try:
+                id_camera = int(local_file_name[local_file_name.index('camera') + 6])
+            except ValueError:
+                self.ctx['__obj']['__log'].setLog(f'Failed getting id camera')
+                return None
+            # Create video entity
+            video_entity = {
+                "camera": id_camera,
+                "path": blob_name,
+            }
+            # Create video entity
+            self.create_videoRecorded_entity(video_entity)
         except Exception as e:
             self.ctx['__obj']['__log'].setLog(f"Error uploading {local_file_name} to Azure Blob Storage: {e}")
+
+    def create_videoRecorded_entity(self, video: dict) -> dict:
+        """
+        Create a videoRecorded entity.
+
+        Args:
+            video: dict
+        Returns:
+            dict: Entity data
+        """
+        self.ctx['__obj']['__log'].setLog('Creating videoRecorded entity')
+        dt = video["path"].split('.')[0]
+        e = Entity("videoRecorded", f"camera{video['camera']}:{dt}")
+        e.prop("camera", video["camera"])
+        e.prop("path", video["path"])
+        e.prop("inferred", False)
+        e.prop("dateObserved", dt)
+        self.client.upsert(e)
+        self.ctx['__obj']['__log'].setLog('videoRecorded entity created')
+
+
+
+
+    def loadProcess(self) -> None:
+        """
+        This method upload all .mp4 files and delete them from records folder.
+
+        Args:
+            None
+        Returns:
+            None
+        """
+
+        files = glob('records/**/*.mp4',recursive=True)
+        self.ctx['__obj']['__log'].setLog(f'Loaded files: {files}')
+        for f in files:
+            self.ctx['__obj']['__log'].setLog(f'Uploading {f}')
+            self.upload_video(f)
+            os.remove(f)
+            self.ctx['__obj']['__log'].setLog(f'Deleted file {f}')
+         

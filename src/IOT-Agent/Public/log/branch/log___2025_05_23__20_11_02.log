@@ -1,0 +1,1282 @@
+---------------------------------
+[2025-05-23 20:11:02][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-23 20:11:02][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-23 20:11:02][INFO][200]:Initializing Uploader from .env
+---------------------------------
+[2025-05-23 20:11:02][INFO][200]:Uploader initialized
+---------------------------------
+[2025-05-23 20:11:02][INFO][200]:Loaded files: ['records/2025_05_23/camera4/2025_05_23-08_02_10_PM.mp4', 'records/2025_05_23/camera4/2025_05_23-08_00_49_PM.mp4', 'records/2025_05_23/camera4/2025_05_23-08_00_33_PM.mp4', 'records/2025_05_23/camera4/2025_05_23-08_01_05_PM.mp4', 'records/2025_05_23/camera4/2025_05_23-08_01_16_PM.mp4', 'records/2025_05_23/camera2/2025_05_23-07_59_05_PM.mp4', 'records/2025_05_23/camera2/2025_05_23-08_01_28_PM.mp4', 'records/2025_05_23/camera2/2025_05_23-07_59_58_PM.mp4', 'records/2025_05_23/camera2/2025_05_23-08_00_09_PM.mp4', 'records/2025_05_23/camera2/2025_05_23-08_00_48_PM.mp4', 'records/2025_05_23/camera2/2025_05_23-08_00_21_PM.mp4', 'records/2025_05_23/camera2/2025_05_23-07_59_44_PM.mp4', 'records/2025_05_23/camera2/2025_05_23-07_58_32_PM.mp4', 'records/2025_05_23/camera2/2025_05_23-07_58_10_PM.mp4', 'records/2025_05_23/camera3/2025_05_23-08_01_01_PM.mp4', 'records/2025_05_23/camera3/2025_05_23-08_00_52_PM.mp4', 'records/2025_05_23/camera3/2025_05_23-08_00_21_PM.mp4', 'records/2025_05_23/camera3/2025_05_23-07_58_46_PM.mp4', 'records/2025_05_23/camera3/2025_05_23-07_59_09_PM.mp4', 'records/2025_05_23/camera3/2025_05_23-07_58_12_PM.mp4', 'records/2025_05_23/camera3/2025_05_23-07_59_40_PM.mp4', 'records/2025_05_23/camera3/2025_05_23-07_58_29_PM.mp4', 'records/2025_05_23/camera3/2025_05_23-07_58_58_PM.mp4', 'records/2025_05_23/camera3/2025_05_23-07_59_32_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-08_00_06_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-08_00_53_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-08_02_02_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-07_59_57_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-07_59_07_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-08_00_34_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-07_58_11_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-07_59_46_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-08_00_15_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-08_01_04_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-07_58_54_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-07_59_32_PM.mp4', 'records/2025_05_23/camera5/2025_05_23-07_59_42_PM.mp4', 'records/2025_05_23/camera5/2025_05_23-08_00_01_PM.mp4', 'records/2025_05_23/camera5/2025_05_23-07_58_18_PM.mp4', 'records/2025_05_23/camera5/2025_05_23-07_59_27_PM.mp4', 'records/2025_05_23/camera5/2025_05_23-08_00_28_PM.mp4', 'records/2025_05_23/camera5/2025_05_23-07_59_11_PM.mp4', 'records/2025_05_23/camera5/2025_05_23-08_00_16_PM.mp4', 'records/2025_05_23/camera6/2025_05_23-07_58_09_PM.mp4']
+---------------------------------
+[2025-05-23 20:11:02][INFO][200]:Uploading records/2025_05_23/camera4/2025_05_23-08_02_10_PM.mp4
+---------------------------------
+[2025-05-23 20:11:02][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera4/2025_05_23-08_02_10_PM.mp4
+---------------------------------
+[2025-05-23 20:11:02][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera4/2025_05_23-08_02_10_PM.mp4
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:Uploaded records/2025_05_23/camera4/2025_05_23-08_02_10_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:Deleted file records/2025_05_23/camera4/2025_05_23-08_02_10_PM.mp4
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:Uploading records/2025_05_23/camera4/2025_05_23-08_00_49_PM.mp4
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera4/2025_05_23-08_00_49_PM.mp4
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera4/2025_05_23-08_00_49_PM.mp4
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:Uploaded records/2025_05_23/camera4/2025_05_23-08_00_49_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:Deleted file records/2025_05_23/camera4/2025_05_23-08_00_49_PM.mp4
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:Uploading records/2025_05_23/camera4/2025_05_23-08_00_33_PM.mp4
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera4/2025_05_23-08_00_33_PM.mp4
+---------------------------------
+[2025-05-23 20:11:03][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera4/2025_05_23-08_00_33_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploaded records/2025_05_23/camera4/2025_05_23-08_00_33_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Deleted file records/2025_05_23/camera4/2025_05_23-08_00_33_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading records/2025_05_23/camera4/2025_05_23-08_01_05_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera4/2025_05_23-08_01_05_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera4/2025_05_23-08_01_05_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploaded records/2025_05_23/camera4/2025_05_23-08_01_05_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Deleted file records/2025_05_23/camera4/2025_05_23-08_01_05_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading records/2025_05_23/camera4/2025_05_23-08_01_16_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera4/2025_05_23-08_01_16_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera4/2025_05_23-08_01_16_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploaded records/2025_05_23/camera4/2025_05_23-08_01_16_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Deleted file records/2025_05_23/camera4/2025_05_23-08_01_16_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading records/2025_05_23/camera2/2025_05_23-07_59_05_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera2/2025_05_23-07_59_05_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera2/2025_05_23-07_59_05_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploaded records/2025_05_23/camera2/2025_05_23-07_59_05_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Deleted file records/2025_05_23/camera2/2025_05_23-07_59_05_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading records/2025_05_23/camera2/2025_05_23-08_01_28_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera2/2025_05_23-08_01_28_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera2/2025_05_23-08_01_28_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploaded records/2025_05_23/camera2/2025_05_23-08_01_28_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Deleted file records/2025_05_23/camera2/2025_05_23-08_01_28_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading records/2025_05_23/camera2/2025_05_23-07_59_58_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera2/2025_05_23-07_59_58_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera2/2025_05_23-07_59_58_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploaded records/2025_05_23/camera2/2025_05_23-07_59_58_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Deleted file records/2025_05_23/camera2/2025_05_23-07_59_58_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading records/2025_05_23/camera2/2025_05_23-08_00_09_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera2/2025_05_23-08_00_09_PM.mp4
+---------------------------------
+[2025-05-23 20:11:04][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera2/2025_05_23-08_00_09_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploaded records/2025_05_23/camera2/2025_05_23-08_00_09_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Deleted file records/2025_05_23/camera2/2025_05_23-08_00_09_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading records/2025_05_23/camera2/2025_05_23-08_00_48_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera2/2025_05_23-08_00_48_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera2/2025_05_23-08_00_48_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploaded records/2025_05_23/camera2/2025_05_23-08_00_48_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Deleted file records/2025_05_23/camera2/2025_05_23-08_00_48_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading records/2025_05_23/camera2/2025_05_23-08_00_21_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera2/2025_05_23-08_00_21_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera2/2025_05_23-08_00_21_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploaded records/2025_05_23/camera2/2025_05_23-08_00_21_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Deleted file records/2025_05_23/camera2/2025_05_23-08_00_21_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading records/2025_05_23/camera2/2025_05_23-07_59_44_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera2/2025_05_23-07_59_44_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera2/2025_05_23-07_59_44_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploaded records/2025_05_23/camera2/2025_05_23-07_59_44_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Deleted file records/2025_05_23/camera2/2025_05_23-07_59_44_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading records/2025_05_23/camera2/2025_05_23-07_58_32_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera2/2025_05_23-07_58_32_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera2/2025_05_23-07_58_32_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploaded records/2025_05_23/camera2/2025_05_23-07_58_32_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Deleted file records/2025_05_23/camera2/2025_05_23-07_58_32_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading records/2025_05_23/camera2/2025_05_23-07_58_10_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera2/2025_05_23-07_58_10_PM.mp4
+---------------------------------
+[2025-05-23 20:11:05][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera2/2025_05_23-07_58_10_PM.mp4
+---------------------------------
+[2025-05-23 20:11:06][INFO][200]:Uploaded records/2025_05_23/camera2/2025_05_23-07_58_10_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:06][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:06][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:06][INFO][200]:Deleted file records/2025_05_23/camera2/2025_05_23-07_58_10_PM.mp4
+---------------------------------
+[2025-05-23 20:11:06][INFO][200]:Uploading records/2025_05_23/camera3/2025_05_23-08_01_01_PM.mp4
+---------------------------------
+[2025-05-23 20:11:06][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera3/2025_05_23-08_01_01_PM.mp4
+---------------------------------
+[2025-05-23 20:11:06][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera3/2025_05_23-08_01_01_PM.mp4
+---------------------------------
+[2025-05-23 20:11:07][INFO][200]:Uploaded records/2025_05_23/camera3/2025_05_23-08_01_01_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:07][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:07][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:07][INFO][200]:Deleted file records/2025_05_23/camera3/2025_05_23-08_01_01_PM.mp4
+---------------------------------
+[2025-05-23 20:11:07][INFO][200]:Uploading records/2025_05_23/camera3/2025_05_23-08_00_52_PM.mp4
+---------------------------------
+[2025-05-23 20:11:07][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera3/2025_05_23-08_00_52_PM.mp4
+---------------------------------
+[2025-05-23 20:11:07][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera3/2025_05_23-08_00_52_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploaded records/2025_05_23/camera3/2025_05_23-08_00_52_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Deleted file records/2025_05_23/camera3/2025_05_23-08_00_52_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploading records/2025_05_23/camera3/2025_05_23-08_00_21_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera3/2025_05_23-08_00_21_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera3/2025_05_23-08_00_21_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploaded records/2025_05_23/camera3/2025_05_23-08_00_21_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Deleted file records/2025_05_23/camera3/2025_05_23-08_00_21_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploading records/2025_05_23/camera3/2025_05_23-07_58_46_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera3/2025_05_23-07_58_46_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera3/2025_05_23-07_58_46_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploaded records/2025_05_23/camera3/2025_05_23-07_58_46_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Deleted file records/2025_05_23/camera3/2025_05_23-07_58_46_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploading records/2025_05_23/camera3/2025_05_23-07_59_09_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera3/2025_05_23-07_59_09_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera3/2025_05_23-07_59_09_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploaded records/2025_05_23/camera3/2025_05_23-07_59_09_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Deleted file records/2025_05_23/camera3/2025_05_23-07_59_09_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploading records/2025_05_23/camera3/2025_05_23-07_58_12_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera3/2025_05_23-07_58_12_PM.mp4
+---------------------------------
+[2025-05-23 20:11:08][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera3/2025_05_23-07_58_12_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploaded records/2025_05_23/camera3/2025_05_23-07_58_12_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Deleted file records/2025_05_23/camera3/2025_05_23-07_58_12_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading records/2025_05_23/camera3/2025_05_23-07_59_40_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera3/2025_05_23-07_59_40_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera3/2025_05_23-07_59_40_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploaded records/2025_05_23/camera3/2025_05_23-07_59_40_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Deleted file records/2025_05_23/camera3/2025_05_23-07_59_40_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading records/2025_05_23/camera3/2025_05_23-07_58_29_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera3/2025_05_23-07_58_29_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera3/2025_05_23-07_58_29_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploaded records/2025_05_23/camera3/2025_05_23-07_58_29_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Deleted file records/2025_05_23/camera3/2025_05_23-07_58_29_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading records/2025_05_23/camera3/2025_05_23-07_58_58_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera3/2025_05_23-07_58_58_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera3/2025_05_23-07_58_58_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploaded records/2025_05_23/camera3/2025_05_23-07_58_58_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Deleted file records/2025_05_23/camera3/2025_05_23-07_58_58_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading records/2025_05_23/camera3/2025_05_23-07_59_32_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera3/2025_05_23-07_59_32_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera3/2025_05_23-07_59_32_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploaded records/2025_05_23/camera3/2025_05_23-07_59_32_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Deleted file records/2025_05_23/camera3/2025_05_23-07_59_32_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-08_00_06_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-08_00_06_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-08_00_06_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploaded records/2025_05_23/camera1/2025_05_23-08_00_06_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-08_00_06_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-08_00_53_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-08_00_53_PM.mp4
+---------------------------------
+[2025-05-23 20:11:09][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-08_00_53_PM.mp4
+---------------------------------
+[2025-05-23 20:11:10][INFO][200]:Uploaded records/2025_05_23/camera1/2025_05_23-08_00_53_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:10][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:10][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:10][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-08_00_53_PM.mp4
+---------------------------------
+[2025-05-23 20:11:10][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-08_02_02_PM.mp4
+---------------------------------
+[2025-05-23 20:11:10][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-08_02_02_PM.mp4
+---------------------------------
+[2025-05-23 20:11:10][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-08_02_02_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploaded records/2025_05_23/camera1/2025_05_23-08_02_02_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-08_02_02_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-07_59_57_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-07_59_57_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-07_59_57_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploaded records/2025_05_23/camera1/2025_05_23-07_59_57_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-07_59_57_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-07_59_07_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-07_59_07_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-07_59_07_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploaded records/2025_05_23/camera1/2025_05_23-07_59_07_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-07_59_07_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-08_00_34_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-08_00_34_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-08_00_34_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploaded records/2025_05_23/camera1/2025_05_23-08_00_34_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-08_00_34_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-07_58_11_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-07_58_11_PM.mp4
+---------------------------------
+[2025-05-23 20:11:11][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-07_58_11_PM.mp4
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Uploaded records/2025_05_23/camera1/2025_05_23-07_58_11_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-07_58_11_PM.mp4
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-07_59_46_PM.mp4
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-07_59_46_PM.mp4
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-07_59_46_PM.mp4
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Uploaded records/2025_05_23/camera1/2025_05_23-07_59_46_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-07_59_46_PM.mp4
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-08_00_15_PM.mp4
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-08_00_15_PM.mp4
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-08_00_15_PM.mp4
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Uploaded records/2025_05_23/camera1/2025_05_23-08_00_15_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-08_00_15_PM.mp4
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-08_01_04_PM.mp4
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-08_01_04_PM.mp4
+---------------------------------
+[2025-05-23 20:11:12][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-08_01_04_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploaded records/2025_05_23/camera1/2025_05_23-08_01_04_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-08_01_04_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-07_58_54_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-07_58_54_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-07_58_54_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploaded records/2025_05_23/camera1/2025_05_23-07_58_54_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-07_58_54_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-07_59_32_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-07_59_32_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-07_59_32_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploaded records/2025_05_23/camera1/2025_05_23-07_59_32_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-07_59_32_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading records/2025_05_23/camera5/2025_05_23-07_59_42_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera5/2025_05_23-07_59_42_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera5/2025_05_23-07_59_42_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploaded records/2025_05_23/camera5/2025_05_23-07_59_42_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Deleted file records/2025_05_23/camera5/2025_05_23-07_59_42_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading records/2025_05_23/camera5/2025_05_23-08_00_01_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera5/2025_05_23-08_00_01_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera5/2025_05_23-08_00_01_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploaded records/2025_05_23/camera5/2025_05_23-08_00_01_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Deleted file records/2025_05_23/camera5/2025_05_23-08_00_01_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading records/2025_05_23/camera5/2025_05_23-07_58_18_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera5/2025_05_23-07_58_18_PM.mp4
+---------------------------------
+[2025-05-23 20:11:13][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera5/2025_05_23-07_58_18_PM.mp4
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Uploaded records/2025_05_23/camera5/2025_05_23-07_58_18_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Deleted file records/2025_05_23/camera5/2025_05_23-07_58_18_PM.mp4
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Uploading records/2025_05_23/camera5/2025_05_23-07_59_27_PM.mp4
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera5/2025_05_23-07_59_27_PM.mp4
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera5/2025_05_23-07_59_27_PM.mp4
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Uploaded records/2025_05_23/camera5/2025_05_23-07_59_27_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Deleted file records/2025_05_23/camera5/2025_05_23-07_59_27_PM.mp4
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Uploading records/2025_05_23/camera5/2025_05_23-08_00_28_PM.mp4
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera5/2025_05_23-08_00_28_PM.mp4
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera5/2025_05_23-08_00_28_PM.mp4
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Uploaded records/2025_05_23/camera5/2025_05_23-08_00_28_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Deleted file records/2025_05_23/camera5/2025_05_23-08_00_28_PM.mp4
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Uploading records/2025_05_23/camera5/2025_05_23-07_59_11_PM.mp4
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera5/2025_05_23-07_59_11_PM.mp4
+---------------------------------
+[2025-05-23 20:11:14][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera5/2025_05_23-07_59_11_PM.mp4
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Uploaded records/2025_05_23/camera5/2025_05_23-07_59_11_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Deleted file records/2025_05_23/camera5/2025_05_23-07_59_11_PM.mp4
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Uploading records/2025_05_23/camera5/2025_05_23-08_00_16_PM.mp4
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera5/2025_05_23-08_00_16_PM.mp4
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera5/2025_05_23-08_00_16_PM.mp4
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Uploaded records/2025_05_23/camera5/2025_05_23-08_00_16_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Deleted file records/2025_05_23/camera5/2025_05_23-08_00_16_PM.mp4
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Uploading records/2025_05_23/camera6/2025_05_23-07_58_09_PM.mp4
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera6/2025_05_23-07_58_09_PM.mp4
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera6/2025_05_23-07_58_09_PM.mp4
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Uploaded records/2025_05_23/camera6/2025_05_23-07_58_09_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-23 20:11:15][INFO][200]:Deleted file records/2025_05_23/camera6/2025_05_23-07_58_09_PM.mp4
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Model loaded in 3.4820423126220703 seconds
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Starting camera1
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Starting camera2
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam2
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Starting the capturing process in the camera2
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Initialized movement detection object for camera2
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Starting camera3
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam3
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Starting the capturing process in the camera3
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Initialized movement detection object for camera3
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Starting camera4
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Starting the capturing process in the camera4
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Initialized movement detection object for camera4
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Starting camera5
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam5
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Starting the capturing process in the camera5
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Initialized movement detection object for camera5
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Starting camera6
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam6
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Starting the capturing process in the camera6
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Initialized movement detection object for camera6
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:Recording for 120 seconds
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Starting human detection for camera2
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Starting human detection for camera3
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Starting human detection for camera4
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Starting human detection for camera5
+---------------------------------
+[2025-05-23 20:11:19][INFO][200]:[INFO] Starting human detection for camera6
+---------------------------------
+[2025-05-23 20:11:22][INFO][200]:[INFO] camera5 : Starting recording
+---------------------------------
+[2025-05-23 20:11:22][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera5/2025_05_23-08_11_22_PM.mp4
+---------------------------------
+[2025-05-23 20:11:22][INFO][200]:[INFO] camera6 : Starting recording
+---------------------------------
+[2025-05-23 20:11:22][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera6/2025_05_23-08_11_22_PM.mp4
+---------------------------------
+[2025-05-23 20:11:23][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-23 20:11:23][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_11_23_PM.mp4
+---------------------------------
+[2025-05-23 20:11:23][INFO][200]:[INFO] camera3 : Starting recording
+---------------------------------
+[2025-05-23 20:11:23][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_11_23_PM.mp4
+---------------------------------
+[2025-05-23 20:11:24][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:11:25][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.97
+---------------------------------
+[2025-05-23 20:11:25][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-23 20:11:26][INFO][200]:[INFO] camera4 : Starting recording
+---------------------------------
+[2025-05-23 20:11:26][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_11_26_PM.mp4
+---------------------------------
+[2025-05-23 20:11:27][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-23 20:11:28][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-23 20:11:28][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-23 20:11:28][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:11:29][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.01
+---------------------------------
+[2025-05-23 20:11:29][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 1.99
+---------------------------------
+[2025-05-23 20:11:29][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-23 20:11:29][INFO][200]:[INFO] camera5 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-23 20:11:30][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 0.97
+---------------------------------
+[2025-05-23 20:11:30][INFO][200]:[INFO] camera5 : Person not detected, remaining recording time: 2.96
+---------------------------------
+[2025-05-23 20:11:31][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-23 20:11:31][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: -0.04
+---------------------------------
+[2025-05-23 20:11:31][INFO][200]:[INFO] camera3 : Stopping recording
+---------------------------------
+[2025-05-23 20:11:31][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:11:31][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-23 20:11:31][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_11_23_PM.mp4
+---------------------------------
+[2025-05-23 20:11:32][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-23 20:11:33][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.02
+---------------------------------
+[2025-05-23 20:11:33][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:11:33][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:11:34][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-23 20:11:34][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.01
+---------------------------------
+[2025-05-23 20:11:34][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-23 20:11:35][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.02
+---------------------------------
+[2025-05-23 20:11:35][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-23 20:11:35][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-23 20:11:35][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_11_23_PM.mp4
+---------------------------------
+[2025-05-23 20:11:35][INFO][200]:[INFO] camera5 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:11:35][INFO][200]:[INFO] camera2 : Starting recording
+---------------------------------
+[2025-05-23 20:11:35][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_11_35_PM.mp4
+---------------------------------
+[2025-05-23 20:11:36][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 0.89
+---------------------------------
+[2025-05-23 20:11:36][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:11:37][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: -0.12
+---------------------------------
+[2025-05-23 20:11:37][INFO][200]:[INFO] camera4 : Stopping recording
+---------------------------------
+[2025-05-23 20:11:37][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_11_26_PM.mp4
+---------------------------------
+[2025-05-23 20:11:37][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 2.97
+---------------------------------
+[2025-05-23 20:11:38][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-23 20:11:38][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_11_38_PM.mp4
+---------------------------------
+[2025-05-23 20:11:40][INFO][200]:[INFO] camera5 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:11:41][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:11:44][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.05
+---------------------------------
+[2025-05-23 20:11:45][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.03
+---------------------------------
+[2025-05-23 20:11:46][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:11:46][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 2.04
+---------------------------------
+[2025-05-23 20:11:47][INFO][200]:[INFO] camera3 : Starting recording
+---------------------------------
+[2025-05-23 20:11:47][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_11_47_PM.mp4
+---------------------------------
+[2025-05-23 20:11:48][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:11:50][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 4.07
+---------------------------------
+[2025-05-23 20:11:50][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:11:51][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:11:51][INFO][200]:[INFO] camera4 : Starting recording
+---------------------------------
+[2025-05-23 20:11:51][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_11_51_PM.mp4
+---------------------------------
+[2025-05-23 20:11:51][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 3.14
+---------------------------------
+[2025-05-23 20:11:51][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 2.92
+---------------------------------
+[2025-05-23 20:11:52][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.06
+---------------------------------
+[2025-05-23 20:11:53][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:11:53][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:11:53][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.05
+---------------------------------
+[2025-05-23 20:11:54][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-23 20:11:54][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 2.04
+---------------------------------
+[2025-05-23 20:11:54][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:11:55][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 2.04
+---------------------------------
+[2025-05-23 20:11:55][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-23 20:11:55][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 3.01
+---------------------------------
+[2025-05-23 20:11:56][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 1.02
+---------------------------------
+[2025-05-23 20:11:56][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 3.01
+---------------------------------
+[2025-05-23 20:11:56][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:11:56][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 2.01
+---------------------------------
+[2025-05-23 20:11:57][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 0.04
+---------------------------------
+[2025-05-23 20:11:57][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 2.01
+---------------------------------
+[2025-05-23 20:11:57][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.01
+---------------------------------
+[2025-05-23 20:11:57][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 1.01
+---------------------------------
+[2025-05-23 20:11:58][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-23 20:11:58][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 0.0
+---------------------------------
+[2025-05-23 20:11:59][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:11:59][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: -0.01
+---------------------------------
+[2025-05-23 20:11:59][INFO][200]:[INFO] camera3 : Stopping recording
+---------------------------------
+[2025-05-23 20:11:59][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.15
+---------------------------------
+[2025-05-23 20:11:59][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_11_47_PM.mp4
+---------------------------------
+[2025-05-23 20:11:59][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: -0.99
+---------------------------------
+[2025-05-23 20:11:59][INFO][200]:[INFO] camera2 : Stopping recording
+---------------------------------
+[2025-05-23 20:12:00][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_11_35_PM.mp4
+---------------------------------
+[2025-05-23 20:12:00][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.01
+---------------------------------
+[2025-05-23 20:12:00][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.18
+---------------------------------
+[2025-05-23 20:12:00][INFO][200]:[INFO] camera2 : Starting recording
+---------------------------------
+[2025-05-23 20:12:00][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_12_00_PM.mp4
+---------------------------------
+[2025-05-23 20:12:01][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 2.2
+---------------------------------
+[2025-05-23 20:12:01][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:12:02][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-23 20:12:02][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:12:02][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 1.19
+---------------------------------
+[2025-05-23 20:12:03][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.99
+---------------------------------
+[2025-05-23 20:12:03][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.01
+---------------------------------
+[2025-05-23 20:12:03][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-23 20:12:04][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 1.99
+---------------------------------
+[2025-05-23 20:12:04][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-23 20:12:05][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.06
+---------------------------------
+[2025-05-23 20:12:05][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-23 20:12:05][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 2.99
+---------------------------------
+[2025-05-23 20:12:06][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 0.02
+---------------------------------
+[2025-05-23 20:12:06][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:12:07][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: -0.89
+---------------------------------
+[2025-05-23 20:12:07][INFO][200]:[INFO] camera4 : Stopping recording
+---------------------------------
+[2025-05-23 20:12:07][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_11_51_PM.mp4
+---------------------------------
+[2025-05-23 20:12:07][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 3.02
+---------------------------------
+[2025-05-23 20:12:08][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:12:08][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.97
+---------------------------------
+[2025-05-23 20:12:08][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 2.02
+---------------------------------
+[2025-05-23 20:12:09][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.02
+---------------------------------
+[2025-05-23 20:12:09][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 2.98
+---------------------------------
+[2025-05-23 20:12:09][INFO][200]:[INFO] camera3 : Starting recording
+---------------------------------
+[2025-05-23 20:12:09][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_12_09_PM.mp4
+---------------------------------
+[2025-05-23 20:12:09][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 1.02
+---------------------------------
+[2025-05-23 20:12:10][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.96
+---------------------------------
+[2025-05-23 20:12:10][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 1.97
+---------------------------------
+[2025-05-23 20:12:10][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: 0.01
+---------------------------------
+[2025-05-23 20:12:11][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.02
+---------------------------------
+[2025-05-23 20:12:11][INFO][200]:[INFO] camera2 : Person not detected, remaining recording time: -0.99
+---------------------------------
+[2025-05-23 20:12:11][INFO][200]:[INFO] camera2 : Stopping recording
+---------------------------------
+[2025-05-23 20:12:11][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.22
+---------------------------------
+[2025-05-23 20:12:12][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera2/2025_05_23-08_12_00_PM.mp4
+---------------------------------
+[2025-05-23 20:12:13][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.98
+---------------------------------
+[2025-05-23 20:12:13][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-23 20:12:13][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_11_38_PM.mp4
+---------------------------------
+[2025-05-23 20:12:13][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:12:13][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:12:14][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-23 20:12:14][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_12_14_PM.mp4
+---------------------------------
+[2025-05-23 20:12:14][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.03
+---------------------------------
+[2025-05-23 20:12:14][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 3.03
+---------------------------------
+[2025-05-23 20:12:15][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 2.02
+---------------------------------
+[2025-05-23 20:12:16][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-23 20:12:16][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.98
+---------------------------------
+[2025-05-23 20:12:16][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 1.04
+---------------------------------
+[2025-05-23 20:12:17][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.03
+---------------------------------
+[2025-05-23 20:12:17][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 0.01
+---------------------------------
+[2025-05-23 20:12:18][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-23 20:12:19][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.99
+---------------------------------
+[2025-05-23 20:12:19][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:12:19][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 3.98
+---------------------------------
+[2025-05-23 20:12:20][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.03
+---------------------------------
+[2025-05-23 20:12:20][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-23 20:12:21][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.05
+---------------------------------
+[2025-05-23 20:12:21][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-23 20:12:22][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-23 20:12:23][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:12:23][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: 0.0
+---------------------------------
+[2025-05-23 20:12:24][INFO][200]:[INFO] camera4 : Starting recording
+---------------------------------
+[2025-05-23 20:12:24][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_12_24_PM.mp4
+---------------------------------
+[2025-05-23 20:12:24][INFO][200]:[INFO] camera3 : Person not detected, remaining recording time: -1.0
+---------------------------------
+[2025-05-23 20:12:24][INFO][200]:[INFO] camera3 : Stopping recording
+---------------------------------
+[2025-05-23 20:12:25][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera3/2025_05_23-08_12_09_PM.mp4
+---------------------------------
+[2025-05-23 20:12:26][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:12:28][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.98
+---------------------------------
+[2025-05-23 20:12:29][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 2.97
+---------------------------------
+[2025-05-23 20:12:30][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 1.97
+---------------------------------
+[2025-05-23 20:12:31][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 0.98
+---------------------------------
+[2025-05-23 20:12:31][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:12:32][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: -0.02
+---------------------------------
+[2025-05-23 20:12:32][INFO][200]:[INFO] camera4 : Stopping recording
+---------------------------------
+[2025-05-23 20:12:32][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_12_24_PM.mp4
+---------------------------------
+[2025-05-23 20:12:33][INFO][200]:[INFO] camera4 : Starting recording
+---------------------------------
+[2025-05-23 20:12:33][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_12_33_PM.mp4
+---------------------------------
+[2025-05-23 20:12:34][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-23 20:12:36][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.04
+---------------------------------
+[2025-05-23 20:12:37][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.05
+---------------------------------
+[2025-05-23 20:12:38][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.97
+---------------------------------
+[2025-05-23 20:12:39][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.99
+---------------------------------
+[2025-05-23 20:12:39][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:12:40][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.01
+---------------------------------
+[2025-05-23 20:12:40][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.04
+---------------------------------
+[2025-05-23 20:12:41][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.96
+---------------------------------
+[2025-05-23 20:12:41][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 2.04
+---------------------------------
+[2025-05-23 20:12:42][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.04
+---------------------------------
+[2025-05-23 20:12:42][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-23 20:12:42][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_12_14_PM.mp4
+---------------------------------
+[2025-05-23 20:12:43][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.96
+---------------------------------
+[2025-05-23 20:12:44][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 2.96
+---------------------------------
+[2025-05-23 20:12:45][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 1.96
+---------------------------------
+[2025-05-23 20:12:46][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:12:48][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.98
+---------------------------------
+[2025-05-23 20:12:49][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 2.99
+---------------------------------
+[2025-05-23 20:12:49][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:12:50][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-23 20:12:50][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_12_50_PM.mp4
+---------------------------------
+[2025-05-23 20:12:50][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 1.98
+---------------------------------
+[2025-05-23 20:12:51][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-23 20:12:53][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:12:54][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.98
+---------------------------------
+[2025-05-23 20:12:54][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:12:54][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.97
+---------------------------------
+[2025-05-23 20:12:55][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.02
+---------------------------------
+[2025-05-23 20:12:55][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.03
+---------------------------------
+[2025-05-23 20:12:55][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-23 20:12:56][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.99
+---------------------------------
+[2025-05-23 20:12:56][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 1.99
+---------------------------------
+[2025-05-23 20:12:57][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.0
+---------------------------------
+[2025-05-23 20:12:57][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-23 20:12:57][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_12_50_PM.mp4
+---------------------------------
+[2025-05-23 20:12:57][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 0.99
+---------------------------------
+[2025-05-23 20:12:58][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:12:59][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.03
+---------------------------------
+[2025-05-23 20:13:00][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-23 20:13:00][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_13_00_PM.mp4
+---------------------------------
+[2025-05-23 20:13:01][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:13:02][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:13:02][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 3.04
+---------------------------------
+[2025-05-23 20:13:03][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.03
+---------------------------------
+[2025-05-23 20:13:03][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.04
+---------------------------------
+[2025-05-23 20:13:03][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 2.04
+---------------------------------
+[2025-05-23 20:13:04][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.03
+---------------------------------
+[2025-05-23 20:13:04][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.03
+---------------------------------
+[2025-05-23 20:13:04][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 1.04
+---------------------------------
+[2025-05-23 20:13:05][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.03
+---------------------------------
+[2025-05-23 20:13:05][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 2.03
+---------------------------------
+[2025-05-23 20:13:05][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 0.02
+---------------------------------
+[2025-05-23 20:13:06][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.01
+---------------------------------
+[2025-05-23 20:13:06][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 1.05
+---------------------------------
+[2025-05-23 20:13:06][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: -0.97
+---------------------------------
+[2025-05-23 20:13:06][INFO][200]:[INFO] camera6 : Stopping recording
+---------------------------------
+[2025-05-23 20:13:06][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera6/2025_05_23-08_11_22_PM.mp4
+---------------------------------
+[2025-05-23 20:13:07][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.97
+---------------------------------
+[2025-05-23 20:13:07][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-23 20:13:07][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_13_00_PM.mp4
+---------------------------------
+[2025-05-23 20:13:07][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 0.13
+---------------------------------
+[2025-05-23 20:13:07][INFO][200]:[INFO] camera6 : Starting recording
+---------------------------------
+[2025-05-23 20:13:07][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera6/2025_05_23-08_13_07_PM.mp4
+---------------------------------
+[2025-05-23 20:13:09][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-23 20:13:10][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-23 20:13:10][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_13_10_PM.mp4
+---------------------------------
+[2025-05-23 20:13:10][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.02
+---------------------------------
+[2025-05-23 20:13:11][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:13:11][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 2.0
+---------------------------------
+[2025-05-23 20:13:12][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.01
+---------------------------------
+[2025-05-23 20:13:13][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.01
+---------------------------------
+[2025-05-23 20:13:13][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:13:13][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.05
+---------------------------------
+[2025-05-23 20:13:15][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:13:15][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:13:16][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.98
+---------------------------------
+[2025-05-23 20:13:16][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 3.02
+---------------------------------
+[2025-05-23 20:13:16][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 20:13:17][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 2.01
+---------------------------------
+[2025-05-23 20:13:18][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.03
+---------------------------------
+[2025-05-23 20:13:18][INFO][200]:[INFO] camera4 : Person not detected, remaining recording time: 1.02
+---------------------------------
+[2025-05-23 20:13:18][INFO][200]:[INFO] camera6 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 20:13:19][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.03
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-08_13_10_PM.mp4
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:Stopped camera1
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:Stopped camera2
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:Stopped camera3
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.01
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera4/2025_05_23-08_12_33_PM.mp4
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:Stopped camera4
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera5/2025_05_23-08_11_22_PM.mp4
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:Stopped camera5
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Releasing thread
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera6/2025_05_23-08_13_07_PM.mp4
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:[INFO] Finished releasing video capture and output
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:Stopped camera6
+---------------------------------
+[2025-05-23 20:13:20][INFO][200]:Finished demo

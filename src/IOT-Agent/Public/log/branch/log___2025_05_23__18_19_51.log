@@ -1,0 +1,999 @@
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:Initializing Uploader from .env
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:Uploader initialized
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:Loaded files: ['records/2025_05_23/camera1/2025_05_23-03_55_26_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_06_54_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_57_30_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_06_53_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_12_05_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-04_35_05_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_53_53_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_54_12_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_57_02_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_59_07_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_10_42_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_10_53_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_57_57_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_54_50_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-04_39_37_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_06_46_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_06_45_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-04_37_32_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_07_26_PM.mp4']
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_55_26_PM.mp4
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_55_26_PM.mp4
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_55_26_PM.mp4
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_55_26_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa353-601e-0092-1b41-ccf50b000000
+Time:2025-05-24T00:19:51.5173017Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa353-601e-0092-1b41-ccf50b000000
+Time:2025-05-24T00:19:51.5173017Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_55_26_PM.mp4
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_06_54_PM.mp4
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_06_54_PM.mp4
+---------------------------------
+[2025-05-23 18:19:51][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_06_54_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_06_54_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa617-601e-0092-0d41-ccf50b000000
+Time:2025-05-24T00:19:52.1575880Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa617-601e-0092-0d41-ccf50b000000
+Time:2025-05-24T00:19:52.1575880Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_06_54_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_57_30_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_57_30_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_57_30_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_57_30_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa6d6-601e-0092-3a41-ccf50b000000
+Time:2025-05-24T00:19:52.3510098Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa6d6-601e-0092-3a41-ccf50b000000
+Time:2025-05-24T00:19:52.3510098Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_57_30_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_06_53_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_06_53_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_06_53_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_06_53_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa792-601e-0092-5a41-ccf50b000000
+Time:2025-05-24T00:19:52.5557354Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa792-601e-0092-5a41-ccf50b000000
+Time:2025-05-24T00:19:52.5557354Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_06_53_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_12_05_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_12_05_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_12_05_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_12_05_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa87e-601e-0092-2f41-ccf50b000000
+Time:2025-05-24T00:19:52.8034784Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa87e-601e-0092-2f41-ccf50b000000
+Time:2025-05-24T00:19:52.8034784Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_12_05_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-04_35_05_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-04_35_05_PM.mp4
+---------------------------------
+[2025-05-23 18:19:52][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-04_35_05_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-04_35_05_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa8e8-601e-0092-0b41-ccf50b000000
+Time:2025-05-24T00:19:52.9212313Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa8e8-601e-0092-0b41-ccf50b000000
+Time:2025-05-24T00:19:52.9212313Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-04_35_05_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_53_53_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_53_53_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_53_53_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_53_53_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa9f5-601e-0092-7a41-ccf50b000000
+Time:2025-05-24T00:19:53.2412592Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aa9f5-601e-0092-7a41-ccf50b000000
+Time:2025-05-24T00:19:53.2412592Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_53_53_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_54_12_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_54_12_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_54_12_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_54_12_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aaa1c-601e-0092-1f41-ccf50b000000
+Time:2025-05-24T00:19:53.3269215Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aaa1c-601e-0092-1f41-ccf50b000000
+Time:2025-05-24T00:19:53.3269215Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_54_12_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aab02-601e-0092-6b41-ccf50b000000
+Time:2025-05-24T00:19:53.5671105Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aab02-601e-0092-6b41-ccf50b000000
+Time:2025-05-24T00:19:53.5671105Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_57_02_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_57_02_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_57_02_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_57_02_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aab52-601e-0092-3241-ccf50b000000
+Time:2025-05-24T00:19:53.6514303Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aab52-601e-0092-3241-ccf50b000000
+Time:2025-05-24T00:19:53.6514303Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_57_02_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_59_07_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_59_07_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_59_07_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_59_07_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aabb8-601e-0092-0e41-ccf50b000000
+Time:2025-05-24T00:19:53.7427863Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aabb8-601e-0092-0e41-ccf50b000000
+Time:2025-05-24T00:19:53.7427863Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_59_07_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_10_42_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_10_42_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_10_42_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_10_42_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aac28-601e-0092-7941-ccf50b000000
+Time:2025-05-24T00:19:53.8266991Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aac28-601e-0092-7941-ccf50b000000
+Time:2025-05-24T00:19:53.8266991Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_10_42_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_10_53_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_10_53_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_10_53_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_10_53_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aac93-601e-0092-5b41-ccf50b000000
+Time:2025-05-24T00:19:53.9140680Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aac93-601e-0092-5b41-ccf50b000000
+Time:2025-05-24T00:19:53.9140680Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_10_53_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_57_57_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_57_57_PM.mp4
+---------------------------------
+[2025-05-23 18:19:53][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_57_57_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_57_57_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aad0c-601e-0092-4441-ccf50b000000
+Time:2025-05-24T00:19:54.0418017Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aad0c-601e-0092-4441-ccf50b000000
+Time:2025-05-24T00:19:54.0418017Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_57_57_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aae4b-601e-0092-6741-ccf50b000000
+Time:2025-05-24T00:19:54.3161443Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aae4b-601e-0092-6741-ccf50b000000
+Time:2025-05-24T00:19:54.3161443Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_54_50_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_54_50_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_54_50_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_54_50_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aafa4-601e-0092-1a41-ccf50b000000
+Time:2025-05-24T00:19:54.6069228Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72aafa4-601e-0092-1a41-ccf50b000000
+Time:2025-05-24T00:19:54.6069228Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_54_50_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-04_39_37_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-04_39_37_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-04_39_37_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-04_39_37_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72ab00a-601e-0092-7741-ccf50b000000
+Time:2025-05-24T00:19:54.7053234Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72ab00a-601e-0092-7741-ccf50b000000
+Time:2025-05-24T00:19:54.7053234Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-04_39_37_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_06_46_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_06_46_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_06_46_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_06_46_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72ab04f-601e-0092-3341-ccf50b000000
+Time:2025-05-24T00:19:54.7880418Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72ab04f-601e-0092-3341-ccf50b000000
+Time:2025-05-24T00:19:54.7880418Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_06_46_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_06_45_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_06_45_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_06_45_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_06_45_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72ab099-601e-0092-7641-ccf50b000000
+Time:2025-05-24T00:19:54.8706174Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72ab099-601e-0092-7641-ccf50b000000
+Time:2025-05-24T00:19:54.8706174Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_06_45_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-04_37_32_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-04_37_32_PM.mp4
+---------------------------------
+[2025-05-23 18:19:54][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-04_37_32_PM.mp4
+---------------------------------
+[2025-05-23 18:19:55][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-04_37_32_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72ab0d8-601e-0092-2a41-ccf50b000000
+Time:2025-05-24T00:19:54.9601737Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72ab0d8-601e-0092-2a41-ccf50b000000
+Time:2025-05-24T00:19:54.9601737Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:55][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-04_37_32_PM.mp4
+---------------------------------
+[2025-05-23 18:19:55][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_07_26_PM.mp4
+---------------------------------
+[2025-05-23 18:19:55][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_07_26_PM.mp4
+---------------------------------
+[2025-05-23 18:19:55][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_07_26_PM.mp4
+---------------------------------
+[2025-05-23 18:19:55][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_07_26_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72ab2e2-601e-0092-6f41-ccf50b000000
+Time:2025-05-24T00:19:55.6176931Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:f72ab2e2-601e-0092-6f41-ccf50b000000
+Time:2025-05-24T00:19:55.6176931Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 18:19:55][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_07_26_PM.mp4
+---------------------------------
+[2025-05-23 18:19:55][INFO][200]:Finished demo

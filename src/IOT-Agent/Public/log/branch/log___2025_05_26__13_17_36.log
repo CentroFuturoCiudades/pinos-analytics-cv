@@ -1,0 +1,485 @@
+---------------------------------
+[2025-05-26 13:17:36][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-26 13:17:36][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-26 13:17:36][INFO][200]:Initializing Uploader from .env
+---------------------------------
+[2025-05-26 13:17:36][INFO][200]:Uploader initialized
+---------------------------------
+[2025-05-26 13:17:36][INFO][200]:Loaded files: ['records/2025_05_26/camera4/2025_05_26-12_46_58_PM.mp4', 'records/2025_05_26/camera4/2025_05_26-12_45_42_PM.mp4', 'records/2025_05_26/camera4/2025_05_26-12_48_02_PM.mp4', 'records/2025_05_26/camera4/2025_05_26-12_48_15_PM.mp4', 'records/2025_05_26/camera4/2025_05_26-12_49_26_PM.mp4', 'records/2025_05_26/camera1/2025_05_26-12_46_18_PM.mp4', 'records/2025_05_26/camera1/2025_05_26-12_48_00_PM.mp4', 'records/2025_05_26/camera1/2025_05_26-12_46_32_PM.mp4', 'records/2025_05_26/camera1/2025_05_26-12_47_16_PM.mp4', 'records/2025_05_26/camera1/2025_05_26-12_47_05_PM.mp4', 'records/2025_05_26/camera1/2025_05_26-12_46_00_PM.mp4', 'records/2025_05_26/camera1/2025_05_26-12_48_24_PM.mp4', 'records/2025_05_26/camera1/2025_05_26-12_47_30_PM.mp4', 'records/2025_05_26/camera1/2025_05_26-12_48_16_PM.mp4', 'records/2025_05_26/camera5/2025_05_26-12_46_36_PM.mp4', 'records/2025_05_26/camera5/2025_05_26-12_48_17_PM.mp4', 'records/2025_05_26/camera5/2025_05_26-12_47_41_PM.mp4', 'records/2025_05_26/camera5/2025_05_26-12_45_57_PM.mp4', 'records/2025_05_26/camera5/2025_05_26-12_48_05_PM.mp4', 'records/2025_05_26/camera5/2025_05_26-12_47_14_PM.mp4', 'records/2025_05_26/camera5/2025_05_26-12_46_09_PM.mp4', 'records/2025_05_26/camera5/2025_05_26-12_49_38_PM.mp4', 'records/2025_05_26/camera6/2025_05_26-12_47_24_PM.mp4', 'records/2025_05_26/camera6/2025_05_26-12_46_14_PM.mp4', 'records/2025_05_26/camera6/2025_05_26-12_46_53_PM.mp4', 'records/2025_05_26/camera6/2025_05_26-12_46_41_PM.mp4', 'records/2025_05_26/camera6/2025_05_26-12_46_04_PM.mp4', 'records/2025_05_26/camera6/2025_05_26-12_47_04_PM.mp4', 'records/2025_05_26/camera6/2025_05_26-12_46_28_PM.mp4', 'records/2025_05_26/camera6/2025_05_26-12_45_37_PM.mp4']
+---------------------------------
+[2025-05-26 13:17:36][INFO][200]:Uploading records/2025_05_26/camera4/2025_05_26-12_46_58_PM.mp4
+---------------------------------
+[2025-05-26 13:17:36][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera4/2025_05_26-12_46_58_PM.mp4
+---------------------------------
+[2025-05-26 13:17:36][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera4/2025_05_26-12_46_58_PM.mp4
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Uploaded records/2025_05_26/camera4/2025_05_26-12_46_58_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Deleted file records/2025_05_26/camera4/2025_05_26-12_46_58_PM.mp4
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Uploading records/2025_05_26/camera4/2025_05_26-12_45_42_PM.mp4
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera4/2025_05_26-12_45_42_PM.mp4
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera4/2025_05_26-12_45_42_PM.mp4
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Uploaded records/2025_05_26/camera4/2025_05_26-12_45_42_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Deleted file records/2025_05_26/camera4/2025_05_26-12_45_42_PM.mp4
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Uploading records/2025_05_26/camera4/2025_05_26-12_48_02_PM.mp4
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera4/2025_05_26-12_48_02_PM.mp4
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera4/2025_05_26-12_48_02_PM.mp4
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Uploaded records/2025_05_26/camera4/2025_05_26-12_48_02_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Deleted file records/2025_05_26/camera4/2025_05_26-12_48_02_PM.mp4
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Uploading records/2025_05_26/camera4/2025_05_26-12_48_15_PM.mp4
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera4/2025_05_26-12_48_15_PM.mp4
+---------------------------------
+[2025-05-26 13:17:38][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera4/2025_05_26-12_48_15_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploaded records/2025_05_26/camera4/2025_05_26-12_48_15_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Deleted file records/2025_05_26/camera4/2025_05_26-12_48_15_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading records/2025_05_26/camera4/2025_05_26-12_49_26_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera4/2025_05_26-12_49_26_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera4/2025_05_26-12_49_26_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploaded records/2025_05_26/camera4/2025_05_26-12_49_26_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Deleted file records/2025_05_26/camera4/2025_05_26-12_49_26_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading records/2025_05_26/camera1/2025_05_26-12_46_18_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera1/2025_05_26-12_46_18_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera1/2025_05_26-12_46_18_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploaded records/2025_05_26/camera1/2025_05_26-12_46_18_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Deleted file records/2025_05_26/camera1/2025_05_26-12_46_18_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading records/2025_05_26/camera1/2025_05_26-12_48_00_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera1/2025_05_26-12_48_00_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera1/2025_05_26-12_48_00_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploaded records/2025_05_26/camera1/2025_05_26-12_48_00_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Deleted file records/2025_05_26/camera1/2025_05_26-12_48_00_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading records/2025_05_26/camera1/2025_05_26-12_46_32_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera1/2025_05_26-12_46_32_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera1/2025_05_26-12_46_32_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploaded records/2025_05_26/camera1/2025_05_26-12_46_32_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Deleted file records/2025_05_26/camera1/2025_05_26-12_46_32_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading records/2025_05_26/camera1/2025_05_26-12_47_16_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera1/2025_05_26-12_47_16_PM.mp4
+---------------------------------
+[2025-05-26 13:17:39][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera1/2025_05_26-12_47_16_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploaded records/2025_05_26/camera1/2025_05_26-12_47_16_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Deleted file records/2025_05_26/camera1/2025_05_26-12_47_16_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploading records/2025_05_26/camera1/2025_05_26-12_47_05_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera1/2025_05_26-12_47_05_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera1/2025_05_26-12_47_05_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploaded records/2025_05_26/camera1/2025_05_26-12_47_05_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Deleted file records/2025_05_26/camera1/2025_05_26-12_47_05_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploading records/2025_05_26/camera1/2025_05_26-12_46_00_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera1/2025_05_26-12_46_00_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera1/2025_05_26-12_46_00_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploaded records/2025_05_26/camera1/2025_05_26-12_46_00_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Deleted file records/2025_05_26/camera1/2025_05_26-12_46_00_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploading records/2025_05_26/camera1/2025_05_26-12_48_24_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera1/2025_05_26-12_48_24_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera1/2025_05_26-12_48_24_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploaded records/2025_05_26/camera1/2025_05_26-12_48_24_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Deleted file records/2025_05_26/camera1/2025_05_26-12_48_24_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploading records/2025_05_26/camera1/2025_05_26-12_47_30_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera1/2025_05_26-12_47_30_PM.mp4
+---------------------------------
+[2025-05-26 13:17:40][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera1/2025_05_26-12_47_30_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploaded records/2025_05_26/camera1/2025_05_26-12_47_30_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Deleted file records/2025_05_26/camera1/2025_05_26-12_47_30_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading records/2025_05_26/camera1/2025_05_26-12_48_16_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera1/2025_05_26-12_48_16_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera1/2025_05_26-12_48_16_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploaded records/2025_05_26/camera1/2025_05_26-12_48_16_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Deleted file records/2025_05_26/camera1/2025_05_26-12_48_16_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading records/2025_05_26/camera5/2025_05_26-12_46_36_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera5/2025_05_26-12_46_36_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera5/2025_05_26-12_46_36_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploaded records/2025_05_26/camera5/2025_05_26-12_46_36_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Deleted file records/2025_05_26/camera5/2025_05_26-12_46_36_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading records/2025_05_26/camera5/2025_05_26-12_48_17_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera5/2025_05_26-12_48_17_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera5/2025_05_26-12_48_17_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploaded records/2025_05_26/camera5/2025_05_26-12_48_17_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Deleted file records/2025_05_26/camera5/2025_05_26-12_48_17_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading records/2025_05_26/camera5/2025_05_26-12_47_41_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera5/2025_05_26-12_47_41_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera5/2025_05_26-12_47_41_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploaded records/2025_05_26/camera5/2025_05_26-12_47_41_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Deleted file records/2025_05_26/camera5/2025_05_26-12_47_41_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading records/2025_05_26/camera5/2025_05_26-12_45_57_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera5/2025_05_26-12_45_57_PM.mp4
+---------------------------------
+[2025-05-26 13:17:41][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera5/2025_05_26-12_45_57_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploaded records/2025_05_26/camera5/2025_05_26-12_45_57_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Deleted file records/2025_05_26/camera5/2025_05_26-12_45_57_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploading records/2025_05_26/camera5/2025_05_26-12_48_05_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera5/2025_05_26-12_48_05_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera5/2025_05_26-12_48_05_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploaded records/2025_05_26/camera5/2025_05_26-12_48_05_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Deleted file records/2025_05_26/camera5/2025_05_26-12_48_05_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploading records/2025_05_26/camera5/2025_05_26-12_47_14_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera5/2025_05_26-12_47_14_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera5/2025_05_26-12_47_14_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploaded records/2025_05_26/camera5/2025_05_26-12_47_14_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Deleted file records/2025_05_26/camera5/2025_05_26-12_47_14_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploading records/2025_05_26/camera5/2025_05_26-12_46_09_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera5/2025_05_26-12_46_09_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera5/2025_05_26-12_46_09_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploaded records/2025_05_26/camera5/2025_05_26-12_46_09_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Deleted file records/2025_05_26/camera5/2025_05_26-12_46_09_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploading records/2025_05_26/camera5/2025_05_26-12_49_38_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera5/2025_05_26-12_49_38_PM.mp4
+---------------------------------
+[2025-05-26 13:17:42][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera5/2025_05_26-12_49_38_PM.mp4
+---------------------------------
+[2025-05-26 13:17:44][INFO][200]:Uploaded records/2025_05_26/camera5/2025_05_26-12_49_38_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:44][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:44][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:44][INFO][200]:Deleted file records/2025_05_26/camera5/2025_05_26-12_49_38_PM.mp4
+---------------------------------
+[2025-05-26 13:17:44][INFO][200]:Uploading records/2025_05_26/camera6/2025_05_26-12_47_24_PM.mp4
+---------------------------------
+[2025-05-26 13:17:44][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera6/2025_05_26-12_47_24_PM.mp4
+---------------------------------
+[2025-05-26 13:17:44][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera6/2025_05_26-12_47_24_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploaded records/2025_05_26/camera6/2025_05_26-12_47_24_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Deleted file records/2025_05_26/camera6/2025_05_26-12_47_24_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploading records/2025_05_26/camera6/2025_05_26-12_46_14_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera6/2025_05_26-12_46_14_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera6/2025_05_26-12_46_14_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploaded records/2025_05_26/camera6/2025_05_26-12_46_14_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Deleted file records/2025_05_26/camera6/2025_05_26-12_46_14_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploading records/2025_05_26/camera6/2025_05_26-12_46_53_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera6/2025_05_26-12_46_53_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera6/2025_05_26-12_46_53_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploaded records/2025_05_26/camera6/2025_05_26-12_46_53_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Deleted file records/2025_05_26/camera6/2025_05_26-12_46_53_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploading records/2025_05_26/camera6/2025_05_26-12_46_41_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera6/2025_05_26-12_46_41_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera6/2025_05_26-12_46_41_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploaded records/2025_05_26/camera6/2025_05_26-12_46_41_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Deleted file records/2025_05_26/camera6/2025_05_26-12_46_41_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploading records/2025_05_26/camera6/2025_05_26-12_46_04_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera6/2025_05_26-12_46_04_PM.mp4
+---------------------------------
+[2025-05-26 13:17:45][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera6/2025_05_26-12_46_04_PM.mp4
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Uploaded records/2025_05_26/camera6/2025_05_26-12_46_04_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Deleted file records/2025_05_26/camera6/2025_05_26-12_46_04_PM.mp4
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Uploading records/2025_05_26/camera6/2025_05_26-12_47_04_PM.mp4
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera6/2025_05_26-12_47_04_PM.mp4
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera6/2025_05_26-12_47_04_PM.mp4
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Uploaded records/2025_05_26/camera6/2025_05_26-12_47_04_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Deleted file records/2025_05_26/camera6/2025_05_26-12_47_04_PM.mp4
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Uploading records/2025_05_26/camera6/2025_05_26-12_46_28_PM.mp4
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera6/2025_05_26-12_46_28_PM.mp4
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera6/2025_05_26-12_46_28_PM.mp4
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Uploaded records/2025_05_26/camera6/2025_05_26-12_46_28_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Deleted file records/2025_05_26/camera6/2025_05_26-12_46_28_PM.mp4
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Uploading records/2025_05_26/camera6/2025_05_26-12_45_37_PM.mp4
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera6/2025_05_26-12_45_37_PM.mp4
+---------------------------------
+[2025-05-26 13:17:46][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera6/2025_05_26-12_45_37_PM.mp4
+---------------------------------
+[2025-05-26 13:17:47][INFO][200]:Uploaded records/2025_05_26/camera6/2025_05_26-12_45_37_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:17:47][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:17:47][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:17:47][INFO][200]:Deleted file records/2025_05_26/camera6/2025_05_26-12_45_37_PM.mp4
+---------------------------------
+[2025-05-26 13:17:50][INFO][200]:Model loaded in 3.677882194519043 seconds
+---------------------------------
+[2025-05-26 13:17:50][INFO][200]:Starting camera1
+---------------------------------
+[2025-05-26 13:17:50][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-26 13:17:50][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-26 13:17:50][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-26 13:17:50][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-26 13:17:50][INFO][200]:Recording for 120 seconds
+---------------------------------
+[2025-05-26 13:18:28][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_26/camera1/2025_05_26-01_18_28_PM.mp4
+---------------------------------
+[2025-05-26 13:18:28][INFO][200]:[INFO] camera1 : Detected movement, starting recording [13, 13, 0]
+---------------------------------
+[2025-05-26 13:18:35][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_26/camera1/2025_05_26-01_18_28_PM.mp4
+---------------------------------
+[2025-05-26 13:18:35][INFO][200]:[INFO] camera1 : Stopped recording
+---------------------------------
+[2025-05-26 13:18:52][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_26/camera1/2025_05_26-01_18_52_PM.mp4
+---------------------------------
+[2025-05-26 13:18:52][INFO][200]:[INFO] camera1 : Detected movement, starting recording [13, 13, 0]
+---------------------------------
+[2025-05-26 13:18:58][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_26/camera1/2025_05_26-01_18_52_PM.mp4
+---------------------------------
+[2025-05-26 13:18:58][INFO][200]:[INFO] camera1 : Stopped recording
+---------------------------------
+[2025-05-26 13:19:18][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 147, in go
+    ProjectDirector().setFlux( argv )
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 127, in setFlux
+    self.__play(
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 78, in __play
+    while datetime.datetime.now() < endTime:
+          ^^^^^^^^^^^^^^^^^^^^^^^
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyboardInterrupt]:
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+
+---------------------------------
+[2025-05-26 13:19:18][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_26/camera1/2025_05_26-01_19_18_PM.mp4
+---------------------------------
+[2025-05-26 13:19:18][INFO][200]:[INFO] camera1 : Detected movement, starting recording [13, 0, 13, 56]

@@ -1,4 +1,4 @@
-from threading import Thread
+from threading import Thread, Lock
 import os
 import time
 import subprocess
@@ -27,6 +27,7 @@ class RTSPRecorder(Borg):
         self.visual = visualize
         self.active = True
         self.recording = False
+        self.lock = Lock()
         self.frame = np.zeros((height, width, 3), dtype=np.uint8)
 
         self.mutithreadingRead()
@@ -50,15 +51,28 @@ class RTSPRecorder(Borg):
             .run_async(pipe_stdout=True, pipe_stderr=True)
         )
 
+        # Drain stderr to avoid blocking
+        def drain_stderr(proc):
+            for _ in proc.stderr:
+                pass
+        Thread(target=drain_stderr, args=(process,), daemon=True).start()
+
         while self.active:
-            in_bytes = process.stdout.read(width * height * 3)
-            if not in_bytes:
-                time.sleep(0.1)
-                continue
-            self.frame = np.frombuffer(in_bytes, np.uint8).reshape([height, width, 3])
+            try:
+                in_bytes = process.stdout.read(width * height * 3)
+                if not in_bytes:
+                    time.sleep(0.1)
+                    continue
+                frame = np.frombuffer(in_bytes, np.uint8).reshape([height, width, 3])
+                with self.lock:
+                    self.frame = frame
+            except Exception as e:
+                self.ctx['__obj']['__log'].setLog(f"[ERROR] Exception in update_queue: {e}")
+                time.sleep(1)
 
     def get_frame(self):
-        return self.frame.copy()
+        with self.lock:
+            return self.frame.copy()
 
     def show_video(self):
         self.videoThread = Thread(target=self.show_video_thread)
@@ -69,7 +83,8 @@ class RTSPRecorder(Borg):
         if self.ctx_rtsp["verbose"]:
             self.ctx['__obj']['__log'].setLog("[INFO] Showing video...")
         while self.active:
-            cv2.imshow('frame', self.frame)
+            with self.lock:
+                cv2.imshow('frame', self.frame)
             if cv2.waitKey(1) == ord('q'):
                 cv2.destroyAllWindows()
                 break
@@ -81,29 +96,27 @@ class RTSPRecorder(Borg):
         self.filename = os.path.join(dir, file)
         self.ctx['__obj']['__log'].setLog(f"[INFO] Starting ffmpeg recording to {self.filename}")
 
-        # Start FFmpeg without duration limit
         self.ffmpeg_proc = subprocess.Popen([
             "ffmpeg",
             "-rtsp_transport", "tcp",
             "-i", self.rtsp_url,
             "-c", "copy",
             "-f", "segment",
-            "-segment_time", "300",  # 5 minute chunks as safety (adjust as needed)
+            "-segment_time", "300",
             "-segment_format", "mp4",
             "-reset_timestamps", "1",
             "-movflags", "+faststart",
             "-strftime", "1",
             "-y", self.filename
-        ], stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
+        ], stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
         self.recording_start_time = time.time()
-        self.last_movement_time = time.time()  # Track last movement
+        self.last_movement_time = time.time()
         self.recording = True
 
     def stopRecording(self):
         if hasattr(self, 'ffmpeg_proc') and self.ffmpeg_proc:
             try:
-                # Gracefully stop FFmpeg
                 self.ffmpeg_proc.stdin.write(b'q\n')
                 self.ffmpeg_proc.stdin.flush()
                 self.ffmpeg_proc.wait(timeout=5)
@@ -121,9 +134,7 @@ class RTSPRecorder(Borg):
         self.ctx['__obj']['__log'].setLog("[INFO] Finished releasing video capture and output")
 
     def updateMovementTime(self):
-        """Call this from MovementDetector when movement is detected"""
         self.last_movement_time = time.time()
 
     def shouldStopRecording(self, clip_duration=5):
-        """Call this periodically from MovementDetector to check if should stop"""
         return (time.time() - self.last_movement_time) >= clip_duration

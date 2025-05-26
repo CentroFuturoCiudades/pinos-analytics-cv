@@ -1,0 +1,87 @@
+---------------------------------
+[2025-05-26 13:23:24][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-26 13:23:24][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-26 13:23:24][INFO][200]:Initializing Uploader from .env
+---------------------------------
+[2025-05-26 13:23:24][INFO][200]:Uploader initialized
+---------------------------------
+[2025-05-26 13:23:24][INFO][200]:Loaded files: ['records/2025_05_26/camera1/2025_05_26-01_18_52_PM.mp4', 'records/2025_05_26/camera1/2025_05_26-01_19_18_PM.mp4', 'records/2025_05_26/camera1/2025_05_26-01_18_28_PM.mp4']
+---------------------------------
+[2025-05-26 13:23:24][INFO][200]:Uploading records/2025_05_26/camera1/2025_05_26-01_18_52_PM.mp4
+---------------------------------
+[2025-05-26 13:23:24][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera1/2025_05_26-01_18_52_PM.mp4
+---------------------------------
+[2025-05-26 13:23:24][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera1/2025_05_26-01_18_52_PM.mp4
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Uploaded records/2025_05_26/camera1/2025_05_26-01_18_52_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Deleted file records/2025_05_26/camera1/2025_05_26-01_18_52_PM.mp4
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Uploading records/2025_05_26/camera1/2025_05_26-01_19_18_PM.mp4
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera1/2025_05_26-01_19_18_PM.mp4
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera1/2025_05_26-01_19_18_PM.mp4
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Uploaded records/2025_05_26/camera1/2025_05_26-01_19_18_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Deleted file records/2025_05_26/camera1/2025_05_26-01_19_18_PM.mp4
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Uploading records/2025_05_26/camera1/2025_05_26-01_18_28_PM.mp4
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Uploading video to Azure Storage: records/2025_05_26/camera1/2025_05_26-01_18_28_PM.mp4
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_26/camera1/2025_05_26-01_18_28_PM.mp4
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Uploaded records/2025_05_26/camera1/2025_05_26-01_18_28_PM.mp4 to Azure Blob Storage.
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Creating videoRecorded entity
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:videoRecorded entity created
+---------------------------------
+[2025-05-26 13:23:25][INFO][200]:Deleted file records/2025_05_26/camera1/2025_05_26-01_18_28_PM.mp4
+---------------------------------
+[2025-05-26 13:23:26][INFO][200]:Model loaded in 1.4900531768798828 seconds
+---------------------------------
+[2025-05-26 13:23:26][INFO][200]:Starting camera1
+---------------------------------
+[2025-05-26 13:23:26][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam1
+---------------------------------
+[2025-05-26 13:23:26][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-26 13:23:26][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-26 13:23:26][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-26 13:23:26][INFO][200]:Recording for 120 seconds
+---------------------------------
+[2025-05-26 13:23:49][EXCEPTION][500]:PYTHON-EXCEPTION:
+
+>>>>>>>>>>>>>>>[TRACEBACK]<<<<<<<<<<<<<<<
+
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/main.py", line 10, in <module>
+    ProjectDirector.go( sys.argv )
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 147, in go
+    ProjectDirector().setFlux( argv )
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 127, in setFlux
+    self.__play(
+  File "/home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/System/Director/ProjectDirector.py", line 78, in __play
+    while datetime.datetime.now() < endTime:
+          ^^^^^^^^^^^^^^^^^^^^^^^
+
+>>>>>>>>>>>>>>[ERROR_DESC]<<<<<<<<<<<<<<<
+
+  [KeyboardInterrupt]:
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<
+

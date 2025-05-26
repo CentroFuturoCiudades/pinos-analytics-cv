@@ -10,11 +10,8 @@ import asyncio
 from Generic.Director.GenericProjectDirector import GenericProjectDirector
 
 #Local imports
-from System.App.RTSPRecorder.RTSPRecorder import RTSPRecorder
-from System.App.Scrambling.Scrambling import Scrambling
 from System.App.Uploader.Uploader import Uploader
 from System.App.MovementDetector.MovementDetector import MovementDetector, yolov8_warmup
-from System.App.TestBorg.TestBorg import TestBorg
 #Director class
 class ProjectDirector( GenericProjectDirector ):
 
@@ -47,36 +44,53 @@ class ProjectDirector( GenericProjectDirector ):
         #Initial procedure log
         self.ctx['__obj']['__log'].setLog( 'Iniciando ...' )
         self.ctx['__obj']['__log'].setDebug( self.ctx ) 
-        # Parámetros
-        CAMERA_ID = 'camera1'
-        DURATION_SECONDS = 120  # Duración de monitoreo
+        uploader = Uploader()
+        uploader.loadProcess()
+        
         # loading model
-        self.model = ultralytics.YOLO("yolov8n.pt")
+        self.model = ultralytics.YOLO("yolo11x.pt")
         prevtime = time.time()
         yolov8_warmup(model=self.model, repetitions=10, verbose=False)
         self.ctx['__obj']['__log'].setLog(f"Model loaded in {time.time() - prevtime} seconds")
 
-        # Instancia del detector
-        detector = MovementDetector(
-            camera=CAMERA_ID,
-            model=self.model,
-            visualize=False,  # Solo si quieres ver el video
-            verbose=True,
-            clip_duration=5,
-            time_between_detections=1
-        )
+        #Step 01: Calling videoprocedures
+        # Starting all objects
+        sources=['camera1']
+        movement_detectors = {}
+        TIME_TO_UPLOAD = 5 # Upload every 5 minutes
+        TIME_TO_RECORD = 120 # Be active 120 minutes
 
-        # Iniciar detección
-        detector.start_inference()
+        for src in sources:
+            self.ctx['__obj']['__log'].setLog('Starting {}'.format(src))
+            movement_detectors[src] = MovementDetector(
+                camera=src,
+                model=self.model,
+                visualize=False,  # Solo si quieres ver el video
+                verbose=True,
+                clip_duration=5,
+                time_between_detections=1
+                )
+        # Record for TIME_TO_RECORD seconds
+        self.ctx['__obj']['__log'].setLog('Recording for {} seconds'.format(TIME_TO_RECORD))
+        for src in sources:
+            movement_detectors[src].start_inference()
+        endTime = datetime.datetime.now() + datetime.timedelta(minutes=TIME_TO_RECORD)
+        while datetime.datetime.now() < endTime:
+            try:
+                pass
+            except KeyboardInterrupt:
+                print("Exit through keyboard interrupt")
+                break
 
-        # Esperar cierto tiempo
-        time.sleep(DURATION_SECONDS)
-
-        # Finalizar proceso
-        detector.stop()
+        for src in sources:
+             # close all
+            movement_detectors[src].stop()
+            self.ctx['__obj']['__log'].setLog('Stopped {}'.format(src))
+        
         self.ctx['__obj']['__log'].setLog('Finished demo')
         #Bye
         return None
+
     
     #-----------------------------------------------------------------------------------------------------------------------------
     def setFlux( self, argv ):

@@ -1,0 +1,974 @@
+---------------------------------
+[2025-05-23 17:07:51][INFO][200]:La conexion [dbconn_standard] esta desabilitada en el archivo .config
+---------------------------------
+[2025-05-23 17:07:51][INFO][200]:Iniciando ...
+---------------------------------
+[2025-05-23 17:07:53][INFO][200]:Model loaded in 1.409827470779419 seconds
+---------------------------------
+[2025-05-23 17:07:53][INFO][200]:[INFO] Reading from rtsp://100.108.97.81:8554/cam4
+---------------------------------
+[2025-05-23 17:07:53][INFO][200]:Starting multithreading
+---------------------------------
+[2025-05-23 17:07:53][INFO][200]:[INFO] Starting the capturing process in the camera1
+---------------------------------
+[2025-05-23 17:07:53][INFO][200]:[INFO] Initialized movement detection object for camera1
+---------------------------------
+[2025-05-23 17:07:53][INFO][200]:[INFO] Starting human detection for camera1
+---------------------------------
+[2025-05-23 17:07:57][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-23 17:07:57][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4
+---------------------------------
+[2025-05-23 17:08:04][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.98
+---------------------------------
+[2025-05-23 17:08:05][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.97
+---------------------------------
+[2025-05-23 17:08:06][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.95
+---------------------------------
+[2025-05-23 17:08:07][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.97
+---------------------------------
+[2025-05-23 17:08:08][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.03
+---------------------------------
+[2025-05-23 17:08:08][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-23 17:08:08][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4
+---------------------------------
+[2025-05-23 17:08:41][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-23 17:08:41][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4
+---------------------------------
+[2025-05-23 17:09:12][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 17:09:13][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-23 17:09:14][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.01
+---------------------------------
+[2025-05-23 17:09:15][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-23 17:09:16][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.02
+---------------------------------
+[2025-05-23 17:09:16][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-23 17:09:16][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4
+---------------------------------
+[2025-05-23 17:09:53][INFO][200]:Initializing Uploader from .env
+---------------------------------
+[2025-05-23 17:09:53][INFO][200]:Uploader initialized
+---------------------------------
+[2025-05-23 17:09:53][INFO][200]:Loaded files: ['records/2025_05_23/camera1/2025_05_23-03_55_26_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_06_54_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_57_30_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_06_53_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-04_35_05_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_53_53_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_54_12_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_57_02_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_59_07_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_57_57_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-03_54_50_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-04_39_37_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_06_46_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_06_45_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-04_37_32_PM.mp4', 'records/2025_05_23/camera1/2025_05_23-05_07_26_PM.mp4']
+---------------------------------
+[2025-05-23 17:09:53][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_55_26_PM.mp4
+---------------------------------
+[2025-05-23 17:09:53][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_55_26_PM.mp4
+---------------------------------
+[2025-05-23 17:09:53][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_55_26_PM.mp4
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_55_26_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c19bc2-e01e-00a3-1d37-cc1418000000
+Time:2025-05-23T23:09:53.7992217Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c19bc2-e01e-00a3-1d37-cc1418000000
+Time:2025-05-23T23:09:53.7992217Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_55_26_PM.mp4
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_06_54_PM.mp4
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_06_54_PM.mp4
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_06_54_PM.mp4
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_06_54_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c19dfd-e01e-00a3-2737-cc1418000000
+Time:2025-05-23T23:09:54.4470251Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c19dfd-e01e-00a3-2737-cc1418000000
+Time:2025-05-23T23:09:54.4470251Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_06_54_PM.mp4
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_57_30_PM.mp4
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_57_30_PM.mp4
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_57_30_PM.mp4
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_57_30_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c19f5d-e01e-00a3-5437-cc1418000000
+Time:2025-05-23T23:09:54.8113613Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c19f5d-e01e-00a3-5437-cc1418000000
+Time:2025-05-23T23:09:54.8113613Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_57_30_PM.mp4
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_06_53_PM.mp4
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_06_53_PM.mp4
+---------------------------------
+[2025-05-23 17:09:54][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_06_53_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_06_53_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a037-e01e-00a3-1737-cc1418000000
+Time:2025-05-23T23:09:55.0840730Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a037-e01e-00a3-1737-cc1418000000
+Time:2025-05-23T23:09:55.0840730Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_06_53_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-04_35_05_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-04_35_05_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-04_35_05_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-04_35_05_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a12f-e01e-00a3-7737-cc1418000000
+Time:2025-05-23T23:09:55.3458845Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a12f-e01e-00a3-7737-cc1418000000
+Time:2025-05-23T23:09:55.3458845Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-04_35_05_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_53_53_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_53_53_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_53_53_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_53_53_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a246-e01e-00a3-7237-cc1418000000
+Time:2025-05-23T23:09:55.6569382Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a246-e01e-00a3-7237-cc1418000000
+Time:2025-05-23T23:09:55.6569382Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_53_53_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_54_12_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_54_12_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_54_12_PM.mp4
+---------------------------------
+[2025-05-23 17:09:55][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_54_12_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a2b1-e01e-00a3-5737-cc1418000000
+Time:2025-05-23T23:09:55.7933577Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a2b1-e01e-00a3-5737-cc1418000000
+Time:2025-05-23T23:09:55.7933577Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_54_12_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a3c5-e01e-00a3-4b37-cc1418000000
+Time:2025-05-23T23:09:56.1180474Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a3c5-e01e-00a3-4b37-cc1418000000
+Time:2025-05-23T23:09:56.1180474Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_07_57_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_57_02_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_57_02_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_57_02_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_57_02_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a47c-e01e-00a3-7637-cc1418000000
+Time:2025-05-23T23:09:56.3366525Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a47c-e01e-00a3-7637-cc1418000000
+Time:2025-05-23T23:09:56.3366525Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_57_02_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_59_07_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_59_07_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_59_07_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_59_07_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a53a-e01e-00a3-2537-cc1418000000
+Time:2025-05-23T23:09:56.5886838Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a53a-e01e-00a3-2537-cc1418000000
+Time:2025-05-23T23:09:56.5886838Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_59_07_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_57_57_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_57_57_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_57_57_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_57_57_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a5e8-e01e-00a3-4137-cc1418000000
+Time:2025-05-23T23:09:56.7687436Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a5e8-e01e-00a3-4137-cc1418000000
+Time:2025-05-23T23:09:56.7687436Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_57_57_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4
+---------------------------------
+[2025-05-23 17:09:56][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a6e8-e01e-00a3-2f37-cc1418000000
+Time:2025-05-23T23:09:57.0542277Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a6e8-e01e-00a3-2f37-cc1418000000
+Time:2025-05-23T23:09:57.0542277Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_08_41_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-03_54_50_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-03_54_50_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-03_54_50_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-03_54_50_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a86f-e01e-00a3-2537-cc1418000000
+Time:2025-05-23T23:09:57.3542564Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a86f-e01e-00a3-2537-cc1418000000
+Time:2025-05-23T23:09:57.3542564Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-03_54_50_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-04_39_37_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-04_39_37_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-04_39_37_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-04_39_37_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a955-e01e-00a3-7a37-cc1418000000
+Time:2025-05-23T23:09:57.5735363Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a955-e01e-00a3-7a37-cc1418000000
+Time:2025-05-23T23:09:57.5735363Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-04_39_37_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_06_46_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_06_46_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_06_46_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_06_46_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a9ee-e01e-00a3-0537-cc1418000000
+Time:2025-05-23T23:09:57.7164027Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1a9ee-e01e-00a3-0537-cc1418000000
+Time:2025-05-23T23:09:57.7164027Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_06_46_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_06_45_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_06_45_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_06_45_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_06_45_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1aabf-e01e-00a3-4237-cc1418000000
+Time:2025-05-23T23:09:57.8849668Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1aabf-e01e-00a3-4237-cc1418000000
+Time:2025-05-23T23:09:57.8849668Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_06_45_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-04_37_32_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-04_37_32_PM.mp4
+---------------------------------
+[2025-05-23 17:09:57][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-04_37_32_PM.mp4
+---------------------------------
+[2025-05-23 17:09:58][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-04_37_32_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1ab46-e01e-00a3-4537-cc1418000000
+Time:2025-05-23T23:09:58.0063362Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1ab46-e01e-00a3-4537-cc1418000000
+Time:2025-05-23T23:09:58.0063362Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:58][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-04_37_32_PM.mp4
+---------------------------------
+[2025-05-23 17:09:58][INFO][200]:Uploading records/2025_05_23/camera1/2025_05_23-05_07_26_PM.mp4
+---------------------------------
+[2025-05-23 17:09:58][INFO][200]:Uploading video to Azure Storage: records/2025_05_23/camera1/2025_05_23-05_07_26_PM.mp4
+---------------------------------
+[2025-05-23 17:09:58][INFO][200]:Uploading to Azure Storage as blob: records/2025_05_23/camera1/2025_05_23-05_07_26_PM.mp4
+---------------------------------
+[2025-05-23 17:09:58][INFO][200]:Error uploading records/2025_05_23/camera1/2025_05_23-05_07_26_PM.mp4 to Azure Blob Storage: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1af25-e01e-00a3-3a37-cc1418000000
+Time:2025-05-23T23:09:58.8568890Z
+ErrorCode:AuthenticationFailed
+authenticationerrordetail:Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:d3c1af25-e01e-00a3-3a37-cc1418000000
+Time:2025-05-23T23:09:58.8568890Z</Message><AuthenticationErrorDetail>Signature did not match. String to sign used was racwdl
+2025-02-05T16:48:09Z
+2026-04-02T00:48:09Z
+/blob/cienciaciudades2024/oasis
+
+
+https
+2022-11-02
+c
+
+
+
+
+
+
+</AuthenticationErrorDetail></Error>
+---------------------------------
+[2025-05-23 17:09:58][INFO][200]:Deleted file records/2025_05_23/camera1/2025_05_23-05_07_26_PM.mp4
+---------------------------------
+[2025-05-23 17:09:58][INFO][200]:Finished demo
+---------------------------------
+[2025-05-23 17:10:42][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-23 17:10:42][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-05_10_42_PM.mp4
+---------------------------------
+[2025-05-23 17:10:43][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.01
+---------------------------------
+[2025-05-23 17:10:44][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.01
+---------------------------------
+[2025-05-23 17:10:46][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-23 17:10:48][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 17:10:49][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.98
+---------------------------------
+[2025-05-23 17:10:50][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.98
+---------------------------------
+[2025-05-23 17:10:51][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.0
+---------------------------------
+[2025-05-23 17:10:52][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.03
+---------------------------------
+[2025-05-23 17:10:52][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-23 17:10:52][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-05_10_42_PM.mp4
+---------------------------------
+[2025-05-23 17:10:53][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-23 17:10:53][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-05_10_53_PM.mp4
+---------------------------------
+[2025-05-23 17:10:54][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.99
+---------------------------------
+[2025-05-23 17:10:59][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 17:11:03][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 17:11:06][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.0
+---------------------------------
+[2025-05-23 17:11:07][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.0
+---------------------------------
+[2025-05-23 17:11:08][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.98
+---------------------------------
+[2025-05-23 17:11:09][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.98
+---------------------------------
+[2025-05-23 17:11:10][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -0.0
+---------------------------------
+[2025-05-23 17:11:10][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-23 17:11:10][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-05_10_53_PM.mp4
+---------------------------------
+[2025-05-23 17:12:05][INFO][200]:[INFO] camera1 : Starting recording
+---------------------------------
+[2025-05-23 17:12:05][INFO][200]:[INFO] Starting ffmpeg recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-05_12_05_PM.mp4
+---------------------------------
+[2025-05-23 17:12:16][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 4.02
+---------------------------------
+[2025-05-23 17:12:17][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 3.02
+---------------------------------
+[2025-05-23 17:12:18][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 2.02
+---------------------------------
+[2025-05-23 17:12:19][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 1.02
+---------------------------------
+[2025-05-23 17:12:20][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: 0.01
+---------------------------------
+[2025-05-23 17:12:21][INFO][200]:[INFO] camera1 : Person not detected, remaining recording time: -1.0
+---------------------------------
+[2025-05-23 17:12:21][INFO][200]:[INFO] camera1 : Stopping recording
+---------------------------------
+[2025-05-23 17:12:21][INFO][200]:[INFO] Finished recording to /home/crowdcounting/sophie/pinos-analytics-cv/src/IOT-Agent/records/2025_05_23/camera1/2025_05_23-05_12_05_PM.mp4
