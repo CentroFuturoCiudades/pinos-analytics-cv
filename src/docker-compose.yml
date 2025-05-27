@@ -1,0 +1,35 @@
+services:
+  # Orion-LD Context Broker
+  orion:
+    image: fiware/orion-ld:latest
+    container_name: fiware-orion
+    restart: unless-stopped
+    depends_on:
+      - mongo-db
+    ports:
+      - "1026:1026"
+    environment:
+      - LOG_LEVEL=DEBUG
+    command: -dbhost mongo-db -logLevel DEBUG -forwarding
+    networks:
+      - fiware-network
+
+  # MongoDB for Orion-LD
+  mongo-db:
+    image: mongo:4.4
+    container_name: mongo-db
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db  # Persist MongoDB data    
+    networks:
+      - fiware-network
+ 
+
+networks:
+  fiware-network:
+    driver: bridge
+
+volumes:
+  mongo-data:    # Persist MongoDB data

@@ -55,10 +55,10 @@ class ProjectDirector( GenericProjectDirector ):
 
         #Step 01: Calling videoprocedures
         # Starting all objects
-        sources=['camera1']
+        sources=['camera1', 'camera2', 'camera3', 'camera4', 'camera5', 'camera6'] # List of camera sources, can be IP cameras or local files
         movement_detectors = {}
         TIME_TO_UPLOAD = 5 # Upload every 5 minutes
-        TIME_TO_RECORD = 120 # Be active 120 minutes
+        TIME_TO_RECORD = 24 * 60 # Be active 120 minutes
 
         for src in sources:
             self.ctx['__obj']['__log'].setLog('Starting {}'.format(src))
@@ -71,11 +71,11 @@ class ProjectDirector( GenericProjectDirector ):
                 time_between_detections=1
                 )
         # Record for TIME_TO_RECORD seconds
-        self.ctx['__obj']['__log'].setLog('Recording for {} seconds'.format(TIME_TO_RECORD))
+        self.ctx['__obj']['__log'].setLog('Recording for {} minutes'.format(TIME_TO_RECORD))
         for src in sources:
             movement_detectors[src].start_inference()
         endTime = datetime.datetime.now() + datetime.timedelta(minutes=TIME_TO_RECORD)
-        while datetime.datetime.now() < endTime:
+        while datetime.datetime.now() < endTime: ###change to run indefinitely
             try:
                 pass
             except KeyboardInterrupt:

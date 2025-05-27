@@ -12,7 +12,7 @@ import glob
 ###CAN TRACK FOR 1 VIDEO OR ALL VIDEOS IN A FOLDER (aka all videos in a day)
 ONE_VIDEO_ONLY = False #If true, only processes one video. Else, processes all videos in the folder (all videos for a day)
 
-TIMESTAMP = 'ADD_HERE' #YYYY_MM_DD-HH_MM-SS ONLY FOR 1 VIDEO - modify according to video name in IOT-AGENT/records
+TIMESTAMP = 'ADD_HERE' #YYYY_MM_DD-HH_MM_SS ONLY FOR 1 VIDEO - modify according to video name in IOT-AGENT/records
 DAY = 'ADD_HERE' # YYYY_MM_DD modify according to video name in IOT-AGENT/records
 SAVE_VIDEO = False #Set to True if you want to save the video with keypoints and trajectory
 
@@ -185,7 +185,7 @@ else: ##Aka all videos in a folder
 
         if len(track_history) > 0:
             # Save to csv file
-            csv_file = f"../csv/trajectory/trajectory_points_{TIMESTAMP}.csv"
+            csv_file = f"../csv/trajectory/trajectory_points_{timestamp}.csv"
             with open(csv_file, mode="w", newline="") as file:
                 writer = csv.writer(file)
                 writer.writerow(["track_id", "x", "y"]) # Header
