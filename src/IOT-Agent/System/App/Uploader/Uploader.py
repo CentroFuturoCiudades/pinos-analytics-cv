@@ -29,7 +29,7 @@ class Uploader(Borg):
 
         self.ctx['__obj']['__log'].setLog('Initializing Uploader from .env')
         self.blob_service_client = BlobServiceClient(account_url, credential=sas_token)
-        self.client = Client(hostname="localhost",port=1026)        
+        self.client = Client(hostname="100.85.126.64",port=1026)        
         self.ctx['__obj']['__log'].setLog('Uploader initialized')
 
     def upload_video(self, local_file_name: str) -> None:
@@ -83,7 +83,6 @@ class Uploader(Borg):
         e.prop("camera", video["camera"])
         e.prop("path", video["path"])
         e.prop("inferred", False)
-        e.prop("dateObserved", dt)
         self.client.upsert(e)
         self.ctx['__obj']['__log'].setLog('videoRecorded entity created')
 

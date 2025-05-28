@@ -6,7 +6,6 @@ import threading
 import cv2
 import os
 import datetime
-import ffmpegcv
 import time
 import imutils
 import argparse
