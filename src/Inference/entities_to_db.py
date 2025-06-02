@@ -39,7 +39,7 @@ container_name = "oasis"
 download_dir = "./Downloads"
 blob_service_client = BlobServiceClient(account_url, credential=sas_token)
 
-# Get all entities of type videoRecorded - TO DO: remove [-10:]
+# Get all entities of type videoRecorded 
 entities = client.query(type="videoRecorded")
 
 # For entities where inferred is false, access video
@@ -134,7 +134,7 @@ for entity in entities:
                                     "detection_id": track_id,
                                     "bbox": json.dumps(box.cpu().numpy().tolist()),
                                     "skeleton": json.dumps(keypoints[i].tolist()),
-                                    "camera_number": entity['camera']['value'] ### TO DO: CHANGE CAMERA COL TO JUST A NUMBER
+                                    "camera_number": entity['camera']['value']
                                 })
                                 row_uploaded = pd.read_sql(f"SELECT * FROM detectionsobserved WHERE id = 'camara{entity['camera']['value']}_{timestamp_formatted}_{track_id}'", conn)
 
