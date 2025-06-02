@@ -12,10 +12,10 @@ import glob
 ###CAN TRACK FOR 1 VIDEO OR ALL VIDEOS IN A FOLDER (aka all videos in a day)
 ONE_VIDEO_ONLY = True #If true, only processes one video. Else, processes all videos in the folder (all videos for a day)
 
-TIMESTAMP = 'camera1_2025_05_26-04_19_19_PM' #cameranum_YYYY_MM_DD-HH_MM_SS ONLY FOR 1 VIDEO - modify according to video name in IOT-AGENT/records
-DAY = '2025_05_26' # YYYY_MM_DD modify according to video name in IOT-AGENT/records
-SAVE_VIDEO = True #Set to True if you want to save the video with keypoints and trajectory
-CAMERA = 'camera1'
+TIMESTAMP = 'ADD_HERE' #cameranum_YYYY_MM_DD-HH_MM_SS ONLY FOR 1 VIDEO - modify according to video name in IOT-AGENT/records
+DAY = 'ADD_HERE' # YYYY_MM_DD modify according to video name in IOT-AGENT/records
+SAVE_VIDEO = False #Set to True if you want to save the video with keypoints and trajectory
+CAMERA = 'ADD_HERE'
 HOMOGRAPHY = np.array([
                         [-6.64359014e+00,  1.68386720e+01,  5.47738945e+03],
                         [-9.01311337e-01,  6.57976459e+00,  2.06128382e+03],
@@ -128,12 +128,6 @@ if ONE_VIDEO_ONLY:
                 pts = np.array(points, dtype=np.float32).reshape(-1, 1, 2)
                 pts_transformed = cv2.perspectiveTransform(pts, HOMOGRAPHY).reshape(-1, 2)
                 x_vals, y_vals = pts_transformed[:, 0], pts_transformed[:, 1]
-                ax.plot(x_vals, y_vals, color=track_colors[track_id], label=f"ID {track_id}")
-
-        # Plot trajectories
-        for track_id, points in track_history.items():
-            if points:
-                x_vals, y_vals = zip(*points)
                 ax.plot(x_vals, y_vals, color=track_colors[track_id], label=f"ID {track_id}")
 
         # Optional: Add legend
