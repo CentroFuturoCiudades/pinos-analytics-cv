@@ -82,7 +82,7 @@ for entity in entities:
 
             if success:
                 # Run YOLO11 tracking on the frame, persisting tracks between frames
-                result = model.track(frame, persist=True)[0]
+                result = model.track(frame, persist=True, imgsz=(frame_height, frame_width))[0] # Yolo processing in better image quality with imgsz=(frame_height, frame_width)
                     
                 # Get the boxes and track IDs
                 if result.boxes and result.boxes.id is not None:

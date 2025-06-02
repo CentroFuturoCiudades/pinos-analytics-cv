@@ -6,7 +6,7 @@ from ultralytics import YOLO
 import numpy as np
 import os
 
-VIDEO_NAME = 'camera1_2025_05_27-10_30_49_AM' # camera#_YYYY_MM_DD-HH_MM_SS
+VIDEO_NAME = 'camera1_2025_05_26-04_19_19_PM' # camera#_YYYY_MM_DD-HH_MM_SS
 
 # Load the YOLO11 model
 model = YOLO("yolo11x-pose.pt")
@@ -25,6 +25,8 @@ frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 frame_size = (frame_width, frame_height)
 fps = cap.get(cv2.CAP_PROP_FPS)
 
+count = 0
+
 # Loop through the video frames
 while cap.isOpened():
     # Read a frame from the video
@@ -32,7 +34,8 @@ while cap.isOpened():
 
     if success:
         # Run YOLO11 tracking on the frame, persisting tracks between frames
-        result = model.track(frame, persist=True)[0]
+        result = model.track(frame, persist=True, imgsz=(frame_height, frame_width))[0] # Yolo processing in better image quality with imgsz=(frame_height, frame_width)
+        #result = model.track(frame, persist=True)[0] #OLD
                     
         # Get the boxes and track IDs
         if result.boxes and result.boxes.id is not None:
@@ -57,11 +60,11 @@ while cap.isOpened():
                     # Calculate the timestamp for the current frame
                     timestamp_formatted += datetime.timedelta(seconds=(frame_number % int(fps)))
 
-                    #Upload processed entity to PostGIS database
+                    #Print to test out
                     print(f"timestamp {timestamp_formatted}; detection_id: {track_id}, bbox: {json.dumps(box.cpu().numpy().tolist())}; skeleton: {json.dumps(keypoints[i].tolist())};")
-                    
+                    count += 1
             # Display the annotated frame
-            #cv2.imshow("YOLO11 Tracking", frame)
+            #Scv2.imshow("YOLO11 Tracking", frame)
 
         # Break the loop if 'q' is pressed
         if cv2.waitKey(1) & 0xFF == ord("q"):
@@ -81,3 +84,4 @@ else:
     print("No keypoints found")
     # ENDED YOLO11 PROCESSING
 
+print(f"Total detections: {count}")
