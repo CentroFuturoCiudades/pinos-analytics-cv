@@ -12,6 +12,8 @@ from Generic.Director.GenericProjectDirector import GenericProjectDirector
 #Local imports
 from System.App.Uploader.Uploader import Uploader
 from System.App.MovementDetector.MovementDetector import MovementDetector, yolov8_warmup
+from System.App.CameraMonitor.CameraMonitor import CameraMonitor
+
 #Director class
 class ProjectDirector( GenericProjectDirector ):
 
@@ -45,7 +47,12 @@ class ProjectDirector( GenericProjectDirector ):
         self.ctx['__obj']['__log'].setLog( 'Iniciando ...' )
         self.ctx['__obj']['__log'].setDebug( self.ctx ) 
         uploader = Uploader()
-        uploader.loadProcess()
+        
+        self.camera_monitor = CameraMonitor(
+            port=19800)
+        self.camera_monitor.start()
+        self.ctx['__obj']['__log'].setLog(f"Camera Monitor is running on {self.camera_monitor.get_url()}")
+        # uploader.loadProcess()
         
         # loading model
         self.model = ultralytics.YOLO("yolo11x.pt")
@@ -55,8 +62,9 @@ class ProjectDirector( GenericProjectDirector ):
 
         #Step 01: Calling videoprocedures
         # Starting all objects
-        sources=['camera1', 'camera2', 'camera3', 'camera4', 'camera5', 'camera6'] # List of camera sources, can be IP cameras or local files
+        sources=['camera1']#, 'camera2', 'camera3', 'camera4', 'camera5', 'camera6'] # List of camera sources, can be IP cameras or local files
         movement_detectors = {}
+        camera_states = {}
         TIME_TO_UPLOAD = 5 # Upload every 5 minutes
         TIME_TO_RECORD = 24 * 60 # Be active 120 minutes
 
@@ -70,17 +78,25 @@ class ProjectDirector( GenericProjectDirector ):
                 clip_duration=5,
                 time_between_detections=1
                 )
+            camera_states[src] = 'inactive'
         # Record for TIME_TO_RECORD seconds
         self.ctx['__obj']['__log'].setLog('Recording for {} minutes'.format(TIME_TO_RECORD))
         for src in sources:
             movement_detectors[src].start_inference()
         endTime = datetime.datetime.now() + datetime.timedelta(minutes=TIME_TO_RECORD)
+        update_web_time = time.time()
         while datetime.datetime.now() < endTime: ###change to run indefinitely
             try:
-                pass
+                if time.time() - update_web_time > 5:
+                    # Update camera states every 5 seconds
+                    for src in sources:
+                        camera_states[src] = movement_detectors[src].get_state()
+                    self.camera_monitor.update_camera_states(camera_states)
+                    update_web_time = time.time()
             except KeyboardInterrupt:
                 print("Exit through keyboard interrupt")
                 break
+            time.sleep(0.01)  # Sleep to avoid busy waiting
 
         for src in sources:
              # close all

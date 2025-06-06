@@ -24,8 +24,12 @@ class RTSPRecorder(Borg):
             "verbose": verbose
         }
 
+        # on self.inactive_timeout seconds without receiving frames, the stream will be considered inactive
+        self.inactive_timeout = 5
+        
         self.visual = visualize
         self.active = True
+        self.stream_active = False
         self.recording = False
         self.frame = np.zeros((height, width, 3), dtype=np.uint8)
 
@@ -40,7 +44,7 @@ class RTSPRecorder(Borg):
             self.show_video()
 
     def update_queue(self):
-        self.ctx['__obj']['__log'].setLog(f"[INFO] Starting the capturing process in the {self.ctx_rtsp['camera']}")
+        self.ctx['__obj']['__log'].setLog(f"[INFO] Starting the capturing process in the {self.ctx_rtsp['camera']}, height: {self.ctx_rtsp['height']}, width: {self.ctx_rtsp['width']}")
         width = self.ctx_rtsp["width"]
         height = self.ctx_rtsp["height"]
         process = (
@@ -49,16 +53,41 @@ class RTSPRecorder(Borg):
             .output('pipe:', format='rawvideo', pix_fmt='bgr24', s=f'{width}x{height}')
             .run_async(pipe_stdout=True, pipe_stderr=True)
         )
+        
+        last_frame_time = time.time()
 
         while self.active:
-            in_bytes = process.stdout.read(width * height * 3)
-            if not in_bytes:
-                time.sleep(0.1)
-                continue
-            self.frame = np.frombuffer(in_bytes, np.uint8).reshape([height, width, 3])
+            try:
+                frame_size = width * height * 3
+                in_bytes = process.stdout.read(frame_size)
+                while len(in_bytes) < frame_size:
+                    remaining = frame_size - len(in_bytes)
+                    chunk = process.stdout.read(remaining)
+                    if not chunk:
+                        break
+                    in_bytes += chunk
+                if not in_bytes:
+                    if time.time() - last_frame_time > self.inactive_timeout:
+                        self.ctx['__obj']['__log'].setLog(f"[WARNING] No frames received for {self.inactive_timeout} seconds, stream may be inactive.")
+                        self.stream_active = False
+                        process = (
+                            ffmpeg
+                            .input(self.rtsp_url, rtsp_transport='tcp')
+                            .output('pipe:', format='rawvideo', pix_fmt='bgr24', s=f'{width}x{height}')
+                            .run_async(pipe_stdout=True, pipe_stderr=True)
+                        )
+                    time.sleep(0.1)
+                    continue
+                last_frame_time = time.time()
+                self.frame = np.frombuffer(in_bytes, np.uint8).reshape([height, width, 3])
+                self.stream_active = True
+            except Exception as e:
+                 pass
 
     def get_frame(self):
-        return self.frame.copy()
+        response = self.frame.copy() if self.frame is not None else None
+        self.frame = None # Clear the frame to avoid returning same frame repeatedly -> and detect dead streams
+        return response
 
     def show_video(self):
         self.videoThread = Thread(target=self.show_video_thread)
@@ -127,3 +156,12 @@ class RTSPRecorder(Borg):
     def shouldStopRecording(self, clip_duration=5):
         """Call this periodically from MovementDetector to check if should stop"""
         return (time.time() - self.last_movement_time) >= clip_duration
+    
+    def get_state(self):
+        """Get the current state of the recorder"""
+        if self.recording:
+            return 'recording'
+        elif self.stream_active:
+            return 'active'
+        else:
+            return 'inactive'

@@ -120,6 +120,7 @@ class MovementDetector(Borg):
             if frame is None:
                 self.ctx['__obj']['__log'].setLog(f"[WARNING] {self.src_name} : Received empty frame, skipping")
                 continue
+            
             # blur
             frame = cv2.GaussianBlur(frame, (self.BLUR_INTENSITY, self.BLUR_INTENSITY), 0)
             # calculate difference between frames
@@ -208,10 +209,8 @@ class MovementDetector(Borg):
             # use getFrame to get a frame from the video
             frame = self.recorder.get_frame()
             if frame is None or frame.size == 0:
-                self.ctx['__obj']['__log'].setLog(f"[WARNING] {self.src_name} : Received invalid frame, skipping inference")
                 time.sleep(1)
                 continue
-            
             prevtime = time.time()
             detections = self.model.predict(source=frame, verbose=False, classes = 0)
             # Get boxes, confidences and classids
@@ -279,6 +278,9 @@ class MovementDetector(Borg):
     
     def is_recording(self):
         return self.curr_state == self.RECORDING
+    
+    def get_state(self):
+        return self.recorder.get_state()
 
 def yolov8_warmup(model, repetitions=1, verbose=False):
         # Warmup model
