@@ -5,7 +5,7 @@ import csv
 import os
 import ast  # Import ast for safe evaluation
 
-CSV_FILE = "../csv/area_juegos4.csv"  # Define the CSV file name
+CSV_FILE = "../csv/galeria_cam1.csv"  # Define the CSV file name
 
 class ImagePointSelector:
     def __init__(self, ax, img_path, label, point_list):
@@ -127,7 +127,7 @@ def display_image(img_path):
     plt.show()
 
 if __name__ == "__main__":
-    img_path = "../imgs/birdseye.jpg" 
+    img_path = "../imgs/gallery01.JPG" 
 
     print("Launching window for single image.")
     print("Press 'r' to reset zoom. Left-click to add points. Right-click to remove.")
