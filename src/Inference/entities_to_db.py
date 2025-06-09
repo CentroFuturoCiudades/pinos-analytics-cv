@@ -12,12 +12,14 @@ from azure.storage.blob import BlobServiceClient
 from dotenv import load_dotenv
 from ngsildclient import Client, Entity, iso8601
 
+load_dotenv()
+
 # Connect to PostGIS URI
-host = "100.85.126.64"
-port = 5434
-db = "oasis"
-user = "admin"
-password = "admin"
+host = os.getenv('HOST')
+port = int(os.getenv('DB_PORT'))
+db = os.getenv('DB_NAME')
+user = os.getenv('DB_USER')
+password = os.getenv('DB_PASSWORD')
 engine = sa.create_engine(f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}")
 
 # Read the detectionsobserved table from PostGIS
@@ -29,8 +31,7 @@ model = YOLO("yolo11x-pose.pt")
 
 # Connect to Context Broker
 client = Client(hostname="100.85.126.64",port=1026)
-# Load environment variables
-load_dotenv()
+# Load environment variable
 
 # Initialize BlobServiceClient for Azure connection
 sas_token = os.getenv("AZURE_STORAGE_SAS_TOKEN")

@@ -13,12 +13,14 @@ from dotenv import load_dotenv
 from ngsildclient import Client, Entity, iso8601
 from scipy.interpolate import interp1d
 
+load_dotenv()
+
 # Connect to PostGIS URI
-host = "100.85.126.64"
-port = 5434
-db = "oasis"
-user = "admin"
-password = "admin"
+host = os.getenv('HOST')
+port = int(os.getenv('DB_PORT'))
+db = os.getenv('DB_NAME')
+user = os.getenv('DB_USER')
+password = os.getenv('DB_PASSWORD')
 engine = sa.create_engine(f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}")
 
 # Change camera numbers and areas of interest as needed
@@ -179,7 +181,7 @@ for camera_number, area_of_interest in zip(CAMERA_NUMBERS, AREAS_OF_INTEREST):
     time_in_polygons['id'] = time_in_polygons['id'].astype('str')
 
     time_in_polygons = time_in_polygons.drop(columns=['video_start_time'], errors='ignore')
-    #time_in_polygons.to_sql('detectionsdurations', engine, if_exists='append', index=False)
+    time_in_polygons.to_sql('detectionsdurations', engine, if_exists='append', index=False)
 
     # Prepare the data as a list of dictionaries for SQLAlchemy
     data_to_insert = time_in_polygons.to_dict(orient='records')
@@ -191,10 +193,9 @@ for camera_number, area_of_interest in zip(CAMERA_NUMBERS, AREAS_OF_INTEREST):
         ON CONFLICT (id) DO NOTHING;
     """
 
-    # Remove temp table
     with engine.connect() as conn:
         # Execute the insert statement
-        #conn.execute(sa.text(insert_query), data_to_insert)
+        conn.execute(sa.text(insert_query), data_to_insert)
 
         # Remove temp table
         conn.execute(sa.text("DROP TABLE IF EXISTS temp_interpolated_positions"))
