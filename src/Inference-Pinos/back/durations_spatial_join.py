@@ -1,16 +1,8 @@
 import os
 import pandas as pd
-from collections import defaultdict
-import json
-import cv2
 import sqlalchemy as sa
 import numpy as np
-import datetime
-import time
-from ultralytics import YOLO
-from azure.storage.blob import BlobServiceClient
 from dotenv import load_dotenv
-from ngsildclient import Client, Entity, iso8601
 from scipy.interpolate import interp1d
 
 if __name__ == "__main__":
@@ -36,7 +28,7 @@ if __name__ == "__main__":
                 SELECT 
                     video_path,
                     MIN(timestamp) AS video_start_time
-                FROM detectionsobservedtest
+                FROM detectionsobserved
                 WHERE camera_number = {camera_number}
                 GROUP BY video_path
             ),
@@ -54,7 +46,7 @@ if __name__ == "__main__":
                         PARTITION BY d.video_path, d.detection_id, EXTRACT(EPOCH FROM (d.timestamp - v.video_start_time))
                         ORDER BY d.id
                     ) AS ts_row_num
-                FROM detectionsobservedtest d
+                FROM detectionsobserved d
                 JOIN video_starts v ON d.video_path = v.video_path
                 WHERE d.camera_number = {camera_number}
             )
@@ -127,7 +119,7 @@ if __name__ == "__main__":
                 SELECT 
                     video_path,
                     MIN(timestamp) AS video_start_time
-                FROM detectionsobservedtest
+                FROM detectionsobserved
                 WHERE camera_number = {camera_number}
                 GROUP BY video_path
             )

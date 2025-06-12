@@ -12,7 +12,7 @@ from ultralytics import YOLO
 from azure.storage.blob import BlobServiceClient
 from dotenv import load_dotenv
 from ngsildclient import Client
-from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy.orm import sessionmaker
 
 load_dotenv()
 
@@ -63,8 +63,15 @@ def main():
             return
         
         video_files = [os.path.join("./Downloads", path) for path in paths_to_infer]
-        parts_files = list(split_list(video_files, num_processes))
-        parts_ids = list(split_list(ids_to_infer, num_processes))
+        num_processes = min(num_processes, len(video_files))
+
+        zipped = list(zip(video_files, ids_to_infer))
+        split_zipped = split_list(zipped, num_processes)
+
+        # Unzip each chunk into separate lists of paths and IDs
+        parts_files = [list(x[0] for x in part) for part in split_zipped]
+        parts_ids = [list(x[1] for x in part) for part in split_zipped]
+        print(list(zip(parts_files, parts_ids)))
         with multiprocessing.Pool(processes=num_processes) as pool:
             pool.starmap(process_video_batch, zip(parts_files, parts_ids))
         print("✅ Processing completed.")
@@ -83,8 +90,7 @@ def main():
 
 def split_list(lst, n):
     k, m = divmod(len(lst), n)
-    return (lst[i * k + min(i, m):(i + 1) * k + min(i + 1, m)] for i in range(n))
-
+    return [lst[i * k + min(i, m):(i + 1) * k + min(i + 1, m)] for i in range(n)]
 
 def process_video_batch(video_files, video_ids):
     session = Session()
@@ -98,7 +104,10 @@ def process_video_batch(video_files, video_ids):
     session.close()
 
 def process_video(video_path, video_id):
-    print(f"Processing video: {video_path}")
+    local_client = Client(hostname=host, port=1026)
+    entity = local_client.get(video_id)
+
+    print(f"Processing video: {video_path} {video_id}")
 
     # Open the video file
     cap = cv2.VideoCapture(video_path)
@@ -110,8 +119,6 @@ def process_video(video_path, video_id):
     frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps = cap.get(cv2.CAP_PROP_FPS)
-
-    entity = client.get(video_id)
 
     # Loop through the video frames
     while cap.isOpened():
@@ -176,7 +183,7 @@ def process_video(video_path, video_id):
                         with engine.begin() as conn:
                             # Insert into detectionsobserved table if ID does not already exist
                             conn.execute(sa.text("""
-                                INSERT INTO detectionsobservedtest (id, video_path, timestamp, detection_id, bbox, skeleton, camera_number, image_size, field_geometry_point)
+                                INSERT INTO detectionsobserved (id, video_path, timestamp, detection_id, bbox, skeleton, camera_number, image_size, field_geometry_point)
                                 VALUES (:id, :video_path, :timestamp, :detection_id, :bbox, :skeleton, :camera_number, :image_size, ST_GeomFromText(:field_geometry_point, 0))
                                 ON CONFLICT (id) DO NOTHING
                             """), {
@@ -226,7 +233,6 @@ def process_video(video_path, video_id):
     # Mark inferred as true
     entity['inferred']['value'] = True
     print(f"Marked {entity['id']} as inferred.")
-    print()
 
     # Delete video from local storage
     if os.path.exists(video_path):
@@ -240,7 +246,7 @@ def process_video(video_path, video_id):
     max_retries = 3
     for attempt in range(max_retries):
         try:
-            client.update(entity)
+            local_client.update(entity)
             print(f"Updated entity {entity['id']} in Context Broker.")
             break
         except Exception as e:

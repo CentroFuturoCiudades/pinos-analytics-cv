@@ -7,9 +7,9 @@ import os
 import datetime
 
 # Configuración de la base de datos PostgreSQL
+load_dotenv("../back/.env")
 host = os.getenv('HOST')
-#port = int(os.getenv('DB_PORT', 5434))
-port = 5434
+port = int(os.getenv('DB_PORT', 5434))
 db = os.getenv('DB_NAME')
 user = os.getenv('DB_USER')
 password = os.getenv('DB_PASSWORD')
