@@ -385,7 +385,6 @@ try:
             else:
                 st.warning("No hay datos para mostrar con los filtros seleccionados.")
 
-
     else:
         # Filtrar el DataFrame según los días seleccionados
         if selected_days:
@@ -662,7 +661,33 @@ try:
             else:
                 st.warning("No hay datos para mostrar con los filtros seleccionados.")
 
+    ### Personas por día
+    st.write("### Cantidad de personas por día")
+    if not filtered_df.empty:
+        filtered_df['datetime'] = pd.to_datetime(filtered_df['datetime'])
+        filtered_df['date'] = filtered_df['datetime'].dt.date
+        daily_counts = filtered_df.groupby('date').size().reset_index(name='count')
+        daily_counts['date'] = daily_counts['date'].astype(str) 
 
+        bar_chart_daily = alt.Chart(daily_counts).mark_bar().encode(
+            x=alt.X('date:O', title='Fecha'),
+            y=alt.Y('count:Q', title='Total de personas por día'),
+            tooltip=[
+                alt.Tooltip('date:O', title='Fecha'),
+                alt.Tooltip('count:Q', title='Total de personas')
+            ],
+            color=alt.Color('count:Q', title='Total de personas', scale=alt.Scale(scheme='blueorange'))
+        ).properties(
+            title="Total de personas por día",
+            width=700,
+            height=400
+        )
+
+        st.altair_chart(bar_chart_daily, use_container_width=True)
+    else:
+        st.warning("No hay datos para mostrar con los filtros seleccionados.")
+
+                
     if selected_table:
         st.write("### Datos Originales - Detecciones en la Galería")
         st.dataframe(df)
