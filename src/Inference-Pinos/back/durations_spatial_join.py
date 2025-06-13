@@ -144,7 +144,7 @@ if __name__ == "__main__":
                     ST_SetSRID(ST_MakePoint(x, y), 0) as geom
                 FROM temp_interpolated_positions
             ) i
-            JOIN areasofinterest p ON ST_Within(i.geom, p.field_geometry_polygon)
+            JOIN areasofinterest p ON ST_Within(i.geom, p.field_geometry)
             JOIN video_starts v ON i.video_path = v.video_path
             WHERE p.area_name = '{area_of_interest}'
             GROUP BY i.camera_number, i.video_path, i.detection_id, p.area_name, v.video_start_time
