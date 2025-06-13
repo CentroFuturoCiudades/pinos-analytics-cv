@@ -173,23 +173,28 @@ if __name__ == "__main__":
         time_in_polygons['area_name'] = time_in_polygons['area_name'].astype('str')
         time_in_polygons['id'] = time_in_polygons['id'].astype('str')
 
+        # First delete any existing records with the same IDs
+        existing_ids = pd.read_sql(
+            f"SELECT id FROM detectionsdurations WHERE id IN ({','.join(['%s']*len(time_in_polygons))})", 
+            engine, 
+            params=tuple(time_in_polygons['id'].tolist())
+        )
+
+        if not existing_ids.empty:
+            with engine.connect() as conn:
+                conn.execute(
+                    sa.text(f"DELETE FROM detectionsdurations WHERE id IN :ids"),
+                    {"ids": tuple(existing_ids['id'].tolist())}
+                )
+                conn.commit()
+
         time_in_polygons = time_in_polygons.drop(columns=['video_start_time'], errors='ignore')
-        #time_in_polygons.to_sql('detectionsdurations', engine, if_exists='append', index=False)
+        time_in_polygons.to_sql('detectionsdurations', engine, if_exists='append', index=False)
 
         # Prepare the data as a list of dictionaries for SQLAlchemy
         data_to_insert = time_in_polygons.to_dict(orient='records')
 
-        # Create a raw SQL query with ON CONFLICT DO NOTHING
-        insert_query = """
-            INSERT INTO detectionsdurations (id, video_path, detection_id, area_name, camera_number, seconds_spent, entry_time, exit_time, real_entry_time, real_exit_time)
-            VALUES (:id, :video_path, :detection_id, :area_name, :camera_number, :seconds_spent, :entry_time, :exit_time, :real_entry_time, :real_exit_time)
-            ON CONFLICT (id) DO NOTHING;
-        """
-
         with engine.connect() as conn:
-            # Execute the insert statement
-            conn.execute(sa.text(insert_query), data_to_insert)
-
             # Remove temp table
             conn.execute(sa.text("DROP TABLE IF EXISTS temp_interpolated_positions"))
 
