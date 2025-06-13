@@ -356,10 +356,10 @@ try:
 
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.text(f"Duración mínima del rango: {avg_duration_per_slot['seconds_spent'].min():.2f}")
+                    st.text(f"Duración mínima del rango: {filtered_df2['seconds_spent'].min():.2f}")
 
                 with col2:
-                    st.text(f"Duración máxima del rango: {avg_duration_per_slot['seconds_spent'].max():.2f}")
+                    st.text(f"Duración máxima del rango: {filtered_df2['seconds_spent'].max():.2f}")
 
             else:
                 st.warning("No hay datos para mostrar con los filtros seleccionados.")
@@ -632,10 +632,10 @@ try:
 
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.text(f"Duración mínima del rango: {avg_duration_per_hour['seconds_spent'].min():.2f}")
+                    st.text(f"Duración mínima del rango: {filtered_df2['seconds_spent'].min():.2f}")
 
                 with col2:
-                    st.text(f"Duración máxima del rango: {avg_duration_per_hour['seconds_spent'].max():.2f}")
+                    st.text(f"Duración máxima del rango: {filtered_df2['seconds_spent'].max():.2f}")
 
             else:
                 st.warning("No hay datos para mostrar con los filtros seleccionados.")
