@@ -67,6 +67,8 @@ class Uploader(Borg):
             self.create_videoRecorded_entity(video_entity)
         except Exception as e:
             self.ctx['__obj']['__log'].setLog(f"Error uploading {local_file_name} to Azure Blob Storage: {e}")
+            return False
+        return True
 
     def create_videoRecorded_entity(self, video: dict) -> dict:
         """
@@ -103,7 +105,8 @@ class Uploader(Borg):
         self.ctx['__obj']['__log'].setLog(f'Loaded files: {files}')
         for f in files:
             self.ctx['__obj']['__log'].setLog(f'Uploading {f}')
-            self.upload_video(f)
-            os.remove(f)
-            self.ctx['__obj']['__log'].setLog(f'Deleted file {f}')
+            success = self.upload_video(f)
+            if success:
+                os.remove(f)
+                self.ctx['__obj']['__log'].setLog(f'Deleted file {f}')
          
