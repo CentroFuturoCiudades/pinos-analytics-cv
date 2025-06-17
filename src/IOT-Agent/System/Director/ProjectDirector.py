@@ -12,7 +12,7 @@ from Generic.Director.GenericProjectDirector import GenericProjectDirector
 #Local imports
 from System.App.Uploader.Uploader import Uploader
 from System.App.MovementDetector.MovementDetector import MovementDetector, yolov8_warmup
-from System.App.CameraMonitor.CameraMonitor import CameraMonitor
+from System.App.CameraMonitor.camera_monitor_utils import update_camera_states
 
 #Director class
 class ProjectDirector( GenericProjectDirector ):
@@ -46,33 +46,27 @@ class ProjectDirector( GenericProjectDirector ):
         #Initial procedure log
         self.ctx['__obj']['__log'].setLog( 'Iniciando ...' )
         self.ctx['__obj']['__log'].setDebug( self.ctx ) 
-        uploader = Uploader()
-        
-        self.camera_monitor = CameraMonitor(
-            port=19800)
-        self.camera_monitor.start()
-        self.ctx['__obj']['__log'].setLog(f"Camera Monitor is running on {self.camera_monitor.get_url()}")
+        # uploader = Uploader()
         # uploader.loadProcess()
         
-        # loading model
-        self.model = ultralytics.YOLO("yolo11x.pt")
-        prevtime = time.time()
-        yolov8_warmup(model=self.model, repetitions=10, verbose=False)
-        self.ctx['__obj']['__log'].setLog(f"Model loaded in {time.time() - prevtime} seconds")
 
         #Step 01: Calling videoprocedures
         # Starting all objects
-        sources=['camera1']#, 'camera2', 'camera3', 'camera4', 'camera5', 'camera6'] # List of camera sources, can be IP cameras or local files
+        sources=['camera1', 'camera2', 'camera3', 'camera4', 'camera5', 'camera6'] # List of camera sources, can be IP cameras or local files
         movement_detectors = {}
         camera_states = {}
-        TIME_TO_UPLOAD = 5 # Upload every 5 minutes
-        TIME_TO_RECORD = 24 * 60 # Be active 120 minutes
+        TIME_TO_UPLOAD = 60 # Upload every x minutes
+        TIME_TO_RECORD = 24*60 # Be active x minutes
 
         for src in sources:
+            model = ultralytics.YOLO("yolo11m.pt")
+            prevtime = time.time()
+            yolov8_warmup(model=model, repetitions=10, verbose=False)
+            self.ctx['__obj']['__log'].setLog(f"Model loaded in {time.time() - prevtime} seconds")
             self.ctx['__obj']['__log'].setLog('Starting {}'.format(src))
             movement_detectors[src] = MovementDetector(
                 camera=src,
-                model=self.model,
+                model=model,
                 visualize=False,  # Solo si quieres ver el video
                 verbose=True,
                 clip_duration=5,
@@ -84,19 +78,24 @@ class ProjectDirector( GenericProjectDirector ):
         for src in sources:
             movement_detectors[src].start_inference()
         endTime = datetime.datetime.now() + datetime.timedelta(minutes=TIME_TO_RECORD)
+        upload_time = datetime.datetime.now() + datetime.timedelta(minutes=TIME_TO_UPLOAD)
         update_web_time = time.time()
         while datetime.datetime.now() < endTime: ###change to run indefinitely
             try:
-                if time.time() - update_web_time > 5:
-                    # Update camera states every 5 seconds
-                    for src in sources:
-                        camera_states[src] = movement_detectors[src].get_state()
-                    self.camera_monitor.update_camera_states(camera_states)
-                    update_web_time = time.time()
+                # if time.time() - update_web_time > 5:
+                #     # Update camera states every 5 seconds
+                #     for src in sources:
+                #         camera_states[src] = movement_detectors[src].get_state()
+                #     update_camera_states(camera_states)
+                #     update_web_time = time.time()
+                if datetime.datetime.now() > upload_time:
+                    # Upload videos every TIME_TO_UPLOAD minutes
+                    # uploader.loadProcess()
+                    upload_time = datetime.datetime.now() + datetime.timedelta(minutes=TIME_TO_UPLOAD)
             except KeyboardInterrupt:
                 print("Exit through keyboard interrupt")
                 break
-            time.sleep(0.01)  # Sleep to avoid busy waiting
+            time.sleep(1)  # Sleep to avoid busy waiting
 
         for src in sources:
              # close all
