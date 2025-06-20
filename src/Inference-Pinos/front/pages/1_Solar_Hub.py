@@ -274,14 +274,14 @@ try:
 
             bar_chart_daily = alt.Chart(daily_counts).mark_bar().encode(
                 x=alt.X('date:O', title='Fecha'),
-                y=alt.Y('count:Q', title='Total de personas por día'),
+                y=alt.Y('count:Q', title='Total de entradas por día'),
                 tooltip=[
                     alt.Tooltip('date:O', title='Fecha'),
-                    alt.Tooltip('count:Q', title='Total de personas')
+                    alt.Tooltip('count:Q', title='Entradas')
                 ],
-                color=alt.Color('count:Q', title='Total de personas', scale=alt.Scale(scheme='blueorange'))
+                color=alt.Color('count:Q', title='Total de entradas', scale=alt.Scale(scheme='blueorange'))
             ).properties(
-                title="Total de personas por día",
+                title="Total de entradas por día",
                 width=700,
                 height=400
             )

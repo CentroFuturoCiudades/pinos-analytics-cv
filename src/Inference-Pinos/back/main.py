@@ -19,7 +19,7 @@ if __name__ == "__main__":
     spatial_join_galeries = "./durations_spatial_join.py"
 
     # Ruta para detectar cruce de linea (solar hub - solo cámara 5)
-    line_crossing = "./cross_product_Line_crossing.py"
+    line_crossing = "./cross_product_line_crossing.py"
 
     # Ejecutar el script para descargar videos
     print("Downloading videos...")
