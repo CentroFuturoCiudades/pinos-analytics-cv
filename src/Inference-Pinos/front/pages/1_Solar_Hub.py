@@ -36,7 +36,7 @@ try:
     #st.write(tables)
 
     # Seleccionar una tabla para procesar
-    selected_table ="detectionsdurations" #CAMBIAR
+    selected_table ="linecrossings"
 
     if selected_table:
         # Leer los datos de la tabla seleccionada

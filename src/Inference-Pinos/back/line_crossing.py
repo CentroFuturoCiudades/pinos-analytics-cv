@@ -3,7 +3,7 @@ import pandas as pd
 import sqlalchemy as sa
 import numpy as np
 from dotenv import load_dotenv
-from scipy.interpolate import interp1d, InterpolatedUnivariateSpline
+from scipy.interpolate import interp1d
 
 if __name__ == "__main__":
     load_dotenv()
@@ -36,6 +36,7 @@ if __name__ == "__main__":
                 SELECT 
                     d.id,
                     d.video_path,
+                    d.timestamp,
                     d.detection_id,
                     d.field_geometry_point,
                     EXTRACT(EPOCH FROM (d.timestamp - v.video_start_time)) AS timestamp_seconds,
@@ -53,6 +54,7 @@ if __name__ == "__main__":
             SELECT 
                 id,
                 video_path,
+                timestamp,
                 detection_id,
                 field_geometry_point,
                 timestamp_seconds,
@@ -66,8 +68,8 @@ if __name__ == "__main__":
 
         #print(filtered_table.head())
 
+        #Interpolate data in half-second increments
         interpolated_data = []
-
         for (video_path, detection_id), group in filtered_table.groupby(['video_path', 'detection_id']):
             if len(group) < 2:
                 #print(f"Skipping {video_path}/{detection_id} - only {len(group)} points")
@@ -96,6 +98,7 @@ if __name__ == "__main__":
             
             temp_df = pd.DataFrame({
                 'video_path': video_path,
+                'video_timestamp': group['timestamp'].iloc[0],
                 'detection_id': detection_id,
                 'camera_number': camera_number,
                 'timestamp_seconds': interp_times,
@@ -117,10 +120,8 @@ if __name__ == "__main__":
         
         # Create a temp table for the interpolated positions
         interpolated_df.to_sql('temp_interpolated_positions', engine, if_exists='replace', index=False)
-
-        #print(interpolated_df)
         
-        # Calculate time in polygons
+        # Form a line for each detection's path
         points_to_line = pd.read_sql ("""
                SELECT 
                     video_path,
@@ -131,75 +132,65 @@ if __name__ == "__main__":
                         ORDER BY timestamp_seconds ASC
                     ) AS line
                 FROM temp_interpolated_positions 
-                GROUP BY camera_number, video_path, detection_id;
+                GROUP BY camera_number, video_timestamp, video_path, detection_id;
         """, engine)
 
         points_to_line.to_sql('temp_points_to_line', engine, if_exists='replace', index=False)
-        
-        points_to_line_direction = pd.read_sql ("""
-            WITH base AS (
-                SELECT 
-                    video_path,
-                    detection_id,
-                    camera_number,
-                    x,
-                    y,
-                    timestamp_seconds,
-                    FIRST_VALUE(x) OVER w AS start_x,
-                    FIRST_VALUE(y) OVER w AS start_y,
-                    LAST_VALUE(x) OVER w AS end_x,
-                    LAST_VALUE(y) OVER w AS end_y
-                FROM temp_interpolated_positions
-                WINDOW w AS (PARTITION BY video_path, detection_id, camera_number ORDER BY timestamp_seconds)
-            ),
-            lines AS (
-                SELECT
-                    video_path,
-                    detection_id,
-                    camera_number,
-                    ST_MakeLine(
-                        ST_SetSRID(ST_MakePoint(x, y), 0) ORDER BY timestamp_seconds
-                    ) AS line,
-                    ST_SetSRID(ST_MakePoint(MIN(start_x), MIN(start_y)), 0) AS start_point,
-                    ST_SetSRID(ST_MakePoint(MIN(end_x), MIN(end_y)), 0) AS end_point
-                FROM base
-                GROUP BY video_path, detection_id, camera_number
-            )
-            SELECT * FROM lines;
-        """, engine)
 
-        #print(points_to_line_direction)
-
-        points_to_line_direction.to_sql('temp_points_to_line_direction', engine, if_exists='replace', index=False)
-
-
-
-        # Adjust pandas settings to prevent truncation
-        pd.set_option('display.max_columns', None)  # Show all columns
-        pd.set_option('display.max_rows', None)     # Show all rows (if needed)
-        pd.set_option('display.width', None)        # Do not limit the width
-        pd.set_option('display.max_colwidth', None) # Display full column content
-        table = pd.read_sql ("SELECT detection_id, ST_AsText(line) FROM temp_points_to_line WHERE video_path = '2025_05_23-07_30_11_PM.mp4'", engine)
-        #print(table.to_string(index=False))
-        print(table)
-
-        #Line crossings
+        #Get point of intersection & surrounding points to determine direction
         line_crossings = pd.read_sql(sa.text("""
+        WITH crossing_events AS (
             SELECT 
                 l.video_path,
                 l.detection_id,
-                a.area_name,
-                ST_Crosses(l.line, a.field_geometry) AS crosses,
-                ST_X(l.start_point) AS start_x,
-                ST_X(l.end_point) AS end_x
-            FROM temp_points_to_line_direction l
-            JOIN areasofinterest a
-              ON ST_Crosses(l.line, a.field_geometry)
-            WHERE a.area_name = :area_name
-                --AND ST_X(l.start_point) > ST_X(l.end_point)
-            """), engine, params={'area_name': area_of_interest})
+                l.camera_number,
+                l.line::geometry AS line_geom,
+                a.area_name AS line_name,
+                (ST_Dump(ST_Intersection(l.line::geometry, a.field_geometry::geometry))).geom AS intersection_geom,
+                ST_LineLocatePoint(l.line::geometry, 
+                    (ST_Dump(ST_Intersection(l.line::geometry, a.field_geometry::geometry))).geom
+                ) AS intersect_position,
+                ST_LineSubstring(
+                    l.line::geometry,
+                    GREATEST(0, ST_LineLocatePoint(l.line::geometry, 
+                        (ST_Dump(ST_Intersection(l.line::geometry, a.field_geometry::geometry))).geom) - 0.05),
+                    LEAST(1, ST_LineLocatePoint(l.line::geometry,
+                        (ST_Dump(ST_Intersection(l.line::geometry, a.field_geometry::geometry))).geom) + 0.05)
+                ) AS near_intersect_segment
+            FROM temp_points_to_line l
+            JOIN areasofinterest a 
+            ON ST_Crosses(l.line::geometry, a.field_geometry::geometry)
+            WHERE a.area_name = :line_name
+        ),
+        first_crossings AS (
+            SELECT 
+                *,
+                ROW_NUMBER() OVER (
+                    PARTITION BY video_path, detection_id
+                    ORDER BY intersect_position
+                ) AS crossing_num
+            FROM crossing_events
+            WHERE GeometryType(intersection_geom) = 'POINT'
+        )
+        SELECT
+            video_path,
+            detection_id,
+            line_name,
+            ST_X(intersection_geom) AS intersection_x,
+            ST_Y(intersection_geom) AS intersection_y,
+            CASE 
+                WHEN ST_X(ST_EndPoint(near_intersect_segment)) < ST_X(ST_StartPoint(near_intersect_segment))
+                THEN 'exits' -- moving right
+                ELSE 'enters' -- moving left
+            END AS refined_movement_type
+        FROM first_crossings
+        WHERE crossing_num = 1
+        ORDER BY video_path, detection_id
+    """), engine, params={'line_name': area_of_interest})
         
         print(line_crossings)
+
+        #TO DO: SAVE TO TABLE IN DB
 
         with engine.connect() as conn:
             # Remove temp table

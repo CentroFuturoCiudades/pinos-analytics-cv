@@ -158,7 +158,10 @@ else: ##Aka all videos in a folder
             success, frame = cap.read()
             if not success:
                 break
-            result = model.track(frame, persist=True)[0]
+            
+            frame = cv2.detailEnhance(frame, sigma_s=10, sigma_r=0.15)
+            result = model.track(frame, persist=True, imgsz=(frame_height, frame_width), conf=0.3)[0]
+
             if result.boxes and result.boxes.id is not None:
                 boxes = result.boxes.xywh.cpu()
                 track_ids = result.boxes.id.int().cpu().tolist()

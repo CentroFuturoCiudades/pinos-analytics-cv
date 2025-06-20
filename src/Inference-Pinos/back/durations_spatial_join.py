@@ -129,7 +129,7 @@ if __name__ == "__main__":
                 i.detection_id,
                 p.area_name AS area_name,
                 i.camera_number,
-                COUNT(*) * 0.5 AS seconds_spent,
+                MAX(i.timestamp_seconds) - MIN(i.timestamp_seconds) AS seconds_spent,
                 MIN(i.timestamp_seconds) AS entry_time,
                 MAX(i.timestamp_seconds) AS exit_time,
                 v.video_start_time,
@@ -154,26 +154,7 @@ if __name__ == "__main__":
         print(f"\nTime in polygons for camera {camera_number} (area: {area_of_interest}):")
         print(time_in_polygons)
 
-        #print(time_in_polygons.dtypes)
-
-        # Save the result into the 'detectionsdurations' table
-        # Ensure the datetime columns are timezone-aware and convert to UTC
-        time_in_polygons['real_entry_time'] = time_in_polygons['real_entry_time'].dt.tz_convert('UTC') if time_in_polygons['real_entry_time'].dt.tz is not None else time_in_polygons['real_entry_time'].dt.tz_localize('UTC')
-        time_in_polygons['real_exit_time'] = time_in_polygons['real_exit_time'].dt.tz_convert('UTC') if time_in_polygons['real_exit_time'].dt.tz is not None else time_in_polygons['real_exit_time'].dt.tz_localize('UTC')
-
-        # Convert float columns to double precision (usually pandas float64 is already correct for this)
-        time_in_polygons['seconds_spent'] = time_in_polygons['seconds_spent'].astype('float64')
-        time_in_polygons['entry_time'] = time_in_polygons['entry_time'].astype('float64')
-        time_in_polygons['exit_time'] = time_in_polygons['exit_time'].astype('float64')
-
-        # Ensure other columns are in the correct types
-        time_in_polygons['camera_number'] = time_in_polygons['camera_number'].astype('int')
-        time_in_polygons['video_path'] = time_in_polygons['video_path'].astype('str')
-        time_in_polygons['detection_id'] = time_in_polygons['detection_id'].astype('str')
-        time_in_polygons['area_name'] = time_in_polygons['area_name'].astype('str')
-        time_in_polygons['id'] = time_in_polygons['id'].astype('str')
-
-        # First delete any existing records with the same IDs
+        #Remove ids already in detectionsdurations from time_in_polygons
         existing_ids = pd.read_sql(
             f"SELECT id FROM detectionsdurations WHERE id IN ({','.join(['%s']*len(time_in_polygons))})", 
             engine, 
@@ -181,18 +162,29 @@ if __name__ == "__main__":
         )
 
         if not existing_ids.empty:
-            with engine.connect() as conn:
-                conn.execute(
-                    sa.text(f"DELETE FROM detectionsdurations WHERE id IN :ids"),
-                    {"ids": tuple(existing_ids['id'].tolist())}
-                )
-                conn.commit()
+            # Remove rows from time_in_polygons that have IDs already in detectionsdurations
+            time_in_polygons = time_in_polygons[~time_in_polygons['id'].isin(existing_ids['id'])]
+            print(f"Removed {len(existing_ids)} duplicate IDs from time_in_polygons")
 
-        time_in_polygons = time_in_polygons.drop(columns=['video_start_time'], errors='ignore')
-        time_in_polygons.to_sql('detectionsdurations', engine, if_exists='append', index=False)
+        if not time_in_polygons.empty:
+            # Prepare data for insertion
+            time_in_polygons['real_entry_time'] = time_in_polygons['real_entry_time'].dt.tz_convert('UTC') if time_in_polygons['real_entry_time'].dt.tz is not None else time_in_polygons['real_entry_time'].dt.tz_localize('UTC')
+            time_in_polygons['real_exit_time'] = time_in_polygons['real_exit_time'].dt.tz_convert('UTC') if time_in_polygons['real_exit_time'].dt.tz is not None else time_in_polygons['real_exit_time'].dt.tz_localize('UTC')
 
-        # Prepare the data as a list of dictionaries for SQLAlchemy
-        data_to_insert = time_in_polygons.to_dict(orient='records')
+            time_in_polygons['seconds_spent'] = time_in_polygons['seconds_spent'].astype('float32')
+            time_in_polygons['entry_time'] = time_in_polygons['entry_time'].astype('float64')
+            time_in_polygons['exit_time'] = time_in_polygons['exit_time'].astype('float64')
+
+            time_in_polygons['camera_number'] = time_in_polygons['camera_number'].astype('int')
+            time_in_polygons['video_path'] = time_in_polygons['video_path'].astype('str')
+            time_in_polygons['detection_id'] = time_in_polygons['detection_id'].astype('str')
+            time_in_polygons['area_name'] = time_in_polygons['area_name'].astype('str')
+            time_in_polygons['id'] = time_in_polygons['id'].astype('str')
+
+            time_in_polygons = time_in_polygons.drop(columns=['video_start_time'], errors='ignore')
+            time_in_polygons.to_sql('detectionsdurations', engine, if_exists='append', index=False)
+        else:
+            print("No new records to insert after removing duplicates")
 
         with engine.connect() as conn:
             # Remove temp table

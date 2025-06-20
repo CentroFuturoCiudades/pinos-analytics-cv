@@ -136,6 +136,32 @@ try:
         # Gráficos
         st.write("## Gráficos Generados")
 
+        ### Personas por día
+        st.write("### Cantidad de personas por día")
+        if not filtered_df.empty:
+            filtered_df['datetime'] = pd.to_datetime(filtered_df['datetime'])
+            filtered_df['date'] = filtered_df['datetime'].dt.date
+            daily_counts = filtered_df.groupby('date').size().reset_index(name='count')
+            daily_counts['date'] = daily_counts['date'].astype(str) 
+
+            bar_chart_daily = alt.Chart(daily_counts).mark_bar().encode(
+                x=alt.X('date:O', title='Fecha'),
+                y=alt.Y('count:Q', title='Total de personas por día'),
+                tooltip=[
+                    alt.Tooltip('date:O', title='Fecha'),
+                    alt.Tooltip('count:Q', title='Total de personas')
+                ],
+                color=alt.Color('count:Q', title='Total de personas', scale=alt.Scale(scheme='blueorange'))
+            ).properties(
+                title="Total de personas por día",
+                width=700,
+                height=400
+            )
+
+            st.altair_chart(bar_chart_daily, use_container_width=True)
+        else:
+            st.warning("No hay datos para mostrar con los filtros seleccionados.")
+
         #DURACION PROMEDIO
         st.write("### Duración promedio por parte del día y día de la semana")
         tab1, tab2, tab3 = st.tabs(["Gráfico de área", "Gráfico hexagonal", "Gráfico de línea"])
@@ -356,10 +382,10 @@ try:
 
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.text(f"Duración mínima del rango: {avg_duration_per_slot['seconds_spent'].min():.2f}")
+                    st.text(f"Duración mínima del rango: {filtered_df2['seconds_spent'].min():.2f}")
 
                 with col2:
-                    st.text(f"Duración máxima del rango: {avg_duration_per_slot['seconds_spent'].max():.2f}")
+                    st.text(f"Duración máxima del rango: {filtered_df2['seconds_spent'].max():.2f}")
 
             else:
                 st.warning("No hay datos para mostrar con los filtros seleccionados.")
@@ -385,6 +411,32 @@ try:
             else:
                 st.warning("No hay datos para mostrar con los filtros seleccionados.")
 
+
+        ### Personas por día - rango seleccionado
+        st.write("### Cantidad de personas por día")
+        if not filtered_df2.empty:
+            filtered_df2['datetime'] = pd.to_datetime(filtered_df2['datetime'])
+            filtered_df2['date'] = filtered_df2['datetime'].dt.date
+            daily_counts = filtered_df2.groupby('date').size().reset_index(name='count')
+            daily_counts['date'] = daily_counts['date'].astype(str) 
+
+            bar_chart_daily = alt.Chart(daily_counts).mark_bar().encode(
+                x=alt.X('date:O', title='Fecha'),
+                y=alt.Y('count:Q', title='Total de personas por día'),
+                tooltip=[
+                    alt.Tooltip('date:O', title='Fecha'),
+                    alt.Tooltip('count:Q', title='Total de personas')
+                ],
+                color=alt.Color('count:Q', title='Total de personas', scale=alt.Scale(scheme='blueorange'))
+            ).properties(
+                title="Total de personas por día",
+                width=700,
+                height=400
+            )
+
+            st.altair_chart(bar_chart_daily, use_container_width=True)
+        else:
+            st.warning("No hay datos para mostrar con los filtros seleccionados.") 
     else:
         # Filtrar el DataFrame según los días seleccionados
         if selected_days:
@@ -401,6 +453,32 @@ try:
 
         # Gráficos
         st.write("## Gráficos Generados")
+    
+        ### Personas por día
+        st.write("### Cantidad de personas por día")
+        if not filtered_df.empty:
+            filtered_df['datetime'] = pd.to_datetime(filtered_df['datetime'])
+            filtered_df['date'] = filtered_df['datetime'].dt.date
+            daily_counts = filtered_df.groupby('date').size().reset_index(name='count')
+            daily_counts['date'] = daily_counts['date'].astype(str) 
+
+            bar_chart_daily = alt.Chart(daily_counts).mark_bar().encode(
+                x=alt.X('date:O', title='Fecha'),
+                y=alt.Y('count:Q', title='Total de personas por día'),
+                tooltip=[
+                    alt.Tooltip('date:O', title='Fecha'),
+                    alt.Tooltip('count:Q', title='Total de personas')
+                ],
+                color=alt.Color('count:Q', title='Total de personas', scale=alt.Scale(scheme='blueorange'))
+            ).properties(
+                title="Total de personas por día",
+                width=700,
+                height=400
+            )
+
+            st.altair_chart(bar_chart_daily, use_container_width=True)
+        else:
+            st.warning("No hay datos para mostrar con los filtros seleccionados.")
 
         #DURACION PROMEDIO
         st.write("### Duración promedio por hora y día de la semana")
@@ -632,10 +710,10 @@ try:
 
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.text(f"Duración mínima del rango: {avg_duration_per_hour['seconds_spent'].min():.2f}")
+                    st.text(f"Duración mínima del rango: {filtered_df2['seconds_spent'].min():.2f}")
 
                 with col2:
-                    st.text(f"Duración máxima del rango: {avg_duration_per_hour['seconds_spent'].max():.2f}")
+                    st.text(f"Duración máxima del rango: {filtered_df2['seconds_spent'].max():.2f}")
 
             else:
                 st.warning("No hay datos para mostrar con los filtros seleccionados.")
@@ -661,31 +739,31 @@ try:
             else:
                 st.warning("No hay datos para mostrar con los filtros seleccionados.")
 
-    ### Personas por día
-    st.write("### Cantidad de personas por día")
-    if not filtered_df.empty:
-        filtered_df['datetime'] = pd.to_datetime(filtered_df['datetime'])
-        filtered_df['date'] = filtered_df['datetime'].dt.date
-        daily_counts = filtered_df.groupby('date').size().reset_index(name='count')
-        daily_counts['date'] = daily_counts['date'].astype(str) 
+        ### Personas por día - rango seleccionado
+        st.write("### Cantidad de personas por día")
+        if not filtered_df2.empty:
+            filtered_df2['datetime'] = pd.to_datetime(filtered_df2['datetime'])
+            filtered_df2['date'] = filtered_df2['datetime'].dt.date
+            daily_counts = filtered_df2.groupby('date').size().reset_index(name='count')
+            daily_counts['date'] = daily_counts['date'].astype(str) 
 
-        bar_chart_daily = alt.Chart(daily_counts).mark_bar().encode(
-            x=alt.X('date:O', title='Fecha'),
-            y=alt.Y('count:Q', title='Total de personas por día'),
-            tooltip=[
-                alt.Tooltip('date:O', title='Fecha'),
-                alt.Tooltip('count:Q', title='Total de personas')
-            ],
-            color=alt.Color('count:Q', title='Total de personas', scale=alt.Scale(scheme='blueorange'))
-        ).properties(
-            title="Total de personas por día",
-            width=700,
-            height=400
-        )
+            bar_chart_daily = alt.Chart(daily_counts).mark_bar().encode(
+                x=alt.X('date:O', title='Fecha'),
+                y=alt.Y('count:Q', title='Total de personas por día'),
+                tooltip=[
+                    alt.Tooltip('date:O', title='Fecha'),
+                    alt.Tooltip('count:Q', title='Total de personas')
+                ],
+                color=alt.Color('count:Q', title='Total de personas', scale=alt.Scale(scheme='blueorange'))
+            ).properties(
+                title="Total de personas por día",
+                width=700,
+                height=400
+            )
 
-        st.altair_chart(bar_chart_daily, use_container_width=True)
-    else:
-        st.warning("No hay datos para mostrar con los filtros seleccionados.")
+            st.altair_chart(bar_chart_daily, use_container_width=True)
+        else:
+            st.warning("No hay datos para mostrar con los filtros seleccionados.")        
 
                 
     if selected_table:
@@ -693,4 +771,4 @@ try:
         st.dataframe(df)
 
 except Exception as e:
-    st.error(f"Actualiza la página. Error al procesar los datos: {e}")
+    st.error(f"Error al procesar los datos: {e}")
