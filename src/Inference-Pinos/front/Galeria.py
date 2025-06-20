@@ -254,16 +254,16 @@ try:
         st.write("### Conteo de personas promedio por parte del día y día de la semana")
         tab4, tab5, tab6 = st.tabs(["Gráfico de área", "Gráfico hexagonal", "Gráfico de línea"])
 
+        filtered_df['datetime'] = pd.to_datetime(filtered_df['datetime'])
+        filtered_df['time_slot'] = filtered_df['hour'].apply(get_time_slot)
+        filtered_df['day_of_week'] = filtered_df['datetime'].dt.day_name()
+        filtered_df['day_of_week'] = filtered_df['day_of_week'].map(day_map)
+        filtered_df['date'] = filtered_df['datetime'].dt.date
+        daily_counts = filtered_df.groupby(['date', 'time_slot', 'day_of_week']).size().reset_index(name='count')
+        avg_counts = daily_counts.groupby(['time_slot', 'day_of_week'])['count'].mean().reset_index()
+
         # Gráfico de área (Conteo de personas por parte del día y día)
         with tab4:
-            filtered_df['datetime'] = pd.to_datetime(filtered_df['datetime'])
-            filtered_df['time_slot'] = filtered_df['hour'].apply(get_time_slot)
-            filtered_df['day_of_week'] = filtered_df['datetime'].dt.day_name()
-            filtered_df['day_of_week'] = filtered_df['day_of_week'].map(day_map)
-            filtered_df['date'] = filtered_df['datetime'].dt.date
-            daily_counts = filtered_df.groupby(['date', 'time_slot', 'day_of_week']).size().reset_index(name='count')
-            avg_counts = daily_counts.groupby(['time_slot', 'day_of_week'])['count'].mean().reset_index()
-
             area_chart = alt.Chart(avg_counts).mark_area(opacity=0.7).encode(
                 x=alt.X('time_slot:O', title="Parte del día", sort=slot_order, axis=alt.Axis(labelAngle=0)),
                 y=alt.Y('count:Q', title='Conteo promedio de personas', scale=alt.Scale(zero=False)),

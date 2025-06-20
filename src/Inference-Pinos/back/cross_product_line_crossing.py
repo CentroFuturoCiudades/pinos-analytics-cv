@@ -118,7 +118,7 @@ if __name__ == "__main__":
 
         points_to_line.to_sql('temp_points_to_line', engine, if_exists='replace', index=False)
 
-        # Get point of intersection & surrounding points to determine direction
+        # Get point of intersection & some points after to determine direction with cross product
         line_crossings = pd.read_sql(sa.text("""
             WITH crossing_events AS (
                 SELECT 
@@ -192,8 +192,6 @@ if __name__ == "__main__":
             WHERE crossing_num = 1
             ORDER BY video_path, detection_id, id
         """), engine, params={'line_name': area_of_interest})
-
-        #line_crossings.to_sql('temp_line_crossings', engine, if_exists='replace', index=False)
         
         print(line_crossings)
 
@@ -204,13 +202,14 @@ if __name__ == "__main__":
             params=tuple(line_crossings['id'].tolist())
         )
 
+        # Remove rows from line_crossings that have IDs already in linecrossings
         if not existing_ids.empty:
-            # Remove rows from line_crossings that have IDs already in linecrossings
             line_crossings = line_crossings[~line_crossings['id'].isin(existing_ids['id'])]
             print(f"Removed {len(existing_ids)} duplicate IDs from line_crossings")
 
+
+        # Clean up data & insert
         if not line_crossings.empty:
-            # Prepare data for insertion
             line_crossings['id'] = line_crossings['id'].astype('str')
             line_crossings['video_path'] = line_crossings['video_path'].astype('str')
             line_crossings['camera_number'] = line_crossings['camera_number'].astype('int')
