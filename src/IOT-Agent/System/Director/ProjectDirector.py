@@ -46,8 +46,8 @@ class ProjectDirector( GenericProjectDirector ):
         #Initial procedure log
         self.ctx['__obj']['__log'].setLog( 'Iniciando ...' )
         self.ctx['__obj']['__log'].setDebug( self.ctx ) 
-        # uploader = Uploader()
-        # uploader.loadProcess()
+        uploader = Uploader()
+        uploader.loadProcess()
         
 
         #Step 01: Calling videoprocedures
@@ -82,15 +82,18 @@ class ProjectDirector( GenericProjectDirector ):
         update_web_time = time.time()
         while datetime.datetime.now() < endTime: ###change to run indefinitely
             try:
-                # if time.time() - update_web_time > 5:
-                #     # Update camera states every 5 seconds
-                #     for src in sources:
-                #         camera_states[src] = movement_detectors[src].get_state()
-                #     update_camera_states(camera_states)
-                #     update_web_time = time.time()
+                if time.time() - update_web_time > 5:
+                    # Update camera states every 5 seconds
+                    for src in sources:
+                        camera_states[src] = movement_detectors[src].get_state()
+                    try:
+                        update_camera_states(camera_states)
+                    except Exception as e:
+                        self.ctx['__obj']['__log'].setLog(f"Error updating camera states: {e}")
+                    update_web_time = time.time()
                 if datetime.datetime.now() > upload_time:
                     # Upload videos every TIME_TO_UPLOAD minutes
-                    # uploader.loadProcess()
+                    uploader.loadProcess()
                     upload_time = datetime.datetime.now() + datetime.timedelta(minutes=TIME_TO_UPLOAD)
             except KeyboardInterrupt:
                 print("Exit through keyboard interrupt")
