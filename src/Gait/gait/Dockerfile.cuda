@@ -1,0 +1,55 @@
+FROM nvidia/cuda:12.6.3-cudnn-runtime-ubuntu22.04
+
+# Cuda images: BASE_IMAGE: nvidia/cuda:11.8.0-runtime-ubuntu22.04
+# CPU images: BASE_IMAGE: ubuntu:22.04
+ARG USERNAME=cfc-gait
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
+
+# Install language
+RUN apt-get update && apt-get install -y \
+    locales \
+    && locale-gen en_US.UTF-8 \
+    && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 \
+    && rm -rf /var/lib/apt/lists/*
+ENV LANG en_US.UTF-8
+
+# Install timezone
+RUN ln -fs /usr/share/zoneinfo/UTC /etc/localtime \
+    && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get update \
+    && apt-get install -y tzdata \
+    && dpkg-reconfigure --frontend noninteractive tzdata \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create a non-root user
+RUN groupadd --gid $USER_GID $USERNAME \
+    && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME \
+    # Add sudo support for the non-root user
+    && apt-get update \
+    && apt-get install -y sudo \
+    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME\
+    && chmod 0440 /etc/sudoers.d/$USERNAME \
+    && rm -rf /var/lib/apt/lists/*
+
+# Setup workspace directory
+RUN mkdir -p /workspace && chown -R $USERNAME:$USERNAME /workspace
+WORKDIR /workspace
+
+RUN apt update && \
+    apt install -y python3 python3-pip git nano \
+    python3-dev libxml2-dev libxslt1-dev zlib1g-dev \
+    libsasl2-dev libldap2-dev build-essential libssl-dev \
+    libffi-dev libmysqlclient-dev libjpeg-dev libpq-dev \
+    libjpeg8-dev liblcms2-dev libblas-dev libatlas-base-dev \
+    libgl1-mesa-glx libglib2.0-0 libsm6 libxrender1 libxext6
+
+RUN pip install torch torchvision torchaudio
+COPY opengait-requirements.txt /workspace/opengait-requirements.txt
+RUN pip install --no-cache-dir -r /workspace/opengait-requirements.txt
+
+RUN git clone https://github.com/jdyjjj/All-in-One-Gait.git all-in-one-gait-install
+RUN git clone https://github.com/Megvii-BaseDetection/YOLOX.git yolox-install
+RUN cd yolox-install && pip install -v .
+
+RUN echo "export PATH=$PATH:~/.local/bin" >> /home/$USERNAME/.bashrc
