@@ -56,10 +56,10 @@ class ProjectDirector( GenericProjectDirector ):
         movement_detectors = {}
         camera_states = {}
         TIME_TO_UPLOAD = 60 # Upload every x minutes
-        TIME_TO_RECORD = 24*60 # Be active x minutes
+        TIME_TO_RECORD = 31*24*60 # Be active x minutes
 
         for src in sources:
-            model = ultralytics.YOLO("yolo11m.pt")
+            model = ultralytics.YOLO("yolo11l.pt")
             prevtime = time.time()
             yolov8_warmup(model=model, repetitions=10, verbose=False)
             self.ctx['__obj']['__log'].setLog(f"Model loaded in {time.time() - prevtime} seconds")
@@ -69,7 +69,7 @@ class ProjectDirector( GenericProjectDirector ):
                 model=model,
                 visualize=False,  # Solo si quieres ver el video
                 verbose=True,
-                clip_duration=5,
+                clip_duration=10,
                 time_between_detections=1
                 )
             camera_states[src] = 'inactive'
