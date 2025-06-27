@@ -209,16 +209,17 @@ class MovementDetector(Borg):
             # use getFrame to get a frame from the video
             frame = self.recorder.get_frame()
             if frame is None or frame.size == 0:
-                time.sleep(1)
-                continue
-            prevtime = time.time()
-            detections = self.model.predict(source=frame, verbose=False, classes = 0)
-            # Get boxes, confidences and classids
-            boxes, confidences, classids = generate_boxes_confidences_classids_v8(detections, 0.4)
-            #self.ctx['__obj']['__log'].setLog(f"Prediction done in {time.time() - prevtime} seconds")
-            # accumulate time of predictions, to print average
-            prediction_time_accum += time.time() - prevtime
-            # every minute, print average prediction time
+                detections = []
+                boxes, confidences, classids = [], [], []
+            else:
+                prevtime = time.time()
+                detections = self.model.predict(source=frame, verbose=False, classes = 0)
+                # Get boxes, confidences and classids
+                boxes, confidences, classids = generate_boxes_confidences_classids_v8(detections, 0.4)
+                #self.ctx['__obj']['__log'].setLog(f"Prediction done in {time.time() - prevtime} seconds")
+                # accumulate time of predictions, to print average
+                prediction_time_accum += time.time() - prevtime
+                # every minute, print average prediction time
 
             
             # if detectinons are found and at least one is a person
