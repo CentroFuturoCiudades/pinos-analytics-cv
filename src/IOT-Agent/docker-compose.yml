@@ -1,0 +1,18 @@
+services:
+  # IOT Agent Main Service
+  iot-agent-main:
+    image: cfc/iot-agent-main:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: iot-agent-main
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ../:/app
+    runtime: nvidia
+    tty: true
+    stdin_open: true
+
+    working_dir: /app/IOT-Agent/
+    command: ["python3", "main.py"]
