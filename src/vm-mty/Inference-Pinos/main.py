@@ -3,6 +3,7 @@ import os
 from azure.storage.blob import BlobServiceClient
 from dotenv import load_dotenv
 from ngsildclient import Client
+import time
 
 load_dotenv("./back/.env")
 
