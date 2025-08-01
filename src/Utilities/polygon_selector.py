@@ -106,6 +106,39 @@ class ImagePointSelector:
         self.ax.set_ylim(self.original_ylim)
         plt.draw()
 
+    def save_image(self):
+        """Save the current plot with polygons and points as an image."""
+        # Create output directory if it doesn't exist
+        output_dir = "../imgs/saved_polygons"
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Use the same name as CSV file but with .png extension
+        csv_basename = os.path.basename(CSV_FILE)
+        filename = os.path.splitext(csv_basename)[0] + ".png"
+        filepath = os.path.join(output_dir, filename)
+        
+        # Save the figure without axes, title, and padding
+        self.ax.figure.savefig(filepath, dpi=300, bbox_inches='tight', 
+                              pad_inches=0, facecolor='none', 
+                              edgecolor='none')
+        
+        # Temporarily hide axes and title for clean save
+        self.ax.axis('off')
+        self.ax.set_title('')
+        
+        # Save again with clean appearance
+        self.ax.figure.savefig(filepath, dpi=300, bbox_inches='tight', 
+                              pad_inches=0, facecolor='none', 
+                              edgecolor='none')
+        
+        # Restore axes and title for continued use
+        self.ax.axis('on')
+        self.ax.set_title("Image View")
+        plt.draw()
+        
+        print(f"Image saved to: {filepath}")
+        return filepath
+
 def save_points_to_csv(points):
     """Save points to a CSV file with headers: Number, Birdseye, Camera."""
     with open(CSV_FILE, mode="w", newline="") as file:
@@ -114,6 +147,13 @@ def save_points_to_csv(points):
         for i, coord in enumerate(points):
             writer.writerow([i + 1, coord])
     print(f"Points saved to {CSV_FILE}")
+
+def handle_key_press(event, selector):
+    """Handle key press events for the image selector."""
+    if event.key == "r":
+        selector.reset_zoom(event)
+    elif event.key == "i":
+        selector.save_image()
 
 def display_image(img_path):
     global image_points
@@ -124,11 +164,11 @@ def display_image(img_path):
 
     ax.set_title("Image View")
 
-    plt.gcf().canvas.mpl_connect("key_press_event", lambda event: selector.reset_zoom(event) if event.key == "r" else None)
+    plt.gcf().canvas.mpl_connect("key_press_event", lambda event: handle_key_press(event, selector))
     plt.show()
 
 if __name__ == "__main__":
 
     print("Launching window for single image.")
-    print("Press 'r' to reset zoom. Left-click to add points. Right-click to remove.")
+    print("Press 'r' to reset zoom. Left-click to add points. Right-click to remove, and 'i' to save the image")
     display_image(IMG_PATH)
