@@ -1,7 +1,6 @@
 import csv
+from engine import engine
 import sqlalchemy as sa
-from dotenv import load_dotenv
-import os
 
 def read_coordinates_from_csv(csv_path):
     coords = []
@@ -53,7 +52,6 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python insert_polygon.py <path_to_csv>")
         exit(1)
-    load_dotenv()
     
     csv_path = sys.argv[1]
     area_name = csv_path.split("/")[-1].replace(".csv", "")
@@ -61,12 +59,7 @@ if __name__ == "__main__":
     coords = read_coordinates_from_csv(csv_path)
     polygon_wkt = build_polygon_wkt(coords)
     
-    host = os.getenv('HOST')
-    port = int(os.getenv('DB_PORT'))
-    db = os.getenv('DB_NAME')
-    user = os.getenv('DB_USER')
-    password = os.getenv('DB_PASSWORD')
-    engine = sa.create_engine(f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}", echo=True)
+   
     
     print("WKT to insert:", polygon_wkt)
     print("area name:", area_name)
