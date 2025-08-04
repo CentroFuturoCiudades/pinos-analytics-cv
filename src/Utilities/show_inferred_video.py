@@ -4,6 +4,7 @@ Script to visualize a video with detected bounding boxes and skeletons. Fetches 
 Usage examples:
 python3 show_inferred_video.py camera5_2025_06_18-01_01_14_PM.mp4
 python3 show_inferred_video.py 2025_05_23-08_28_02_PM.mp4
+python3 show_inferred_video.py camera5_2025_06_18-01_01_14_PM.mp4 --global-ids
 """
 
 import cv2
@@ -38,14 +39,36 @@ def analyze_detections(detections):
         'frame_range': frame_range
     }
 
-def fetch_detections(video_path: str):
+def fetch_detections(video_path: str, include_global_ids: bool = False):
     with engine.begin() as conn:
-        result = conn.execute(text("""
-            SELECT id, bbox, skeleton
-            FROM detectionsobserved
-            WHERE video_path = :video_path
-            ORDER BY id ASC
-        """), {"video_path": video_path})
+        if include_global_ids:
+            # First get all detections
+            result = conn.execute(text("""
+                SELECT id, bbox, skeleton
+                FROM detectionsobserved
+                WHERE video_path = :video_path
+                ORDER BY id ASC
+            """), {"video_path": video_path})
+            
+            # Get global ID mappings
+            global_mapping = {}
+            global_result = conn.execute(text("""
+                SELECT original_id, global_id
+                FROM track_to_global
+                WHERE video_path = :video_path
+            """), {"video_path": video_path})
+            
+            for row in global_result.fetchall():
+                global_mapping[row.original_id] = row.global_id
+        else:
+            result = conn.execute(text("""
+                SELECT id, bbox, skeleton
+                FROM detectionsobserved
+                WHERE video_path = :video_path
+                ORDER BY id ASC
+            """), {"video_path": video_path})
+            global_mapping = {}
+        
         detections = {}
         unique_track_ids = set()
         row_count = 0
@@ -62,16 +85,25 @@ def fetch_detections(video_path: str):
                 if frame_number not in detections:
                     detections[frame_number] = []
                 
-                detections[frame_number].append({
+                detection_data = {
                     "bbox": row.bbox,
                     "skeleton": row.skeleton,
                     "track_id": track_id
-                })
+                }
+                
+                # Add global_id if available
+                if include_global_ids and track_id in global_mapping:
+                    detection_data["global_id"] = global_mapping[track_id]
+                
+                detections[frame_number].append(detection_data)
             except (ValueError, IndexError) as e:
                 print(f"Warning: Could not extract frame number from ID {row.id}: {e}")
                 continue
             
     print("Detections:", len(detections), "frame numbers found for video:", video_path)
+    if include_global_ids:
+        mapped_tracks = sum(1 for tid in unique_track_ids if tid in global_mapping)
+        print(f"Global ID mapping: {mapped_tracks}/{len(unique_track_ids)} tracks have global IDs")
     
     return detections, len(unique_track_ids)
 
@@ -79,6 +111,7 @@ def draw_detection(frame, det):
     bbox = det.get("bbox", {})
     skeleton = det.get("skeleton", {})
     track_id = det.get("track_id", "Unknown")
+    global_id = det.get("global_id")
     
     if isinstance(bbox, str):
         try:
@@ -102,20 +135,48 @@ def draw_detection(frame, det):
             y2 = int(y_center + height / 2)
             
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-            # Draw track id
-            label = f"ID: {track_id}"
-            label_size = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.6, 2)[0]
             
-            label_y = max(y1 - 10, label_size[1] + 5)
+            # Create label with track ID and optionally global ID
+            if global_id:
+                label = f"Track: {track_id}"
+                global_id_str = str(global_id)
+                global_label = f"Global: {global_id_str[:8]}..."  # Show first 8 chars of UUID
+            else:
+                label = f"ID: {track_id}"
+                global_label = None
+            
+            # Calculate label dimensions
+            label_size = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)[0]
+            label_height = label_size[1] + 10
+            
+            # If we have global ID, calculate space for second line
+            if global_label:
+                global_label_size = cv2.getTextSize(global_label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)[0]
+                total_width = max(label_size[0], global_label_size[0]) + 10
+                total_height = label_height + global_label_size[1] + 10
+            else:
+                total_width = label_size[0] + 10
+                total_height = label_height
+            
+            # Position labels above the bounding box
+            label_y = max(y1 - total_height, total_height)
             label_x = x1
             
+            # Draw background rectangle for labels
             cv2.rectangle(frame, 
-                         (label_x, label_y - label_size[1] - 5), 
-                         (label_x + label_size[0] + 10, label_y + 5), 
+                         (label_x, label_y - total_height), 
+                         (label_x + total_width, label_y), 
                          (0, 255, 0), -1)
             
-            cv2.putText(frame, label, (label_x + 5, label_y), 
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 2)
+            # Draw track ID label
+            cv2.putText(frame, label, (label_x + 5, label_y - total_height + label_size[1] + 5), 
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
+            
+            # Draw global ID label if available
+            if global_label:
+                cv2.putText(frame, global_label, 
+                           (label_x + 5, label_y - global_label_size[1] - 2), 
+                           cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
 
     # Draw skeleton keypoints
     if skeleton and "keypoints" in skeleton:
@@ -128,7 +189,7 @@ def draw_detection(frame, det):
     
     return frame
 
-def annotate_video(input_path: str, video_path_db: str, output_path: str):
+def annotate_video(input_path: str, video_path_db: str, output_path: str, include_global_ids: bool = False):
     print(f"Processing: {input_path}")
     cap = cv2.VideoCapture(input_path)
     if not cap.isOpened():
@@ -162,7 +223,7 @@ def annotate_video(input_path: str, video_path_db: str, output_path: str):
         output_path = output_path.replace('.mp4', '.avi')
         print(f"Using alternative codec, output will be: {output_path}")
 
-    detections, unique_track_count = fetch_detections(video_path_db)
+    detections, unique_track_count = fetch_detections(video_path_db, include_global_ids)
 
     for frame_idx in range(frame_count):
         ret, frame = cap.read()
@@ -191,6 +252,8 @@ def annotate_video(input_path: str, video_path_db: str, output_path: str):
     print("="*50)
     print(f"Total detections: {stats['total_detections']}")
     print(f"Unique track IDs: {unique_track_count}")
+    if include_global_ids:
+        print("Global ID visualization: ENABLED")
     print(f"Frames with detections: {stats['frames_with_detections']}")
     print(f"Maximum detections in single frame: {stats['max_detections_per_frame']}")
     if stats['frame_range']:
@@ -208,9 +271,11 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("video_path", help="Path to input video")
+    parser.add_argument("--global-ids", action="store_true", 
+                       help="Display global IDs alongside track IDs")
     args = parser.parse_args()
 
     output_path = f"annotated/annotated_{args.video_path.split('/')[-1]}"
     local_video_path = os.path.join("videos", os.path.basename(args.video_path))
     download_video(os.path.basename(local_video_path), os.path.dirname(local_video_path))
-    annotate_video(local_video_path, os.path.basename(local_video_path), output_path)
+    annotate_video(local_video_path, os.path.basename(local_video_path), output_path, args.global_ids)
