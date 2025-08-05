@@ -221,18 +221,45 @@ def store_group_relation(video_path, id_mapping):
         conn.close()
         
 
+def process_video_tracklets(video_path: str) -> bool:
+    try:
+        print(f"Processing tracklets for video: {video_path}")
+        
+        # Step 1: Fetch detections
+        print("  Fetching detections...")
+        tracklets = fetch_detections(video_path)
+        if not tracklets:
+            print("  No tracklets found")
+            return False
+        
+        # Step 2: Merge tracklets
+        print("  Merging tracklets...")
+        id_mapping = merge_tracklets(tracklets)
+        
+        # Step 3: Generate UUIDs
+        print("  Generating global UUIDs...")
+        id_mapping = uuid_mapping(id_mapping)
+        
+        # Step 4: Store results
+        print("  Storing group relation...")
+        store_group_relation(video_path, id_mapping)
+        
+        print("  Storing group summary...")
+        store_group_summary(video_path, id_mapping, tracklets)
+        
+        print(f"  Successfully processed {len(tracklets)} tracklets into {len(set(id_mapping.values()))} merged groups")
+        return True
+        
+    except Exception as e:
+        print(f"  Error processing video {video_path}: {e}")
+        return False
+
 
 if __name__ == "__main__":
     video_path = "2025_05_23-08_28_02_PM.mp4"
-    print("Fetching detections...")
-    tracklets = fetch_detections(video_path)
-    print("Merging tracklets...")
-    id_mapping = merge_tracklets(tracklets)
-    id_mapping = uuid_mapping(id_mapping)
+    success = process_video_tracklets(video_path)
     
-    print("Storing group relation...")
-    store_group_relation(video_path, id_mapping)
-    print("Storing group summary...")
-    store_group_summary(video_path, id_mapping, tracklets)
-
-    print("Merged tracklets saved to database.")
+    if success:
+        print("Merged tracklets saved to database.")
+    else:
+        print("Failed to process tracklets.")

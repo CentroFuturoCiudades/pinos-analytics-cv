@@ -1,3 +1,7 @@
+"""
+Initializes the database connection using SQLAlchemy and env information.
+"""
+
 import sqlalchemy as sa
 from dotenv import load_dotenv
 import os
