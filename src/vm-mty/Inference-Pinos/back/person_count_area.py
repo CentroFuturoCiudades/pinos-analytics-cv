@@ -105,7 +105,7 @@ def process_area_detections(detections, area_name):
 
     return results
 
-def save_count_results(count_results):
+def save_count_results(count_results, video_file):
     conn = engine.connect()
     trans = conn.begin()
     try:
@@ -114,11 +114,12 @@ def save_count_results(count_results):
                 'timestamp': count_result['timestamp'],
                 'detection_count': count_result['detection_count'],
                 'area_name': count_result['area_name'],
-                'camera_number': count_result['camera_number']
+                'camera_number': count_result['camera_number'],
+                'video_file': video_file
             }
             conn.execute(text("""
-                INSERT INTO count_result (timestamp, detection_count, area_name, camera_number)
-                VALUES (:timestamp, :detection_count, :area_name, :camera_number)
+                INSERT INTO count_result (timestamp, detection_count, area_name, camera_number, video_file)
+                VALUES (:timestamp, :detection_count, :area_name, :camera_number, :video_file)
             """), entry)
         trans.commit()
     except Exception as e:
@@ -194,7 +195,7 @@ def process_day_counts_in_areas(day):
                 continue
 
             print(f"Saving {area} results ({len(area_results)}) to database ...")
-            save_count_results(area_results)
+            save_count_results(area_results, video_file)
             
             print(f"Finished processing area: {area}")
 

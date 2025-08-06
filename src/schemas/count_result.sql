@@ -5,7 +5,8 @@ CREATE TABLE count_result (
     timestamp timestamptz NOT NULL,
     detection_count INTEGER NOT NULL,
     area_name TEXT NOT NULL,
-    camera_number INTEGER NOT NULL
+    camera_number INTEGER NOT NULL,
+    video_file TEXT
 );
 
 
