@@ -6,6 +6,7 @@ sys.path.append('../../../Utilities')
 from merge_tracklets import process_video_tracklets
 from engine import engine
 from sqlalchemy import text
+import datetime
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 AREA_DIRECTORY = os.path.join(CURRENT_DIR, "../../../../csv/areas")
@@ -201,5 +202,12 @@ def process_day_counts_in_areas(day):
         mark_video_as_inferred(video_file)
 
 if __name__ == "__main__":
-    day = '2025-05-26'
-    process_day_counts_in_areas(day)
+    day = datetime.date(2025, 5, 23)
+    initial_date = day
+    today = datetime.date.today()
+    
+    while day <= today:
+        process_day_counts_in_areas(day.strftime('%Y-%m-%d'))
+        day += datetime.timedelta(days=1)
+
+    print(f"Finished processing dates from {initial_date} to {today}.")
