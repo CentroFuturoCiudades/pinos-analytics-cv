@@ -200,6 +200,7 @@ def store_group_summary(video_path, id_mapping, tracklets):
 def store_group_relation(video_path, id_mapping):
     conn = engine.connect()
     trans = conn.begin()
+    success = True
     try:
         for original_track_id, group_id in id_mapping.items():
             conn.execute(text("""
@@ -216,9 +217,12 @@ def store_group_relation(video_path, id_mapping):
         trans.commit()
     except Exception as e:
         print("Insert failed:", e)
-        trans.rollback()    
+        trans.rollback()
+        success = False
     finally:
         conn.close()
+        
+    return success
         
 
 def process_video_tracklets(video_path: str) -> bool:
@@ -232,6 +236,8 @@ def process_video_tracklets(video_path: str) -> bool:
             print("  No tracklets found")
             return False
         
+        print(f"  Found {len(tracklets)} tracklets")
+        
         # Step 2: Merge tracklets
         print("  Merging tracklets...")
         id_mapping = merge_tracklets(tracklets)
@@ -240,11 +246,17 @@ def process_video_tracklets(video_path: str) -> bool:
         print("  Generating global UUIDs...")
         id_mapping = uuid_mapping(id_mapping)
         
+        print(f"  Grouped {len(tracklets)} tracklets into {len(set(id_mapping.values()))} merged groups")
+
         # Step 4: Store results
         print("  Storing group relation...")
-        store_group_relation(video_path, id_mapping)
-        
+        success = store_group_relation(video_path, id_mapping)
+
         print("  Storing group summary...")
+        if not success:
+            print("  Failed to store group relation, aborting summary storage")
+            return False
+        
         store_group_summary(video_path, id_mapping, tracklets)
         
         print(f"  Successfully processed {len(tracklets)} tracklets into {len(set(id_mapping.values()))} merged groups")
