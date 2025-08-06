@@ -32,9 +32,46 @@ try:
     st.success("Conexión exitosa a la base de datos PostgreSQL")
     st.write(f"Conectado a la base de datos PostgreSQL: `{db}`")
 
-    # Leer datos de la tabla count_result
-    selected_table = "count_result"
-    df = pd.read_sql(f"SELECT * FROM {selected_table}", engine)
+    # Obtener información básica de la tabla
+    count_query = "SELECT COUNT(*) as total_rows FROM count_result"
+    total_rows = pd.read_sql(count_query, engine).iloc[0]['total_rows']
+    st.info(f"📊 Total de registros en la base de datos: {total_rows}")
+
+    # Query optimizada: obtener solo los registros con máximo detection_count por minuto
+    optimized_query = """
+    WITH minute_max AS (
+        SELECT 
+            DATE_TRUNC('minute', timestamp) as minute_timestamp,
+            area_name,
+            camera_number,
+            MAX(detection_count) as max_detection_count
+        FROM count_result 
+        GROUP BY DATE_TRUNC('minute', timestamp), area_name, camera_number
+    ),
+    ranked_records AS (
+        SELECT 
+            cr.*,
+            ROW_NUMBER() OVER (
+                PARTITION BY DATE_TRUNC('minute', cr.timestamp), cr.area_name, cr.camera_number 
+                ORDER BY cr.detection_count DESC, cr.timestamp DESC
+            ) as rn
+        FROM count_result cr
+        INNER JOIN minute_max mm ON 
+            DATE_TRUNC('minute', cr.timestamp) = mm.minute_timestamp
+            AND cr.area_name = mm.area_name 
+            AND cr.camera_number = mm.camera_number
+            AND cr.detection_count = mm.max_detection_count
+    )
+    SELECT id, timestamp, detection_count, area_name, camera_number, video_file
+    FROM ranked_records 
+    WHERE rn = 1
+    ORDER BY timestamp DESC
+    """
+
+    # Ejecutar query optimizada con progress bar
+    with st.spinner("Cargando datos (máximo detection_count por minuto)..."):
+        df = pd.read_sql(optimized_query, engine)
+
 
     # Convertir timestamp a datetime
     df['datetime'] = pd.to_datetime(df['timestamp'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
@@ -64,17 +101,12 @@ try:
 
     # Definir el orden correcto de los días
     day_order = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
-
-    # Obtener zonas únicas de la base de datos
-    available_zones = df['area_name'].unique().tolist() if 'area_name' in df.columns else []
     
-    # Si no hay zonas en la DB, usar las imágenes disponibles
-    if not available_zones:
-        try:
-            zones = [os.path.splitext(os.path.basename(f))[0] for f in os.listdir("imgs/zones")]
-            available_zones = zones
-        except FileNotFoundError:
-            available_zones = []
+    try:
+        zones = [os.path.splitext(os.path.basename(f))[0] for f in os.listdir("imgs/zones")]
+        available_zones = zones
+    except FileNotFoundError:
+        available_zones = []
 
     if available_zones:
         selected_zones = st.multiselect(
@@ -517,7 +549,7 @@ try:
                     st.warning("No hay datos para mostrar con los filtros seleccionados.")
 
         # Mostrar datos originales
-        if selected_table:
+        if df:
             st.write("### Datos Originales - Conteos en Zonas de Juego")
             st.dataframe(df)
 
