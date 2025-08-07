@@ -68,7 +68,9 @@ def fetch_area_detections(video_path):
 
 def process_area_detections(detections, area_name):
     # Filter detections for the specified area
-    area_detections = [d for d in detections if d.area_name == area_name]
+
+    cam_area = int(area_name.split("_")[0].replace("cam", ""))
+    area_detections = [d for d in detections if d.area_name == area_name and d.camera_number == cam_area]
     
     # Sort detections by timestamp for efficient range searching
     area_detections.sort(key=lambda d: d.timestamp)
