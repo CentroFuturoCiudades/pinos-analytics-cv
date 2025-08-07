@@ -548,10 +548,96 @@ try:
                 else:
                     st.warning("No hay datos para mostrar con los filtros seleccionados.")
 
-        # Mostrar datos originales
-        if df:
-            st.write("### Datos Originales - Conteos en Zonas de Juego")
-            st.dataframe(df)
+        st.write("### Datos Originales - Conteos en Zonas de Juego")
+        st.dataframe(df)
+# src/vm-mty/Inference-Pinos/front/pages
+# src/Utilities
+        # Video Annotation Section
+        st.write("---")
+        st.write("## 🎥 Inspeccionar Videos Anotados")
+        
+        # Check if video functionality is available
+        try:
+            import sys
+            import os
+            sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.path.abspath('../../../Utilities')))
+            from show_inferred_video import show_inferred_video
+            video_available = True
+        except ImportError as e:
+            video_available = False
+            error_msg = str(e)
+            
+        if video_available:
+            st.info("""
+            **Funcionalidad de Anotación de Videos:**
+            - Ingresa el nombre de un archivo de video para generar una versión anotada
+            - El video resultante muestra bounding boxes y esqueletos de las personas detectadas
+            """)
+            
+            col1, col2 = st.columns([3, 1])
+            
+            with col1:
+                video_filename = st.text_input(
+                    "Nombre del archivo de video:",
+                    placeholder="Ejemplo: camera5_2025_06_18-01_01_14_PM.mp4",
+                    help="Ingresa el nombre completo del archivo de video incluyendo la extensión"
+                )
+            
+            with col2:
+                include_global_ids = st.checkbox(
+                    "Incluir IDs globales",
+                    value=False,
+                    help="Mostrar IDs globales además de los IDs de seguimiento locales"
+                )
+            
+            if st.button("🎬 Generar Video Anotado", type="primary"):
+                if video_filename:
+                    try:
+                        progress_text = st.empty()
+                        progress_bar = st.progress(0)
+                        
+                        def update_progress(value):
+                            progress_bar.progress(value)
+                            
+                        def update_status(text):
+                            progress_text.text(text)
+                        
+                        annotated_video_path = show_inferred_video(
+                            video_filename, 
+                            include_global_ids, 
+                            progress_callback=update_progress,
+                            status_callback=update_status
+                        )
+                        
+                        if annotated_video_path and os.path.exists(annotated_video_path):
+                            st.success("✅ Video anotado generado exitosamente!")
+                            
+                            st.write("### 📽️ Video Anotado Generado")
+                            with open(annotated_video_path, 'rb') as video_file:
+                                video_bytes = video_file.read()
+                                st.video(video_bytes)
+                            
+                            # Provide download link
+                            st.download_button(
+                                label="⬇️ Descargar Video Anotado",
+                                data=video_bytes,
+                                file_name=f"annotated_{video_filename}",
+                                mime="video/mp4"
+                            )
+                        else:
+                            st.error("❌ Error: No se pudo generar el video anotado.")
+                            
+                    except Exception as e:
+                        st.error(f"❌ Error al procesar el video: {e}")
+                        import traceback
+                        st.error(traceback.format_exc())
+                else:
+                    st.warning("⚠️ Por favor, ingresa el nombre de un archivo de video.")
+        else:
+            st.warning(f"""
+            **Funcionalidad de video no disponible**
+            Error: {error_msg if 'error_msg' in locals() else 'Dependencias no encontradas'}
+            """)
 
     else:
         st.warning("No se encontraron zonas disponibles en la base de datos o en las imágenes.")

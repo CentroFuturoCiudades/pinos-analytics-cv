@@ -189,7 +189,8 @@ def draw_detection(frame, det):
     
     return frame
 
-def annotate_video(input_path: str, video_path_db: str, output_path: str, include_global_ids: bool = False):
+def annotate_video(input_path: str, video_path_db: str, output_path: str, include_global_ids: bool = False, 
+                  progress_callback=None, status_callback=None):
     print(f"Processing: {input_path}")
     cap = cv2.VideoCapture(input_path)
     if not cap.isOpened():
@@ -225,6 +226,9 @@ def annotate_video(input_path: str, video_path_db: str, output_path: str, includ
 
     detections, unique_track_count = fetch_detections(video_path_db, include_global_ids)
 
+    if status_callback:
+        status_callback("🎬 Procesando video y aplicando anotaciones...")
+
     for frame_idx in range(frame_count):
         ret, frame = cap.read()
         if not ret:
@@ -241,6 +245,18 @@ def annotate_video(input_path: str, video_path_db: str, output_path: str, includ
         # Progress indicator
         if frame_idx % 100 == 0:
             print(f"Processed {frame_idx}/{frame_count} frames ({frame_idx/frame_count*100:.1f}%)")
+        
+        # Streamlit progress tracking
+        if progress_callback and frame_idx % 10 == 0:
+            progress_value = 0.3 + (frame_idx / frame_count) * 0.7
+            progress_callback(progress_value)
+            
+        if status_callback and frame_idx % 50 == 0:
+            status_callback(f"🎬 Procesando frame {frame_idx + 1}/{frame_count} ({(frame_idx/frame_count)*100:.1f}%)")
+    if progress_callback:
+        progress_callback(1.0)
+    if status_callback:
+        status_callback("✅ Anotaciones completadas.")
 
     cap.release()
     out.release()
@@ -266,6 +282,24 @@ def annotate_video(input_path: str, video_path_db: str, output_path: str, includ
         print(f"Annotated video saved to: {output_path} (Size: {os.path.getsize(output_path)} bytes)")
     else:
         print(f"Error: Output file was not created or is empty: {output_path}")
+        
+    return {
+        'frame_count': frame_count,
+        'unique_track_count': unique_track_count,
+        'detections_count': len(detections),
+        'detection_coverage': len(detections)/frame_count*100 if frame_count > 0 else 0
+    }
+
+def show_inferred_video(video_path, include_global_ids, progress_callback=None, status_callback=None):
+    output_path = f"annotated/annotated_{video_path.split('/')[-1]}"
+    local_video_path = os.path.join("videos", os.path.basename(video_path))
+    if progress_callback:
+        progress_callback(0.1)
+    if status_callback:
+        status_callback("🔄 Descargando video...")
+    download_video(os.path.basename(local_video_path), os.path.dirname(local_video_path))
+    annotate_video(local_video_path, os.path.basename(local_video_path), output_path, include_global_ids, progress_callback, status_callback)
+    return output_path
 
 if __name__ == "__main__":
     import argparse
@@ -274,8 +308,5 @@ if __name__ == "__main__":
     parser.add_argument("--global-ids", action="store_true", 
                        help="Display global IDs alongside track IDs")
     args = parser.parse_args()
-
-    output_path = f"annotated/annotated_{args.video_path.split('/')[-1]}"
-    local_video_path = os.path.join("videos", os.path.basename(args.video_path))
-    download_video(os.path.basename(local_video_path), os.path.dirname(local_video_path))
-    annotate_video(local_video_path, os.path.basename(local_video_path), output_path, args.global_ids)
+    
+    show_inferred_video(args.video_path, args.global_ids)
