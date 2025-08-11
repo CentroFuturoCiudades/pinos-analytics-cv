@@ -18,24 +18,24 @@ engine = sa.create_engine(f"postgresql+psycopg2://{user}:{password}@{host}:{port
 st.set_page_config(page_title="Conteos en Zonas de Juego", layout="wide")
 st.title("Análisis de conteos en Zonas de Juego")
 
-# Información metodológica
-st.info("""
-**Metodología de análisis:**
-- Los datos muestran el **promedio de personas** presentes en las áreas de juego
-- Cada `detection_count` representa el máximo número de detecciones en una ventana de 600ms (±300ms del timestamp)
-- Los gráficos utilizan el **máximo** por área y tiempo (no suma) para evitar doble conteo
-- Las métricas reflejan la ocupación promedio real de las zonas de juego
-""")
-
-
 try:
     st.success("Conexión exitosa a la base de datos PostgreSQL")
     st.write(f"Conectado a la base de datos PostgreSQL: `{db}`")
+    
+    with st.expander("Metodología de análisis"):
+        st.write('''
+            Para realizar el análisis de los conteos en las zonas de juego, se siguió la siguiente metodología:
+            1. Se extrajeron los datos originales de las detecciones de la base de datos.
+            2. Se realizó un procesamiento de corrección espacio-temporal en las detecciones, para reducir la cantidad de trayectorias (tracklets) duplicadas por persona. Estas pueden ser causadas por videos con baja calidad o problemas de sincronización.
+            3. Usando las trayectorias corregidas, para cada zona definida, se realizó un cálculo para obtener la cantidad máxima de detecciones en un momento dado.
+            4. En las visualizaciones, los conteos para una cantidad del tiempo están definidos como el máximo de detecciones encontrada en ese intervalo de tiempo. Por ejemplo, si se selecciona un intervalo de 1 minuto, se mostrará el máximo de detecciones encontradas en ese minuto.
+            5. Esto permite tener una visión de los flujos de personas en las zonas de juego, evitando la sobreestimación de conteos que podría ocurrir si se sumaran todas las detecciones en lugar de tomar el máximo.
+        ''')
 
     # Obtener información básica de la tabla
     count_query = "SELECT COUNT(*) as total_rows FROM count_result"
     total_rows = pd.read_sql(count_query, engine).iloc[0]['total_rows']
-    st.info(f"📊 Total de registros en la base de datos: {total_rows}")
+    st.info(f"📊 Total de registros en la base de datos (paso 3 de metodología): {total_rows:,}")
 
     # Query optimizada: obtener solo los registros con máximo detection_count por minuto
     optimized_query = """
