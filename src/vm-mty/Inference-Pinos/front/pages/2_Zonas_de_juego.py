@@ -76,13 +76,13 @@ try:
     
     # Filtrar por fecha
     st.write("#### Filtrar por rango de fecha")
-    month_ago = datetime.datetime.now() - datetime.timedelta(days=31)
-    init_day = datetime.datetime(2025, 5, 23)
+    month_ago_3 = datetime.datetime.now() - datetime.timedelta(days=31 * 3)
+    init_day = datetime.datetime(2025, 5, 1)
     today = datetime.datetime.now()
 
     d = st.date_input(
         "Selecciona el rango para visualizar",
-        (month_ago, today),
+        (month_ago_3, today),
         init_day,
         today + datetime.timedelta(days=1),
         format="MM.DD.YYYY",
@@ -146,23 +146,36 @@ try:
         st.warning("No hay datos para mostrar con los filtros seleccionados.")
         st.stop()
 
-    st.write("### Promedio de personas por hora")
+    st.write("### Promedio de flujo de personas por hora")
+    with st.expander("Explicación de gráfica"):
+        st.write("Esta gráfica muestra el promedio de personas detectadas por cada hora del dia.")
+        st.info('Para obtener estos datos, se siguen los siguientes pasos:')
+        st.info('''
+                1. Filtrar los datos considerando el rango de fechas, días de la semana y áreas seleccionadas.
+                2. Para cada área, hora, y dia, se consigue el máximo de detecciones.
+                3. Si hay detecciones de una área y hora en diferentes días, se promedian las detecciones para cada hora y área.
+                4. Finalmente, el flujo promedio de personas de las zonas seleccionadas se suman para cada hora del día.
+                5. El resultado es un promedio de flujo de personas detectadas por hora, que se muestra en la gráfica.
+                ''')
     if not filtered_df.empty:
-        # Usar max en lugar de sum ya que detection_count es el máximo en una ventana de 600ms
+        # Paso 2: Para cada área, hora, y dia, se consigue el máximo de detecciones. 
         hourly_avg = filtered_df.groupby(['hour', 'area_name', 'date'])['detection_count'].max().reset_index()
-        hourly_avg = hourly_avg.groupby('hour')['detection_count'].mean().reset_index()
+        # Paso 3: Si hay detecciones de una área y hora en diferentes días, se promedian las detecciones para cada hora y área.
+        hourly_avg = hourly_avg.groupby(['hour', 'area_name'])['detection_count'].mean().reset_index()
+        # Paso 4: Finalmente, el flujo promedio de personas de las zonas seleccionadas se suman para cada hora del día.
+        hourly_avg = hourly_avg.groupby('hour')['detection_count'].sum().reset_index()
+
         hourly_avg['hour_str'] = hourly_avg['hour'].astype(str).str.zfill(2) + ':00'
 
         bar_chart_hourly = alt.Chart(hourly_avg).mark_bar().encode(
             x=alt.X('hour_str:O', title='Hora del día'),
-            y=alt.Y('detection_count:Q', title='Promedio de personas en el área'),
+            y=alt.Y('detection_count:Q', title='Promedio de flujo de personas en áreas seleccionadas'),
             tooltip=[
                 alt.Tooltip('hour_str:O', title='Hora'),
-                alt.Tooltip('detection_count:Q', title='Promedio de personas', format='.1f')
+                alt.Tooltip('detection_count:Q', title='Promedio de flujo de personas', format='.1f')
             ],
-            color=alt.Color('detection_count:Q', title='Promedio de personas', scale=alt.Scale(scheme='blueorange'))
+            color=alt.Color('detection_count:Q', title='Flujo de personas', scale=alt.Scale(scheme='blueorange'))
         ).properties(
-            title="Promedio de personas por hora",
             width=700,
             height=400
         )
@@ -172,19 +185,32 @@ try:
         st.warning("No hay datos para mostrar con los filtros seleccionados.")
 
     # PROMEDIO DE PERSONAS POR HORA
-    st.write("### Promedio de personas por hora y día de la semana")
+    st.write("### Promedio de flujo de personas por hora y día de la semana")
+    with st.expander("Explicación de gráfica"):
+        st.write("Esta gráfica muestra el flujo promedio de personas detectadas por cada hora del día, segmentado por día de la semana.")
+        st.info('Para obtener estos datos, se siguen los siguientes pasos:')
+        st.info('''
+                1. Filtrar los datos considerando el rango de fechas, días de la semana y áreas seleccionadas.
+                2. Para cada grupo de área, hora, día y día de la semana, se consigue el máximo de detecciones.
+                3. Para cada hora y día de la semana, se promedian las detecciones de todas las áreas seleccionadas.
+                4. Para cada grupo de hora, área y día de la semana, se consiguen las detecciones promedio.
+                5. Finalmente, se suman las detecciones promedio de todas las áreas para cada hora del día.
+                6. El resultado muestra patrones de flujo de personas por hora, diferenciados por día de la semana.
+                ''')
+    
     tab1, tab2 = st.tabs(["Gráfico de área", "Gráfico de línea"])
 
     # Preparar datos para promedio de personas por hora (usar max en lugar de sum)
     # Primero obtener el máximo por área y hora, luego promediar por hora
-    hourly_max = filtered_df.groupby(['hour', 'day_of_week', 'area_name'])['detection_count'].max().reset_index()
-    avg_counts = hourly_max.groupby(['hour', 'day_of_week'])['detection_count'].mean().reset_index()
-
+    hourly_avg = filtered_df.groupby(['hour', 'area_name', 'date', 'day_of_week'])['detection_count'].max().reset_index()
+    avg_counts = hourly_avg.groupby(['hour', 'area_name', 'day_of_week'])['detection_count'].mean().reset_index()
+    avg_counts = hourly_avg.groupby(['hour', 'day_of_week'])['detection_count'].sum().reset_index()
+        
     # Gráfico de área (Promedio de personas por hora)
     with tab1:
         area_chart = alt.Chart(avg_counts).mark_area(opacity=0.7).encode(
             x=alt.X('hour:O', title="Hora del día (0-23)", axis=alt.Axis(labelAngle=0)),
-            y=alt.Y('detection_count:Q', title='Promedio de personas en el área', scale=alt.Scale(zero=False)),
+            y=alt.Y('detection_count:Q', title='Promedio de flujo de personas en el área', scale=alt.Scale(zero=False)),
             color=alt.Color(
                 field='day_of_week',
                 title='Día de la semana',
@@ -193,7 +219,7 @@ try:
                 scale=alt.Scale(range=["#f4a261", "#cb997e", "#ddbea9", "#b7b7a4", "#9b9b7a", "#93b7be", "#588b8b"])
             ),
             tooltip=['hour', 'day_of_week', alt.Tooltip('detection_count:Q', title='Promedio de personas', format='.1f')]
-        ).properties(title="Promedio de personas por día y hora", width=600, height=400)
+        ).properties(width=600, height=400)
 
         st.altair_chart(area_chart, use_container_width=True)
     
@@ -203,7 +229,7 @@ try:
             point=alt.OverlayMarkDef(filled=False, fill="white")
         ).encode(
             x=alt.X('hour:O', title="Hora del día (0-23)", axis=alt.Axis(labelAngle=0)),
-            y=alt.Y('detection_count:Q', title='Promedio de personas en el área', scale=alt.Scale(zero=False)),
+            y=alt.Y('detection_count:Q', title='Promedio de personas', scale=alt.Scale(zero=False)),
             color=alt.Color(
                 field='day_of_week',
                 title='Día de la semana',
@@ -216,12 +242,21 @@ try:
 
         st.altair_chart(line_chart, use_container_width=True)
 
-    # PROMEDIO DE PERSONAS POR MINUTO (ANÁLISIS DETALLADO)
     st.write("### Análisis detallado por minutos")
-    
+    with st.expander("Explicación de gráfica"):
+        st.write("Esta gráfica muestra el flujo de personas minuto a minuto para una hora específica seleccionada.")
+        st.info('Para obtener estos datos, se siguen los siguientes pasos:')
+        st.info('''
+                1. Filtrar los datos por la hora seleccionada, además de los filtros anteriores (fechas, días, áreas).
+                2. Para cada minuto, fecha y área, se consigue el máximo de detecciones.
+                3. Para cada minuto y área, se promedian las detecciones a través de todas las fechas.
+                4. Para cada minuto, se suman las detecciones promedio de todas las áreas seleccionadas.
+                5. El resultado muestra la variación del flujo de personas durante los 60 minutos de la hora seleccionada.
+                6. Esto permite identificar picos de actividad específicos dentro de una hora determinada.
+                ''')
     # Selector de hora para análisis por minutos
     selected_hour = st.selectbox(
-        "Selecciona una hora para ver el análisis por minutos:",
+        "Selecciona una hora para ver los resultados minuto a minuto:",
         options=list(range(24)),
         format_func=lambda x: f"{x:02d}:00"
     )
@@ -232,19 +267,19 @@ try:
         
         if not hour_filtered.empty:
             # Análisis por minutos usando máximo por área y promedio por minuto
-            minute_max = hour_filtered.groupby(['minute', 'area_name'])['detection_count'].max().reset_index()
-            minute_avg = minute_max.groupby('minute')['detection_count'].mean().reset_index()
+            minute_max = hour_filtered.groupby(['minute', 'date', 'area_name'])['detection_count'].max().reset_index()
+            minute_avg = minute_max.groupby(['minute', 'area_name'])['detection_count'].mean().reset_index()
+            minute_avg = minute_avg.groupby('minute')['detection_count'].sum().reset_index()
             minute_avg['time_str'] = minute_avg['minute'].apply(lambda x: f"{selected_hour:02d}:{x:02d}")
             
             minute_chart = alt.Chart(minute_avg).mark_line(point=True).encode(
                 x=alt.X('minute:O', title='Minuto'),
-                y=alt.Y('detection_count:Q', title='Promedio de personas en el área', scale=alt.Scale(zero=False)),
+                y=alt.Y('detection_count:Q', title='Promedio de flujo de personas en el área', scale=alt.Scale(zero=False)),
                 tooltip=[
                     alt.Tooltip('time_str:O', title='Hora:Minuto'),
-                    alt.Tooltip('detection_count:Q', title='Promedio de personas', format='.1f')
+                    alt.Tooltip('detection_count:Q', title='Promedio de flujo de personas', format='.1f')
                 ]
             ).properties(
-                title=f"Promedio de personas por minuto - Hora {selected_hour:02d}:00",
                 width=700,
                 height=300
             )
@@ -258,7 +293,7 @@ try:
 
     # Video Annotation Section
     st.write("---")
-    st.write("## 🎥 Inspeccionar Videos Anotados")
+    st.write("## 🎥 Inspeccionar Videos Procesados")
     
     # Check if video functionality is available
     try:
