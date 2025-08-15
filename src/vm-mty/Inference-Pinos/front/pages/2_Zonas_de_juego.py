@@ -19,6 +19,8 @@ engine = sa.create_engine(f"postgresql+psycopg2://{user}:{password}@{host}:{port
 st.set_page_config(page_title="Conteos en Zonas de Juego", layout="wide")
 st.title("Análisis de conteos en Zonas de Juego")
 
+ENABLE_MOVING_AVERAGE = True
+
 try:
     st.success("Conexión exitosa a la base de datos PostgreSQL")
     st.write(f"Conectado a la base de datos PostgreSQL: `{db}`")
@@ -57,6 +59,23 @@ try:
     df['hour_minute'] = df['datetime'].dt.strftime('%H:%M')
     df['day_of_week'] = df['datetime'].dt.day_name()
     df['date'] = df['datetime'].dt.date
+    
+    # Conseguir el máximo de detecciones por minuto, área y cámara
+    df = df.loc[
+        df.groupby(['area_name', 'camera_number', 'date', 'hour', 'minute'])['detection_count'].idxmax()
+    ].reset_index(drop=True)
+    df.set_index('timestamp', inplace=True)
+
+    # Calcular la media móvil de detecciones a 10 minutos
+    df['detection_count_moving_avg'] = (
+        df.groupby(['area_name', 'camera_number'])['detection_count']
+        .rolling('10T', min_periods=1)
+        .mean()
+        .reset_index(level=[0,1], drop=True)
+    )
+    
+    if ENABLE_MOVING_AVERAGE:
+        df['detection_count'] = df['detection_count_moving_avg']
 
     # Mapear días de la semana a español
     day_map = {
