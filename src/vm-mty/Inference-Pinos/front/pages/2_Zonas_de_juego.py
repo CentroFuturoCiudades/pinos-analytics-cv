@@ -28,8 +28,9 @@ try:
             Para realizar el análisis de los conteos en las zonas de juego, se siguió la siguiente metodología:
             1. Se obtuvieron las detecciones en los videos.
             2. Se aplicaron filtros para evitar las detecciones múltiples de una sola persona en intervalos de un segundo.
-            3. Para cada zona definida, se calculó la cantidad máxima de detecciones dentro de esa zona para un intervalo de un segundo.
-            4. Las visualizaciones muestran el promedio móvil de las detecciones máximas encontrada por minuto. Por ejemplo, si se selecciona un intervalo de 1 hora, se realiza el promedio móvil de las detecciones máximas encontradas en un minuto, y se muestra el máximo promedio movil encontrado durante la hora.
+            3. Se calculan flujos de detecciones por segundo en cada uno de los videos y zonas de juego.
+            4. Para cada zona definida, se selecciona el máximo flujo en una ventana de un minuto.
+            5. Las visualizaciones muestran el promedio móvil de las detecciones máximas encontrada por minuto. Por ejemplo, si se selecciona un intervalo de 1 hora, se realiza el promedio móvil del flujo máximo de cada minuto, y se muestra el máximo promedio móvil encontrado durante la hora.
 
             Nota: la mínima cantidad de tiempo en la que podemos mostrar detecciones representativas es de 1 minuto.
         ''')
@@ -124,7 +125,6 @@ try:
     )
 
     if selected_zones:
-        filtered_df = filtered_df[filtered_df['area_name'].isin(selected_zones)]
         st.write("#### Zonas de juego seleccionadas")
 
         cols = st.columns(min(len(selected_zones), 3))  # Máximo 3 columnas
@@ -138,7 +138,10 @@ try:
                 except FileNotFoundError:
                     st.error(f"Imagen no encontrada para {zone}")
     else:
+        selected_zones = available_zones
         st.warning("No se seleccionó ninguna zona. Mostrando datos de todas las zonas.")
+    
+    filtered_df = filtered_df[filtered_df['area_name'].isin(selected_zones)]
 
     # Gráficos
     st.write("## Gráficos Generados")
@@ -185,7 +188,7 @@ try:
     else:
         st.warning("No hay datos para mostrar con los filtros seleccionados.")
 
-    # PROMEDIO DE PERSONAS POR HORA
+    # Promedio de personas por hora y dia de la semana
     st.write("### Flujo promedio de personas (hora y día de la semana)")
     with st.expander("Explicación de gráfica"):
         st.info("Esta gráfica muestra el flujo promedio de personas detectadas por cada hora del día, segmentado por día de la semana.")
@@ -202,13 +205,13 @@ try:
 
     # Preparar datos para promedio de personas por hora (usar max en lugar de sum)
     # Primero obtener el máximo por área y hora, luego promediar por hora
-    hourly_avg = filtered_df.groupby(['hour', 'area_name', 'date', 'day_of_week'])['detection_count'].max().reset_index()
-    avg_counts = hourly_avg.groupby(['hour', 'area_name', 'day_of_week'])['detection_count'].mean().reset_index()
-    avg_counts = hourly_avg.groupby(['hour', 'day_of_week'])['detection_count'].sum().reset_index()
+    hourly_max = filtered_df.groupby(['hour', 'area_name', 'date', 'day_of_week'])['detection_count'].max().reset_index()
+    hourly_avg = hourly_max.groupby(['hour', 'area_name', 'day_of_week'])['detection_count'].mean().reset_index()
+    hourly_sum = hourly_avg.groupby(['hour', 'day_of_week'])['detection_count'].sum().reset_index()
         
     # Gráfico de área (Promedio de personas por hora)
     with tab1:
-        area_chart = alt.Chart(avg_counts).mark_area(opacity=0.7).encode(
+        area_chart = alt.Chart(hourly_sum).mark_area(opacity=0.7).encode(
             x=alt.X('hour:O', title="Hora del día (0-23)", axis=alt.Axis(labelAngle=0)),
             y=alt.Y('detection_count:Q', title='Flujo de personas (pers/seg)', scale=alt.Scale(zero=False)),
             color=alt.Color(
@@ -225,7 +228,7 @@ try:
     
     # Gráfico de línea (conteo promedio por día y hora)
     with tab2:
-        line_chart = alt.Chart(avg_counts).mark_line(
+        line_chart = alt.Chart(hourly_sum).mark_line(
             point=alt.OverlayMarkDef(filled=False, fill="white")
         ).encode(
             x=alt.X('hour:O', title="Hora del día (0-23)", axis=alt.Axis(labelAngle=0)),
@@ -326,7 +329,7 @@ try:
             include_global_ids = st.checkbox(
                 "Incluir IDs corregidos",
                 value=False,
-                help="Mostrar IDs corregidos (veáse paso 2 de metodología) además de los IDs de seguimiento locales"
+                help="Mostrar IDs corregidos (paso 2 de metodología) además de los IDs de seguimiento locales"
             )
         
         if st.button("🎬 Generar Video Anotado", type="primary"):
