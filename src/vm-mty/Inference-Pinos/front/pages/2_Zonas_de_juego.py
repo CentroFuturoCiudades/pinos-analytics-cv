@@ -26,11 +26,12 @@ try:
     with st.expander("Metodología de análisis"):
         st.write('''
             Para realizar el análisis de los conteos en las zonas de juego, se siguió la siguiente metodología:
-            1. Se extrajeron los datos originales de las detecciones de la base de datos.
-            2. Se realizó un procesamiento de corrección espacio-temporal en las detecciones, para reducir la cantidad de trayectorias (tracklets) duplicadas por persona. Estas pueden ser causadas por videos con baja calidad o problemas de sincronización.
-            3. Usando las trayectorias corregidas, para cada zona definida, se realizó un cálculo para obtener la cantidad máxima de detecciones en un momento dado.
-            4. En las visualizaciones, los conteos para una cantidad del tiempo están definidos como el máximo de detecciones encontrada en ese intervalo de tiempo. Por ejemplo, si se selecciona un intervalo de 1 minuto, se mostrará el máximo de detecciones encontradas en ese minuto.
-            5. Esto permite tener una visión de los flujos de personas en las zonas de juego, evitando la sobreestimación de conteos que podría ocurrir si se sumaran todas las detecciones en lugar de tomar el máximo.
+            1. Se obtuvieron las detecciones en los videos.
+            2. Se aplicaron filtros para evitar las detecciones múltiples de una sola persona en intervalos de un segundo.
+            3. Para cada zona definida, se calculó la cantidad máxima de detecciones dentro de esa zona para un intervalo de un segundo.
+            4. Las visualizaciones muestran el promedio móvil de las detecciones máximas encontrada por minuto. Por ejemplo, si se selecciona un intervalo de 1 hora, se realiza el promedio móvil de las detecciones máximas encontradas en un minuto, y se muestra el máximo promedio movil encontrado durante la hora.
+
+            Nota: la mínima cantidad de tiempo en la que podemos mostrar detecciones representativas es de 1 minuto.
         ''')
 
     # Obtener información básica de la tabla
@@ -146,13 +147,13 @@ try:
         st.warning("No hay datos para mostrar con los filtros seleccionados.")
         st.stop()
 
-    st.write("### Promedio de flujo de personas por hora")
+    st.write("### Flujo promedio de personas hora")
     with st.expander("Explicación de gráfica"):
-        st.write("Esta gráfica muestra el promedio de personas detectadas por cada hora del dia.")
-        st.info('Para obtener estos datos, se siguen los siguientes pasos:')
-        st.info('''
+        st.info("Esta gráfica muestra el flujo promedio de personas detectadas por cada hora del dia.")
+        st.write('Para obtener estos datos, se siguen los siguientes pasos:')
+        st.write('''
                 1. Filtrar los datos considerando el rango de fechas, días de la semana y áreas seleccionadas.
-                2. Para cada área, hora, y dia, se consigue el máximo de detecciones.
+                2. Para cada área, hora, y dia, se consigue el máximo de detecciones encontradas.
                 3. Si hay detecciones de una área y hora en diferentes días, se promedian las detecciones para cada hora y área.
                 4. Finalmente, el flujo promedio de personas de las zonas seleccionadas se suman para cada hora del día.
                 5. El resultado es un promedio de flujo de personas detectadas por hora, que se muestra en la gráfica.
@@ -169,7 +170,7 @@ try:
 
         bar_chart_hourly = alt.Chart(hourly_avg).mark_bar().encode(
             x=alt.X('hour_str:O', title='Hora del día'),
-            y=alt.Y('detection_count:Q', title='Promedio de flujo de personas en áreas seleccionadas'),
+            y=alt.Y('detection_count:Q', title='Flujo de personas (pers/seg)'),
             tooltip=[
                 alt.Tooltip('hour_str:O', title='Hora'),
                 alt.Tooltip('detection_count:Q', title='Promedio de flujo de personas', format='.1f')
@@ -185,19 +186,18 @@ try:
         st.warning("No hay datos para mostrar con los filtros seleccionados.")
 
     # PROMEDIO DE PERSONAS POR HORA
-    st.write("### Promedio de flujo de personas por hora y día de la semana")
+    st.write("### Flujo promedio de personas (hora y día de la semana)")
     with st.expander("Explicación de gráfica"):
-        st.write("Esta gráfica muestra el flujo promedio de personas detectadas por cada hora del día, segmentado por día de la semana.")
-        st.info('Para obtener estos datos, se siguen los siguientes pasos:')
-        st.info('''
+        st.info("Esta gráfica muestra el flujo promedio de personas detectadas por cada hora del día, segmentado por día de la semana.")
+        st.write('Para obtener estos datos, se siguen los siguientes pasos:')
+        st.write('''
                 1. Filtrar los datos considerando el rango de fechas, días de la semana y áreas seleccionadas.
-                2. Para cada grupo de área, hora, día y día de la semana, se consigue el máximo de detecciones.
-                3. Para cada hora y día de la semana, se promedian las detecciones de todas las áreas seleccionadas.
-                4. Para cada grupo de hora, área y día de la semana, se consiguen las detecciones promedio.
-                5. Finalmente, se suman las detecciones promedio de todas las áreas para cada hora del día.
-                6. El resultado muestra patrones de flujo de personas por hora, diferenciados por día de la semana.
+                2. Para cada grupo de área, hora, día y día de la semana, se consigue el máximo de detecciones encontradas.
+                3. Para cada grupo de área, hora y día de la semana, se promedian las detecciones encontradas.
+                4. Finalmente, se suman las detecciones promedio de todas las áreas para cada hora del día.
+                5. El resultado muestra patrones de flujo de personas por hora, diferenciados por día de la semana.
                 ''')
-    
+
     tab1, tab2 = st.tabs(["Gráfico de área", "Gráfico de línea"])
 
     # Preparar datos para promedio de personas por hora (usar max en lugar de sum)
@@ -210,7 +210,7 @@ try:
     with tab1:
         area_chart = alt.Chart(avg_counts).mark_area(opacity=0.7).encode(
             x=alt.X('hour:O', title="Hora del día (0-23)", axis=alt.Axis(labelAngle=0)),
-            y=alt.Y('detection_count:Q', title='Promedio de flujo de personas en el área', scale=alt.Scale(zero=False)),
+            y=alt.Y('detection_count:Q', title='Flujo de personas (pers/seg)', scale=alt.Scale(zero=False)),
             color=alt.Color(
                 field='day_of_week',
                 title='Día de la semana',
@@ -244,9 +244,9 @@ try:
 
     st.write("### Análisis detallado por minutos")
     with st.expander("Explicación de gráfica"):
-        st.write("Esta gráfica muestra el flujo de personas minuto a minuto para una hora específica seleccionada.")
-        st.info('Para obtener estos datos, se siguen los siguientes pasos:')
-        st.info('''
+        st.info("Esta gráfica muestra el flujo de personas minuto a minuto para una hora específica seleccionada.")
+        st.write('Para obtener estos datos, se siguen los siguientes pasos:')
+        st.write('''
                 1. Filtrar los datos por la hora seleccionada, además de los filtros anteriores (fechas, días, áreas).
                 2. Para cada minuto, fecha y área, se consigue el máximo de detecciones.
                 3. Para cada minuto y área, se promedian las detecciones a través de todas las fechas.
@@ -274,10 +274,10 @@ try:
             
             minute_chart = alt.Chart(minute_avg).mark_line(point=True).encode(
                 x=alt.X('minute:O', title='Minuto'),
-                y=alt.Y('detection_count:Q', title='Promedio de flujo de personas en el área', scale=alt.Scale(zero=False)),
+                y=alt.Y('detection_count:Q', title='Flujo de personas (pers/seg)', scale=alt.Scale(zero=False)),
                 tooltip=[
                     alt.Tooltip('time_str:O', title='Hora:Minuto'),
-                    alt.Tooltip('detection_count:Q', title='Promedio de flujo de personas', format='.1f')
+                    alt.Tooltip('detection_count:Q', title='Flujo promedio de personas (pers/seg)', format='.1f')
                 ]
             ).properties(
                 width=700,
