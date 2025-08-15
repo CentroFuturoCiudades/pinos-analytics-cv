@@ -30,7 +30,7 @@ try:
             2. Se aplicaron filtros para evitar las detecciones múltiples de una sola persona en intervalos de un segundo.
             3. Se calculan flujos de detecciones por segundo en cada uno de los videos y zonas de juego.
             4. Para cada zona definida, se selecciona el máximo flujo en una ventana de un minuto.
-            5. Las visualizaciones muestran el promedio móvil de las detecciones máximas encontrada por minuto. Por ejemplo, si se selecciona un intervalo de 1 hora, se realiza el promedio móvil del flujo máximo de cada minuto, y se muestra el máximo promedio móvil encontrado durante la hora.
+            5. Las visualizaciones muestran las detecciones máximas encontradas por minuto, después de remover datos atípicos.
 
             Nota: la mínima cantidad de tiempo en la que podemos mostrar detecciones representativas es de 1 minuto.
         ''')
